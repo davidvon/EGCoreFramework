@@ -1,0 +1,6 @@
+//
+// Prefix header for all source files of the 'EGCore' target in the 'EGCore' project
+//
+
+#ifdef __OBJC__
+#endif
