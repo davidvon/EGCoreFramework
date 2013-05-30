@@ -27,8 +27,8 @@
 
 -(void) testcase
 {
-//    rootViewController = [[TestSwipeViewController alloc] init];
-    rootViewController = [[TestAnimationViewController alloc] init];
+    rootViewController = [[TestSwipeViewController alloc] init];
+//    rootViewController = [[TestAnimationViewController alloc] init];
 //    rootViewController = [[TestReflectionView alloc] init];
     self.window.rootViewController = rootViewController;
 }

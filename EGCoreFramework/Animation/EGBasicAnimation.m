@@ -42,12 +42,12 @@
 }
 
 
-+(void) moveX:(float)duration X:(NSNumber *)x delay:(float)time withView:(UIView *)view
++(void) moveX:(int)x duration:(float)duration delay:(float)time withView:(UIView *)view
 {
     UIViewAnimationOptions options = UIViewAnimationCurveLinear | UIViewAnimationOptionCurveEaseInOut;
     [UIView animateWithDuration:duration delay:time options:options animations:^ {
         CGRect frame = view.frame;
-        frame.origin.x = x.intValue;
+        frame.origin.x = x;
         view.frame = frame;
      } completion:nil];
 }
@@ -64,12 +64,12 @@
 }
 
 
-+(void) moveY:(float)duration Y:(NSNumber *)y delay:(float)time withView:(UIView *)view
++(void) moveY:(int)y duration:(float)duration delay:(float)time withView:(UIView *)view
 {
     UIViewAnimationOptions options = UIViewAnimationCurveLinear | UIViewAnimationOptionCurveEaseInOut;
     [UIView animateWithDuration:duration delay:time options:options animations:^ {
         CGRect frame = view.frame;
-        frame.origin.y = y.intValue;
+        frame.origin.y = y;
         view.frame = frame;
     } completion:nil];
 }

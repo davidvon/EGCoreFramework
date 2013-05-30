@@ -29,9 +29,9 @@
 		DDB7730D175219D6004A3004 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7730C175219D6004A3004 /* QuartzCore.framework */; };
 		DDB7731017521AB8004A3004 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7730F17521AB8004A3004 /* 1.png */; };
 		DDB77322175234A7004A3004 /* TestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB77321175234A6004A3004 /* TestAnimationViewController.m */; };
-		DDC637DD17561D6000975F99 /* EGCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC637DC17561D6000975F99 /* EGCore.framework */; };
 		DDC637E41756216B00975F99 /* BezierCurve1.svg in Resources */ = {isa = PBXBuildFile; fileRef = DDC637E31756216B00975F99 /* BezierCurve1.svg */; };
 		DDC637F81756294A00975F99 /* TestReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637F71756294A00975F99 /* TestReflection.m */; };
+		DDC63828175656DC00975F99 /* EGCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC63826175656CF00975F99 /* EGCore.framework */; };
 		DDCD6E2F1754CA7200994BCE /* SwipePageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCD6E2E1754CA7200994BCE /* SwipePageWidgetView.m */; };
 		DDCD6E4B1754ED0800994BCE /* XSW_vacation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCD6E301754ED0700994BCE /* XSW_vacation_back.png */; };
 		DDCD6E4C1754ED0800994BCE /* XSW_vacation_big_view_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDCD6E311754ED0700994BCE /* XSW_vacation_big_view_2.jpg */; };
@@ -63,9 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DD2A76461753800800A7886A /* PBXContainerItemProxy */ = {
+		DDC6381A1756418F00975F99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD2A76421753800800A7886A /* EGCoreFramework.xcodeproj */;
+			containerPortal = DDC638161756418F00975F99 /* EGCoreFramework.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DDB773461752436F004A3004;
 			remoteInfo = EGCore;
@@ -73,7 +73,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD2A76421753800800A7886A /* EGCoreFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EGCoreFramework.xcodeproj; path = ../EGCoreFramework/EGCoreFramework.xcodeproj; sourceTree = "<group>"; };
 		DD2A76481753871F00A7886A /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg1.jpg; path = Resources/bg1.jpg; sourceTree = "<group>"; };
 		DD2A76491753871F00A7886A /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg2.jpg; path = Resources/bg2.jpg; sourceTree = "<group>"; };
 		DD2A764A1753871F00A7886A /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg3.jpg; path = Resources/bg3.jpg; sourceTree = "<group>"; };
@@ -103,10 +102,11 @@
 		DDB7730F17521AB8004A3004 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Resources/1.png; sourceTree = "<group>"; };
 		DDB77320175234A6004A3004 /* TestAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnimationViewController.h; sourceTree = "<group>"; };
 		DDB77321175234A6004A3004 /* TestAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnimationViewController.m; sourceTree = "<group>"; };
-		DDC637DC17561D6000975F99 /* EGCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGCore.framework; path = "../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-cilzfwgtmmkghehapdfbmikjpkzb/Build/Products/Debug-iphonesimulator/EGCore.framework"; sourceTree = "<group>"; };
 		DDC637E31756216B00975F99 /* BezierCurve1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BezierCurve1.svg; sourceTree = "<group>"; };
 		DDC637F61756294A00975F99 /* TestReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestReflection.h; sourceTree = "<group>"; };
 		DDC637F71756294A00975F99 /* TestReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestReflection.m; sourceTree = "<group>"; };
+		DDC638161756418F00975F99 /* EGCoreFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EGCoreFramework.xcodeproj; path = ../EGCoreFramework/EGCoreFramework.xcodeproj; sourceTree = "<group>"; };
+		DDC63826175656CF00975F99 /* EGCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGCore.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EGCoreFrameworkDemo-cfqbjtgadowbksadfcrnzrrdidcc/Build/Products/Debug-iphonesimulator/EGCore.framework"; sourceTree = "<group>"; };
 		DDCD6E2D1754CA7200994BCE /* SwipePageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageWidgetView.h; sourceTree = "<group>"; };
 		DDCD6E2E1754CA7200994BCE /* SwipePageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageWidgetView.m; sourceTree = "<group>"; };
 		DDCD6E301754ED0700994BCE /* XSW_vacation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = XSW_vacation_back.png; path = Resources/XSW_vacation_back.png; sourceTree = "<group>"; };
@@ -147,25 +147,17 @@
 				DDB77288175207D0004A3004 /* UIKit.framework in Frameworks */,
 				DDB7728A175207D0004A3004 /* Foundation.framework in Frameworks */,
 				DDB7728C175207D0004A3004 /* CoreGraphics.framework in Frameworks */,
-				DDC637DD17561D6000975F99 /* EGCore.framework in Frameworks */,
+				DDC63828175656DC00975F99 /* EGCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD2A76431753800800A7886A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DD2A76471753800800A7886A /* EGCore.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		DDB7727B175207D0004A3004 = {
 			isa = PBXGroup;
 			children = (
-				DD2A76421753800800A7886A /* EGCoreFramework.xcodeproj */,
+				DDC638161756418F00975F99 /* EGCoreFramework.xcodeproj */,
 				DDB7728D175207D0004A3004 /* EGCoreFrameworkDemo */,
 				DDB77286175207D0004A3004 /* Frameworks */,
 				DDB77285175207D0004A3004 /* Products */,
@@ -183,7 +175,7 @@
 		DDB77286175207D0004A3004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DDC637DC17561D6000975F99 /* EGCore.framework */,
+				DDC63826175656CF00975F99 /* EGCore.framework */,
 				DDB7730C175219D6004A3004 /* QuartzCore.framework */,
 				DDB77287175207D0004A3004 /* UIKit.framework */,
 				DDB77289175207D0004A3004 /* Foundation.framework */,
@@ -272,6 +264,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		DDC638171756418F00975F99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDC6381B1756418F00975F99 /* EGCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,8 +313,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = DD2A76431753800800A7886A /* Products */;
-					ProjectRef = DD2A76421753800800A7886A /* EGCoreFramework.xcodeproj */;
+					ProductGroup = DDC638171756418F00975F99 /* Products */;
+					ProjectRef = DDC638161756418F00975F99 /* EGCoreFramework.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -325,11 +325,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DD2A76471753800800A7886A /* EGCore.framework */ = {
+		DDC6381B1756418F00975F99 /* EGCore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = EGCore.framework;
-			remoteRef = DD2A76461753800800A7886A /* PBXContainerItemProxy */;
+			remoteRef = DDC6381A1756418F00975F99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -473,21 +473,12 @@
 		DDB772A2175207D0004A3004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-bpizwngoewxbrcarewcenvfmdpvn/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-bpizwngoewxbrcarewcenvfmdpvn/Build/Products/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-cilzfwgtmmkghehapdfbmikjpkzb/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-cilzfwgtmmkghehapdfbmikjpkzb/Build/Products/Debug-iphonesimulator\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EGMagazineDemo/EGCoreFrameworkDemo-Prefix.pch";
 				INFOPLIST_FILE = "EGMagazineDemo/EGCoreFrameworkDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-bpizwngoewxbrcarewcenvfmdpvn/Build/Products/Debug-iphoneos\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = EGCoreFrameworkDemo;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -497,21 +488,12 @@
 		DDB772A3175207D0004A3004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-bpizwngoewxbrcarewcenvfmdpvn/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-bpizwngoewxbrcarewcenvfmdpvn/Build/Products/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-cilzfwgtmmkghehapdfbmikjpkzb/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-cilzfwgtmmkghehapdfbmikjpkzb/Build/Products/Debug-iphonesimulator\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EGMagazineDemo/EGCoreFrameworkDemo-Prefix.pch";
 				INFOPLIST_FILE = "EGMagazineDemo/EGCoreFrameworkDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/EGMagazineDemo-bpizwngoewxbrcarewcenvfmdpvn/Build/Products/Debug-iphoneos\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = EGCoreFrameworkDemo;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;

@@ -8,12 +8,34 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SwipePageWidgetView : UIView
+typedef enum {
+    WIDGET_SWIPING,
+    WIDGET_ANIMATION,
+}WidgetType;
 
+
+
+@interface WidgetParams: NSObject
+@property (nonatomic, strong) NSString *imageName;
+@property (nonatomic) CGRect frame;
+@property (nonatomic) float durnation;
+@property (nonatomic) float delay;
+@property (nonatomic) int destinationX;
+
+-(id) initWithParams:(CGRect)rect destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)delay;
+
+@end
+
+
+
+
+@interface SwipePageWidgetView : UIView{
+    WidgetType widgetType;
+}
 @property (nonatomic, strong) UIImageView *imageview;
-@property (nonatomic) CGPoint destination;
+@property (nonatomic, strong) WidgetParams *inparams;
 
-- (id)initWithFrame:(CGRect)frame withImageName:(NSString *)image toDestination:(CGPoint)point;
+- (id)initWithParams:(WidgetParams*)params ofType:(WidgetType)type;
 - (void)swipeViewDidScroll:(float)offset withIndex:(int) index;
-
+-(void)animate;
 @end

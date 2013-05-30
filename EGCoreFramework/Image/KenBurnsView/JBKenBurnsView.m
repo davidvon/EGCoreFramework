@@ -296,7 +296,7 @@
     [imageView.layer addSublayer:picLayer];
     
     CATransition *animation = [CATransition animation];
-    [animation setDuration:.3]; //default:1
+    [animation setDuration:.5f]; //default:1
     [animation setType:kCATransitionFade];
     [[self layer] addAnimation:animation forKey:nil];
     

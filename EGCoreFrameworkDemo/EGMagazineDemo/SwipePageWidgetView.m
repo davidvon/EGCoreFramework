@@ -7,17 +7,35 @@
 //
 
 #import "SwipePageWidgetView.h"
+#import "EGCore/EGBasicAnimation.h"
+
+@implementation WidgetParams
+@synthesize imageName, frame, durnation, destinationX, delay;
+-(id) initWithParams:(CGRect)rect destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)del
+{
+    self = [super init];
+    self.frame = rect;
+    self.destinationX = x;
+    self.imageName = name;
+    self.durnation = dur;
+    self.delay = del;
+    return self;
+}
+@end
+
 
 @implementation SwipePageWidgetView
-@synthesize imageview, destination;
+@synthesize imageview, inparams;
 
-- (id)initWithFrame:(CGRect)frame withImageName:(NSString *)image toDestination:(CGPoint)point
+- (id)initWithParams:(WidgetParams*)params ofType:(WidgetType)type
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
+        inparams = params;
+        self.frame = params.frame;
+        imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:params.imageName]];
         [self addSubview:imageview];
-        destination = point;
+        widgetType = type;
     }
     return self;
 }
@@ -27,11 +45,22 @@
 {
     CGRect rect = self.frame;
     float val = offset - index;
-    rect.origin.x = destination.x - val*1000;
-    NSLog(@"offset=%f, index=%d, result=%f, destX=%d, currentX=%d",offset, index, val, (int)destination.x, (int)rect.origin.x);
+    rect.origin.x = inparams.destinationX- val*1000;
+//    NSLog(@"self=%@, offset=%f, index=%d, result=%f, destX=%d, currentX=%d", self, offset, index, val, (int)inparams.destinationX, (int)rect.origin.x);
     self.frame = rect;
 }
 
+
+-(void) animate
+{
+    [NSThread detachNewThreadSelector:@selector(animateByThread) toTarget:self withObject:nil];
+}
+
+
+-(void) animateByThread
+{
+    [EGBasicAnimation moveX:inparams.destinationX duration:inparams.durnation delay:inparams.delay withView:self];
+}
 
 
 @end

@@ -14,8 +14,8 @@
 
 +(CABasicAnimation *)moveX:(float)duration X:(NSNumber *)x;     //横向移动
 +(CABasicAnimation *)moveY:(float)duration Y:(NSNumber *)y;     //纵向移动
-+(void) moveX:(float)duration X:(NSNumber *)x delay:(float)time withView:(UIView *)view;
-+(void) moveY:(float)duration Y:(NSNumber *)y delay:(float)time withView:(UIView *)view;
++(void) moveX:(int)x duration:(float)duration delay:(float)time withView:(UIView *)view;
++(void) moveY:(int)y duration:(float)duration delay:(float)time withView:(UIView *)view;
 +(CAKeyframeAnimation*) movePathBySVG:(UIView*)owner durcation:(float)dur bySVGFile:(NSString*)svg;
 
 +(CABasicAnimation *)opacityForever_Animation:(float)time;  //永久闪烁的动画

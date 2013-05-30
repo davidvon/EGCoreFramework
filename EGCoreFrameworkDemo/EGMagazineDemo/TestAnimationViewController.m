@@ -93,10 +93,10 @@
     [imageview.layer addAnimation:anim forKey:nil];
     
     imageview = [self addImageView:@"XSW_vacation_Golf_big_back" withFrame:CGRectMake(1024,280,722,109)];
-    [EGBasicAnimation moveX:0.4f X:[NSNumber numberWithInt:300] delay:0.5f withView:imageview ];
+    [EGBasicAnimation moveX:300 duration:0.4f delay:0.5f withView:imageview ];
 
     imageview = [self addImageView:@"XSW_vacation_Golf_big_writing" withFrame:CGRectMake(1024,290,650,76)];
-    [EGBasicAnimation moveX:0.4f X:[NSNumber numberWithInt:340] delay:0.5f withView:imageview ];
+    [EGBasicAnimation moveX:340 duration:0.4f  delay:0.5f withView:imageview ];
 }
 
 
