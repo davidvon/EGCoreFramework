@@ -9,33 +9,61 @@
 #import "SwipePageWidgetView.h"
 #import "EGCore/EGBasicAnimation.h"
 
+@implementation WidgetImage
+@synthesize image, frame;
+@end
+
 @implementation WidgetParams
-@synthesize imageName, frame, durnation, destinationX, delay;
+@synthesize imagelist, durnation, destinationX, delay;
 -(id) initWithParams:(CGRect)rect destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)del
 {
     self = [super init];
-    self.frame = rect;
     self.destinationX = x;
-    self.imageName = name;
+    WidgetImage *image = [[WidgetImage alloc] init];
+    image.image = name;
+    image.frame = rect;
+    self.imagelist = [[NSArray alloc] initWithObjects:image,nil];
     self.durnation = dur;
     self.delay = del;
     return self;
 }
+
+
+-(id) initWithParams:(NSArray*)images destX:(int)x durnation:(float)dur delay:(float)del
+{
+    self = [super init];
+    self.destinationX = x;
+    self.imagelist = images;
+    self.durnation = dur;
+    self.delay = del;
+    return self;
+}
+
 @end
 
 
 @implementation SwipePageWidgetView
-@synthesize imageview, inparams;
+@synthesize imageViewLists, destinationX, durnation, delay;
+;
 
-- (id)initWithParams:(WidgetParams*)params ofType:(WidgetType)type
+- (id)initWithParams:(WidgetParams*)params withFrame:(CGRect)frame ofType:(WidgetType)type
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
-        inparams = params;
-        self.frame = params.frame;
-        imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:params.imageName]];
-        [self addSubview:imageview];
+        for( int i=0; i<params.imagelist.count; i++ ){
+            WidgetImage *widgetImage = (WidgetImage*)[params.imagelist objectAtIndex:i];
+            NSString *name = widgetImage.image;
+            UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:name]];
+            imageview.frame = widgetImage.frame;
+            [self addSubview:imageview];
+        }
         widgetType = type;
+        destinationX = params.destinationX;
+        durnation = params.durnation;
+        delay = params.delay;
+        if( type == WIDGET_ANIMATION){
+            [self animate];
+        }
     }
     return self;
 }
@@ -43,23 +71,18 @@
 
 - (void)swipeViewDidScroll:(float)offset withIndex:(int) index
 {
+    if( widgetType == WIDGET_ANIMATION ) return;
     CGRect rect = self.frame;
     float val = offset - index;
-    rect.origin.x = inparams.destinationX- val*1000;
-//    NSLog(@"self=%@, offset=%f, index=%d, result=%f, destX=%d, currentX=%d", self, offset, index, val, (int)inparams.destinationX, (int)rect.origin.x);
+    rect.origin.x = destinationX- val*1000;
     self.frame = rect;
+    NSLog(@"x=%f, offset=%f", rect.origin.x, offset );
 }
 
 
 -(void) animate
 {
-    [NSThread detachNewThreadSelector:@selector(animateByThread) toTarget:self withObject:nil];
-}
-
-
--(void) animateByThread
-{
-    [EGBasicAnimation moveX:inparams.destinationX duration:inparams.durnation delay:inparams.delay withView:self];
+    [EGBasicAnimation moveX:destinationX duration:durnation delay:delay withView:self];
 }
 
 

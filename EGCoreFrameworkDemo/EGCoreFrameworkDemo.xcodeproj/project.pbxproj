@@ -16,7 +16,8 @@
 		DD2A76561753871F00A7886A /* wzall3.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2A764E1753871F00A7886A /* wzall3.png */; };
 		DD2A76571753871F00A7886A /* wzall4.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2A764F1753871F00A7886A /* wzall4.png */; };
 		DD2A765A175387A100A7886A /* TestSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A7659175387A100A7886A /* TestSwipeViewController.m */; };
-		DD2A765D175389B800A7886A /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A765C175388F200A7886A /* SwipePageView.m */; };
+		DDB6AAE817578D9F0093B05B /* SwipePageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB6AAE517578CDA0093B05B /* SwipePageWidgetView.m */; };
+		DDB6AAE917578DA00093B05B /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB6AAE317578CDA0093B05B /* SwipePageView.m */; };
 		DDB77288175207D0004A3004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB77287175207D0004A3004 /* UIKit.framework */; };
 		DDB7728A175207D0004A3004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB77289175207D0004A3004 /* Foundation.framework */; };
 		DDB7728C175207D0004A3004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7728B175207D0004A3004 /* CoreGraphics.framework */; };
@@ -32,7 +33,6 @@
 		DDC637E41756216B00975F99 /* BezierCurve1.svg in Resources */ = {isa = PBXBuildFile; fileRef = DDC637E31756216B00975F99 /* BezierCurve1.svg */; };
 		DDC637F81756294A00975F99 /* TestReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637F71756294A00975F99 /* TestReflection.m */; };
 		DDC63828175656DC00975F99 /* EGCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC63826175656CF00975F99 /* EGCore.framework */; };
-		DDCD6E2F1754CA7200994BCE /* SwipePageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCD6E2E1754CA7200994BCE /* SwipePageWidgetView.m */; };
 		DDCD6E4B1754ED0800994BCE /* XSW_vacation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCD6E301754ED0700994BCE /* XSW_vacation_back.png */; };
 		DDCD6E4C1754ED0800994BCE /* XSW_vacation_big_view_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDCD6E311754ED0700994BCE /* XSW_vacation_big_view_2.jpg */; };
 		DDCD6E4D1754ED0800994BCE /* XSW_vacation_big_view_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDCD6E321754ED0700994BCE /* XSW_vacation_big_view_3.jpg */; };
@@ -83,8 +83,10 @@
 		DD2A764F1753871F00A7886A /* wzall4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wzall4.png; path = Resources/wzall4.png; sourceTree = "<group>"; };
 		DD2A7658175387A100A7886A /* TestSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSwipeViewController.h; sourceTree = "<group>"; };
 		DD2A7659175387A100A7886A /* TestSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSwipeViewController.m; sourceTree = "<group>"; };
-		DD2A765B175388F200A7886A /* SwipePageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipePageView.h; sourceTree = "<group>"; };
-		DD2A765C175388F200A7886A /* SwipePageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
+		DDB6AAE217578CDA0093B05B /* SwipePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageView.h; sourceTree = "<group>"; };
+		DDB6AAE317578CDA0093B05B /* SwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
+		DDB6AAE417578CDA0093B05B /* SwipePageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageWidgetView.h; sourceTree = "<group>"; };
+		DDB6AAE517578CDA0093B05B /* SwipePageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageWidgetView.m; sourceTree = "<group>"; };
 		DDB77284175207D0004A3004 /* EGCoreFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGCoreFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB77287175207D0004A3004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DDB77289175207D0004A3004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,8 +109,6 @@
 		DDC637F71756294A00975F99 /* TestReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestReflection.m; sourceTree = "<group>"; };
 		DDC638161756418F00975F99 /* EGCoreFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EGCoreFramework.xcodeproj; path = ../EGCoreFramework/EGCoreFramework.xcodeproj; sourceTree = "<group>"; };
 		DDC63826175656CF00975F99 /* EGCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGCore.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EGCoreFrameworkDemo-cfqbjtgadowbksadfcrnzrrdidcc/Build/Products/Debug-iphonesimulator/EGCore.framework"; sourceTree = "<group>"; };
-		DDCD6E2D1754CA7200994BCE /* SwipePageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageWidgetView.h; sourceTree = "<group>"; };
-		DDCD6E2E1754CA7200994BCE /* SwipePageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageWidgetView.m; sourceTree = "<group>"; };
 		DDCD6E301754ED0700994BCE /* XSW_vacation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = XSW_vacation_back.png; path = Resources/XSW_vacation_back.png; sourceTree = "<group>"; };
 		DDCD6E311754ED0700994BCE /* XSW_vacation_big_view_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = XSW_vacation_big_view_2.jpg; path = Resources/XSW_vacation_big_view_2.jpg; sourceTree = "<group>"; };
 		DDCD6E321754ED0700994BCE /* XSW_vacation_big_view_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = XSW_vacation_big_view_3.jpg; path = Resources/XSW_vacation_big_view_3.jpg; sourceTree = "<group>"; };
@@ -195,10 +195,10 @@
 				DD2A7659175387A100A7886A /* TestSwipeViewController.m */,
 				DDC637F61756294A00975F99 /* TestReflection.h */,
 				DDC637F71756294A00975F99 /* TestReflection.m */,
-				DD2A765B175388F200A7886A /* SwipePageView.h */,
-				DD2A765C175388F200A7886A /* SwipePageView.m */,
-				DDCD6E2D1754CA7200994BCE /* SwipePageWidgetView.h */,
-				DDCD6E2E1754CA7200994BCE /* SwipePageWidgetView.m */,
+				DDB6AAE217578CDA0093B05B /* SwipePageView.h */,
+				DDB6AAE317578CDA0093B05B /* SwipePageView.m */,
+				DDB6AAE417578CDA0093B05B /* SwipePageWidgetView.h */,
+				DDB6AAE517578CDA0093B05B /* SwipePageWidgetView.m */,
 				DDB7730E17521A30004A3004 /* Resources */,
 				DDB7728E175207D0004A3004 /* Supporting Files */,
 			);
@@ -393,9 +393,9 @@
 				DDB77294175207D0004A3004 /* main.m in Sources */,
 				DDB77298175207D0004A3004 /* AppDelegate.m in Sources */,
 				DDB77322175234A7004A3004 /* TestAnimationViewController.m in Sources */,
-				DD2A765D175389B800A7886A /* SwipePageView.m in Sources */,
 				DD2A765A175387A100A7886A /* TestSwipeViewController.m in Sources */,
-				DDCD6E2F1754CA7200994BCE /* SwipePageWidgetView.m in Sources */,
+				DDB6AAE917578DA00093B05B /* SwipePageView.m in Sources */,
+				DDB6AAE817578D9F0093B05B /* SwipePageWidgetView.m in Sources */,
 				DDC637F81756294A00975F99 /* TestReflection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

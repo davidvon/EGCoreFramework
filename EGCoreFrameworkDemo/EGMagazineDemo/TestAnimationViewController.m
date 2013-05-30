@@ -28,7 +28,7 @@
 //    [self animationShow];
 //    [self initAnimationBackground];
 //    [self timerAnimation];
-    [self bazierAnimation];
+//    [self bazierAnimation];
 }
 
 

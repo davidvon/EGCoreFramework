@@ -88,8 +88,8 @@
 
 - (void)swipeViewDidEndDragging:(SwipeView *)swipeView willDecelerate:(BOOL)decelerate
 {
-    SwipePageView *cell = (SwipePageView *)[swipeView currentItemView];
-    [cell swipeViewDidEndDragging:swipeView];
+//    SwipePageView *cell = (SwipePageView *)[swipeView currentItemView];
+//    [cell swipeViewDidEndDragging:swipeView];
 }
 
 

@@ -47,6 +47,7 @@
     UIViewAnimationOptions options = UIViewAnimationCurveLinear | UIViewAnimationOptionCurveEaseInOut;
     [UIView animateWithDuration:duration delay:time options:options animations:^ {
         CGRect frame = view.frame;
+        NSLog(@"src.x=%f, src.y=%f, dst.x=%d", frame.origin.x, frame.origin.y, x);
         frame.origin.x = x;
         view.frame = frame;
      } completion:nil];
