@@ -14,8 +14,8 @@
     KenBurnsView *kenView;
 }
 
-@property (nonatomic) int pos;
 @property (nonatomic, strong) NSMutableArray *widgets;
+@property (nonatomic, strong) NSDictionary *json_data;
 
 - (void) resetContentWithIndex:(int)index;
 - (void) swipeViewDidScroll:(SwipeView *)swipeView;

@@ -1,6 +1,6 @@
 {
     "title":"阳光里",
-    "background":"bg1.jpg",
+    "background":"bg3.jpg",
     
     "widget.swipings":[
         {
@@ -24,7 +24,7 @@
     ],
         
     "widget.animations":[
-        {
+         {
             "name":"animation.1",
             "type":"animation",
             "image":"XSW_vacation_Golf_small_back.png",
@@ -59,6 +59,6 @@
             "duration":"0.5",
             "delay":"0.25",
             "frame":[1024,0,650,76]
-        }                
+        }    
     ]
 }

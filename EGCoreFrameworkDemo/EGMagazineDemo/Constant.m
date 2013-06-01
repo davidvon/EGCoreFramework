@@ -104,8 +104,7 @@ static NSDictionary *appJsonSettingsData = nil;
 +(id) getPage:(NSString*)pageName
 {
     NSError *error = [[NSError alloc] init];
-    NSString *filename= [NSString stringWithFormat:@"%@.json", pageName];
-    NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Static"] stringByAppendingPathComponent:filename];
+    NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Static"] stringByAppendingPathComponent:pageName];
     NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     NSDictionary *dict = [data objectFromJSONString];
     return dict;

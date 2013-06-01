@@ -21,7 +21,7 @@
         [self addSubview:imageview];
         widgetType = wtype;
         destination = xy;
-        durnation = dur;
+        duration = dur;
         animationType = atype;
         delay = del;
         if( widgetType == WIDGET_ANIMATION || widgetType == WIDGET_ANIMATION_SWIPING ){
@@ -32,15 +32,18 @@
 }
 
 
-- (id)initWithJsonFile: (NSDictionary *)dict
+- (id)initWithJsonDict: (NSDictionary *)dict
 {
-    self = [super init];
+    NSArray *frame = [dict objectForKey:@"frame"];
+    CGRect ret = [SwipePageWidgetView createCGRectByDict:frame];
+    self = [super initWithFrame:ret];
+    
     self.name =  [dict objectForKey:@"name"];
     NSString *image = [dict objectForKey:@"image"];
     UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
     NSDictionary *pos = [dict objectForKey:@"position"];
     NSArray *from     = [pos objectForKey:@"from"];
-    imageview.frame   = [self createCGRectByDict:from];
+    imageview.frame   = [SwipePageWidgetView createCGRectByDict:from];
     [self addSubview:imageview];
     
     NSDictionary *to  = [pos objectForKey:@"to"];
@@ -54,6 +57,7 @@
         animationType = MOVE_X;
         destination = [tox integerValue];
     }
+    duration = [[dict objectForKey:@"duration"] floatValue];
     delay = [[dict objectForKey:@"delay"] floatValue];
     widgetType = [self widgetTypeFromDict: dict];
     if( widgetType == WIDGET_ANIMATION || widgetType == WIDGET_ANIMATION_SWIPING ){
@@ -72,15 +76,15 @@
 }
 
 
-+(SwipePageWidgetView*) initWithJsonFile:(NSString *)filename inView:(UIView *)view
++(SwipePageWidgetView*) initWithJsonDict:(NSDictionary *)dict inView:(UIView *)view
 {
-    SwipePageWidgetView *widget = [[SwipePageWidgetView alloc] initWithJsonFile:filename];
+    SwipePageWidgetView *widget = [[SwipePageWidgetView alloc] initWithJsonDict:dict];
     [view addSubview:widget];
-    return widget;    
+    return widget;
 }
 
 
--(CGRect) createCGRectByDict:(NSArray*)dict
++(CGRect) createCGRectByDict:(NSArray*)dict
 {
     assert(dict.count == 4);
     NSInteger x =  [[dict objectAtIndex:0] integerValue];
@@ -107,16 +111,16 @@
     float val = offset - index;
     rect.origin.x = destination- val*1000;
     self.frame = rect;
-//    NSLog(@"x=%f, offset=%f", rect.origin.x, offset );
+    NSLog(@"x=%f, offset=%f", rect.origin.x, offset );
 }
 
 
 -(void) animate
 {
     if( animationType == MOVE_X )
-        [EGBasicAnimation moveX:destination duration:durnation delay:delay withView:self];
+        [EGBasicAnimation moveX:destination duration:duration delay:delay withView:self];
     else
-        [EGBasicAnimation moveY:destination duration:durnation delay:delay withView:self];
+        [EGBasicAnimation moveY:destination duration:duration delay:delay withView:self];
 }
 
 

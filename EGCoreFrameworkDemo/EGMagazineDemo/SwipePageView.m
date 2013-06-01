@@ -8,11 +8,11 @@
 #import "SwipePageView.h"
 #import "SwipePageWidgetView.h"
 #import "EGCore/EGBasicAnimation.h"
-#define INVALID_POS_X 4000
+#import "Constant.h"
 
 
 @implementation SwipePageView
-@synthesize pos, widgets;
+@synthesize widgets,json_data;
 
 - (id)init
 {
@@ -40,20 +40,26 @@
 -(void) resetContentWithIndex:(int)index
 {    
     [self clearExistingWidgets];
-    
-    NSString *name = [NSString stringWithFormat:@"wzall%d", index];
-    SwipePageWidgetView *widget = [SwipePageWidgetView addWidgetView:CGRectMake(4000, 60, 435, 121) toDestX:-4000+1024-435 animateType:MOVE_X withImage:name durcation:0 delay:0 ofType:WIDGET_SWIPING withMainViewFrame:CGRectMake(0,0, 435, 121) inView:self];
-    [widgets addObject:widget];
-    
-    name = [NSString stringWithFormat:@"wzall%d", 2];
-    widget = [SwipePageWidgetView addWidgetView:CGRectMake(-4000, 400, 435, 121) toDestX:4000 animateType:MOVE_X withImage:name durcation:0 delay:0 ofType:WIDGET_SWIPING withMainViewFrame:CGRectMake(0,0, 435, 121) inView:self];
-    [widgets addObject:widget];
+    [self loadSwipingWidgets:index];
     
     [self initAnimationBackground:index];
     [self timerAnimation];
 }
 
 
+
+-(void)loadSwipingWidgets:(int)index
+{
+    NSString *pageName = [NSString stringWithFormat:@"page2_%d.json", index];
+    json_data = [AppJsonDataSource getPage:pageName];
+    
+    NSArray *objs = [json_data objectForKey:@"widget.swipings"];
+    for ( int i=0 ; i<[objs count]; i++ ) {
+        NSDictionary *obj = [objs objectAtIndex:i];
+        SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
+        [widgets addObject:widget];
+    }
+}
 
 
 - (void)swipeViewDidScroll:(SwipeView *)swipeView
@@ -91,17 +97,12 @@
 
 -(void) animationGroupShow
 {
-    SwipePageWidgetView *widget = [SwipePageWidgetView addWidgetView:CGRectMake(-681,200,681,70) toDestX:681 animateType:MOVE_X withImage:@"XSW_vacation_Golf_small_back" durcation:0.4 delay:0.f ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(-681,0,681,70) inView:self];
-    [widgets addObject:widget];
-    
-    widget = [SwipePageWidgetView addWidgetView:CGRectMake(-501,210,373,51) toDestX:680 animateType:MOVE_X withImage:@"XSW_vacation_Golf_small_writing" durcation:0.4f delay:0.05f  ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(-501,0,373,51) inView:self];
-    [widgets addObject:widget];
-    
-    widget = [SwipePageWidgetView addWidgetView:CGRectMake(1024,280,722,109) toDestX:-722 animateType:MOVE_X withImage:@"XSW_vacation_Golf_big_back" durcation:0.5f delay:0.2f ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(1024,0,722,109) inView:self];
-    [widgets addObject:widget];
-
-    widget = [SwipePageWidgetView addWidgetView:CGRectMake(1024,290,650,76) toDestX:-670 animateType:MOVE_X withImage:@"XSW_vacation_Golf_big_writing" durcation:0.5f delay:0.25f  ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(1024,0,650,76) inView:self];
-    [widgets addObject:widget];
+    NSArray *objs = [json_data objectForKey:@"widget.animations"];
+    for ( int i=0 ; i<[objs count]; i++ ) {
+        NSDictionary *obj = [objs objectAtIndex:i];
+        SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
+        [widgets addObject:widget];
+    }
 }
 
 
