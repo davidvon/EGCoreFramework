@@ -10,6 +10,9 @@
 #import "EGCore/SwipeView.h"
 #import "EGCore/JBKenBurnsView.h"
 
+#define WIDGET_ANIMATIONS  @"widget.animations"
+#define WIDGET_SWIPINGS    @"widget.swipings"
+
 @interface SwipePageView : UIView{
     KenBurnsView *kenView;
 }

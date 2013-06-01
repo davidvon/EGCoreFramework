@@ -94,7 +94,7 @@
     NSDictionary *app_data = [data objectFromJSONString];
     [json_datas setObject:app_data forKey:@"application"];
     
-    currentCatagory = 2;
+    currentCatagory = 1;
     return self;
 }
 
@@ -110,6 +110,20 @@
     }
     return 0;
 }
+
+
+-(int) getCategoryCountInJson
+{
+    NSDictionary *json_file_content =  [json_datas valueForKey:@"application"];
+    NSDictionary *obj = [json_file_content valueForKey:@"categories"];
+    if(obj){
+        int sum = [[obj valueForKey:@"sum"] integerValue];
+        NSLog(@"sum=%d", sum);
+        return sum;
+    }
+    return 0;
+}
+
 
 
 -(id) getPageInJson:(NSString*)pageName

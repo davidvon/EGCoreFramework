@@ -41,9 +41,10 @@
 }
 @property (nonatomic) int currentCatagory;
 
--(int)getWidgetCountInJson:(NSString*)pageName;
--(id) getPageInJson:(NSString*)pageName;
--(id) getWidgetFromPageInJson:(NSString*)widgetName fromPage:(NSString*)pageName;
+-(int) getCategoryCountInJson;
+-(int) getWidgetCountInJson:(NSString*)pageName;
+-(id)  getPageInJson:(NSString*)pageName;
+-(id)  getWidgetFromPageInJson:(NSString*)widgetName fromPage:(NSString*)pageName;
 +(AppDataSource*) instance;
 @end
 

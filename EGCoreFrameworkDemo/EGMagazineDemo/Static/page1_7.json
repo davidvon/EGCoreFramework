@@ -1,6 +1,7 @@
 {
     "title":"阳光里",
-    "background":"bg1.jpg",
+    "name":"清新系列", 
+    "background":"bg4.jpg",
     
     "widget.swipings":[
         {
@@ -58,7 +59,7 @@
             "position":{ "from":[1024,290,650,76], "to":{"x":"-670"}, "z":"1" },
             "duration":"0.5",
             "delay":"0.25",
-            "frame":[1024,0,650,76]
-        }                
+            "frame":[1024,0,650,76] 
+        }
     ]
 }

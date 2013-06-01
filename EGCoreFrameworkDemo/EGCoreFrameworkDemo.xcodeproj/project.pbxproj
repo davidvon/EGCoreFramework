@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD2A765A175387A100A7886A /* TestSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A7659175387A100A7886A /* TestSwipeViewController.m */; };
+		DD2A765A175387A100A7886A /* SwipePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A7659175387A100A7886A /* SwipePageViewController.m */; };
 		DD4DD6A21759E4E4005FBE14 /* Static in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A11759E4E4005FBE14 /* Static */; };
+		DD4DD6A9175A25CC005FBE14 /* bg1_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A6175A25CC005FBE14 /* bg1_1.jpg */; };
+		DD4DD6AA175A25CC005FBE14 /* bg1_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A7175A25CC005FBE14 /* bg1_2.jpg */; };
+		DD4DD6AB175A25CC005FBE14 /* bg1_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A8175A25CC005FBE14 /* bg1_3.jpg */; };
 		DDB6AAE817578D9F0093B05B /* SwipePageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB6AAE517578CDA0093B05B /* SwipePageWidgetView.m */; };
 		DDB6AAE917578DA00093B05B /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB6AAE317578CDA0093B05B /* SwipePageView.m */; };
 		DDB77288175207D0004A3004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB77287175207D0004A3004 /* UIKit.framework */; };
@@ -33,9 +36,6 @@
 		DDE693041759B37000C97CF0 /* wzall3.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E01759B37000C97CF0 /* wzall3.png */; };
 		DDE693051759B37000C97CF0 /* wzall4.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E11759B37000C97CF0 /* wzall4.png */; };
 		DDE693061759B37000C97CF0 /* XSW_vacation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E21759B37000C97CF0 /* XSW_vacation_back.png */; };
-		DDE693071759B37000C97CF0 /* XSW_vacation_big_view_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E31759B37000C97CF0 /* XSW_vacation_big_view_2.jpg */; };
-		DDE693081759B37000C97CF0 /* XSW_vacation_big_view_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E41759B37000C97CF0 /* XSW_vacation_big_view_3.jpg */; };
-		DDE693091759B37000C97CF0 /* XSW_vacation_bit_view_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E51759B37000C97CF0 /* XSW_vacation_bit_view_1.jpg */; };
 		DDE6930A1759B37000C97CF0 /* XSW_vacation_close_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E61759B37000C97CF0 /* XSW_vacation_close_btn.png */; };
 		DDE6930B1759B37000C97CF0 /* XSW_vacation_first_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E71759B37000C97CF0 /* XSW_vacation_first_1.png */; };
 		DDE6930C1759B37000C97CF0 /* XSW_vacation_first_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692E81759B37000C97CF0 /* XSW_vacation_first_2.png */; };
@@ -73,9 +73,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD2A7658175387A100A7886A /* TestSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSwipeViewController.h; sourceTree = "<group>"; };
-		DD2A7659175387A100A7886A /* TestSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSwipeViewController.m; sourceTree = "<group>"; };
+		DD2A7658175387A100A7886A /* SwipePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageViewController.h; sourceTree = "<group>"; };
+		DD2A7659175387A100A7886A /* SwipePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageViewController.m; sourceTree = "<group>"; };
 		DD4DD6A11759E4E4005FBE14 /* Static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Static; sourceTree = "<group>"; };
+		DD4DD6A6175A25CC005FBE14 /* bg1_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_1.jpg; sourceTree = "<group>"; };
+		DD4DD6A7175A25CC005FBE14 /* bg1_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_2.jpg; sourceTree = "<group>"; };
+		DD4DD6A8175A25CC005FBE14 /* bg1_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_3.jpg; sourceTree = "<group>"; };
 		DDB6AAE217578CDA0093B05B /* SwipePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageView.h; sourceTree = "<group>"; };
 		DDB6AAE317578CDA0093B05B /* SwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
 		DDB6AAE417578CDA0093B05B /* SwipePageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageWidgetView.h; sourceTree = "<group>"; };
@@ -109,9 +112,6 @@
 		DDE692E01759B37000C97CF0 /* wzall3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wzall3.png; sourceTree = "<group>"; };
 		DDE692E11759B37000C97CF0 /* wzall4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wzall4.png; sourceTree = "<group>"; };
 		DDE692E21759B37000C97CF0 /* XSW_vacation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XSW_vacation_back.png; sourceTree = "<group>"; };
-		DDE692E31759B37000C97CF0 /* XSW_vacation_big_view_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = XSW_vacation_big_view_2.jpg; sourceTree = "<group>"; };
-		DDE692E41759B37000C97CF0 /* XSW_vacation_big_view_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = XSW_vacation_big_view_3.jpg; sourceTree = "<group>"; };
-		DDE692E51759B37000C97CF0 /* XSW_vacation_bit_view_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = XSW_vacation_bit_view_1.jpg; sourceTree = "<group>"; };
 		DDE692E61759B37000C97CF0 /* XSW_vacation_close_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XSW_vacation_close_btn.png; sourceTree = "<group>"; };
 		DDE692E71759B37000C97CF0 /* XSW_vacation_first_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XSW_vacation_first_1.png; sourceTree = "<group>"; };
 		DDE692E81759B37000C97CF0 /* XSW_vacation_first_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XSW_vacation_first_2.png; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 				DDB77297175207D0004A3004 /* AppDelegate.m */,
 				DDB77320175234A6004A3004 /* TestAnimationViewController.h */,
 				DDB77321175234A6004A3004 /* TestAnimationViewController.m */,
-				DD2A7658175387A100A7886A /* TestSwipeViewController.h */,
-				DD2A7659175387A100A7886A /* TestSwipeViewController.m */,
+				DD2A7658175387A100A7886A /* SwipePageViewController.h */,
+				DD2A7659175387A100A7886A /* SwipePageViewController.m */,
 				DDC637F61756294A00975F99 /* TestReflection.h */,
 				DDC637F71756294A00975F99 /* TestReflection.m */,
 				DDB6AAE217578CDA0093B05B /* SwipePageView.h */,
@@ -243,14 +243,14 @@
 				DDE692DB1759B37000C97CF0 /* bg2.jpg */,
 				DDE692DC1759B37000C97CF0 /* bg3.jpg */,
 				DDE692DD1759B37000C97CF0 /* bg4.jpg */,
+				DD4DD6A6175A25CC005FBE14 /* bg1_1.jpg */,
+				DD4DD6A7175A25CC005FBE14 /* bg1_2.jpg */,
+				DD4DD6A8175A25CC005FBE14 /* bg1_3.jpg */,
 				DDE692DE1759B37000C97CF0 /* wzall1.png */,
 				DDE692DF1759B37000C97CF0 /* wzall2.png */,
 				DDE692E01759B37000C97CF0 /* wzall3.png */,
 				DDE692E11759B37000C97CF0 /* wzall4.png */,
 				DDE692E21759B37000C97CF0 /* XSW_vacation_back.png */,
-				DDE692E31759B37000C97CF0 /* XSW_vacation_big_view_2.jpg */,
-				DDE692E41759B37000C97CF0 /* XSW_vacation_big_view_3.jpg */,
-				DDE692E51759B37000C97CF0 /* XSW_vacation_bit_view_1.jpg */,
 				DDE692E61759B37000C97CF0 /* XSW_vacation_close_btn.png */,
 				DDE692E71759B37000C97CF0 /* XSW_vacation_first_1.png */,
 				DDE692E81759B37000C97CF0 /* XSW_vacation_first_2.png */,
@@ -358,9 +358,6 @@
 				DDE693041759B37000C97CF0 /* wzall3.png in Resources */,
 				DDE693051759B37000C97CF0 /* wzall4.png in Resources */,
 				DDE693061759B37000C97CF0 /* XSW_vacation_back.png in Resources */,
-				DDE693071759B37000C97CF0 /* XSW_vacation_big_view_2.jpg in Resources */,
-				DDE693081759B37000C97CF0 /* XSW_vacation_big_view_3.jpg in Resources */,
-				DDE693091759B37000C97CF0 /* XSW_vacation_bit_view_1.jpg in Resources */,
 				DDE6930A1759B37000C97CF0 /* XSW_vacation_close_btn.png in Resources */,
 				DDE6930B1759B37000C97CF0 /* XSW_vacation_first_1.png in Resources */,
 				DDE6930C1759B37000C97CF0 /* XSW_vacation_first_2.png in Resources */,
@@ -385,6 +382,9 @@
 				DDE6931F1759B37000C97CF0 /* XSW_vacation_water_small_back.png in Resources */,
 				DDE693201759B37000C97CF0 /* XSW_vacation_water_small_writing.png in Resources */,
 				DD4DD6A21759E4E4005FBE14 /* Static in Resources */,
+				DD4DD6A9175A25CC005FBE14 /* bg1_1.jpg in Resources */,
+				DD4DD6AA175A25CC005FBE14 /* bg1_2.jpg in Resources */,
+				DD4DD6AB175A25CC005FBE14 /* bg1_3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +398,7 @@
 				DDB77294175207D0004A3004 /* main.m in Sources */,
 				DDB77298175207D0004A3004 /* AppDelegate.m in Sources */,
 				DDB77322175234A7004A3004 /* TestAnimationViewController.m in Sources */,
-				DD2A765A175387A100A7886A /* TestSwipeViewController.m in Sources */,
+				DD2A765A175387A100A7886A /* SwipePageViewController.m in Sources */,
 				DDB6AAE917578DA00093B05B /* SwipePageView.m in Sources */,
 				DDB6AAE817578D9F0093B05B /* SwipePageWidgetView.m in Sources */,
 				DDC637F81756294A00975F99 /* TestReflection.m in Sources */,

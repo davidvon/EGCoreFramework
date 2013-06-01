@@ -1,5 +1,4 @@
 {
-   "pages.overall": { "sum":"2"},
-   "catagory1": { "name":"疯狂系列", "list":["page1_1","page1_2","page1_3"] },
-   "catagory2": { "name":"清新系列", "list":["page2_1","page2_2","page2_3","page2_4"] }
+   "categories": { "sum":"1"},
+   "catagory1": { "list":["page1_1","page1_2","page1_3","page1_4","page1_5","page1_6","page1_7"] }
 }

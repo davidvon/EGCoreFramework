@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TestAnimationViewController.h"
-#import "TestSwipeViewController.h"
+#import "SwipePageViewController.h"
 #import "TestReflection.h"
 #import "AppDataSource.h"
 
@@ -30,16 +30,16 @@
 
 -(void) testJson
 {
-    int sum = [[AppDataSource instance] getWidgetCountInJson:@"catagory2"];
-    NSLog(@"sum=%d", sum);
-    
-    NSDictionary *data = [[AppDataSource instance] getPageInJson:@"page2_1"];
-    NSLog(@"data=%@", data);
+//    int sum = [[AppDataSource instance] getPageCountInCategory:@"catagory2"];
+//    NSLog(@"sum=%d", sum);
+//    
+//    NSDictionary *data = [[AppDataSource instance] getPage:@"page2_1"];
+//    NSLog(@"data=%@", data);
 }
 
 -(void) testcase
 {
-    rootViewController = [[TestSwipeViewController alloc] init];
+    rootViewController = [[SwipePageViewController alloc] init];
 //  rootViewController = [[TestAnimationViewController alloc] init];
 //  rootViewController = [[TestReflectionView alloc] init];
     self.window.rootViewController = rootViewController;

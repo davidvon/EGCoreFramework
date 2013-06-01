@@ -52,7 +52,7 @@
     NSString *pageName = [NSString stringWithFormat:@"page%d_%d.json", catagory, index];
     json_data = [[AppDataSource instance] getPageInJson:pageName];
     
-    NSArray *objs = [json_data objectForKey:@"widget.swipings"];
+    NSArray *objs = [json_data objectForKey:WIDGET_SWIPINGS];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
         SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
@@ -97,7 +97,7 @@
 
 -(void) animationGroupShow
 {
-    NSArray *objs = [json_data objectForKey:@"widget.animations"];
+    NSArray *objs = [json_data objectForKey:WIDGET_ANIMATIONS];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
         SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];

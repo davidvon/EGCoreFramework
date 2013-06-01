@@ -1,21 +1,13 @@
 {
-    "title":"阳光里",
-    "background":"bg2.jpg",
+    "title":"青春期",
+    "category":"疯狂系列",
+    "background":"bg1_3.jpg",
     
     "widget.swipings":[
         {
-          "name":"swiping.1",
-          "type":"swiping", 
-          "image":"wzall1.png",
-          "position":{ "from":[4000,60,435,121], "to":{"x":"-3411"}, "z":"1" },
-          "duration":"0",
-          "delay":"0",
-          "frame":[0,0,435,121]
-        },
-        {
           "name":"swiping.2",
           "type":"swiping",
-          "image":"wzall2.png",
+          "image":"XSW_vacation_show_back.png",
           "position":{ "from":[-4000, 400, 435, 121], "to":{"x":"4000"}, "z":"1" },
           "duration":"0",
           "delay":"0",
@@ -24,11 +16,11 @@
     ],
         
     "widget.animations":[
-        {
+         {
             "name":"animation.1",
             "type":"animation",
-            "image":"XSW_vacation_Golf_small_back.png",
-            "position":{ "from":[-681,200,681,70], "to":{"x":"681"}, "z":"1" },
+            "image":"XSW_vacation_water_big_back.png",
+            "position":{ "from":[-681,200,722,109], "to":{"x":"681"}, "z":"1" },
             "duration":"0.4",
             "delay":"0",
             "frame":[-681,0,681,70]
@@ -36,8 +28,8 @@
         {
             "name":"animation.2",
             "type":"animation",
-            "image":"XSW_vacation_Golf_small_writing.png",
-            "position":{ "from":[-501,210,373,51], "to":{"x":"680"}, "z":"1" },
+            "image":"XSW_vacation_water_big_writing.png",
+            "position":{ "from":[-501,210,653,76], "to":{"x":"680"}, "z":"1" },
             "duration":"0.4",
             "delay":"0.05",
             "frame":[-501,0,373,51]
@@ -45,8 +37,8 @@
         {
             "name":"animation.3",
             "type":"animation",
-            "image":"XSW_vacation_Golf_big_back.png",
-            "position":{ "from":[1024,280,722,109], "to":{"x":"-722"}, "z":"1" },
+            "image":"XSW_vacation_mountain_big_back.png",
+            "position":{ "from":[1024,280,722,199], "to":{"x":"-722"}, "z":"1" },
             "duration":"0.5",
             "delay":"0.2",
             "frame":[1024,0,722,109]
@@ -54,11 +46,11 @@
         {
             "name":"animation.4",
             "type":"animation",
-            "image":"XSW_vacation_Golf_big_writing.png",
-            "position":{ "from":[1024,290,650,76], "to":{"x":"-670"}, "z":"1" },
+            "image":"XSW_vacation_mountain_big_writing.png",
+            "position":{ "from":[1024,290,653,166], "to":{"x":"-670"}, "z":"1" },
             "duration":"0.5",
             "delay":"0.25",
             "frame":[1024,0,650,76]
-        }         
+        }    
     ]
 }
