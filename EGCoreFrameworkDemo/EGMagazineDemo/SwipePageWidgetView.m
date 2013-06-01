@@ -32,6 +32,23 @@
 }
 
 
+- (void)toDestination:(NSDictionary *)to
+{
+    if( !to ) return;
+    NSString *tox = [to objectForKey:@"x"];
+    if( tox.length == 0 ){
+        NSString *toy = [to objectForKey:@"y"];
+        assert(toy.length > 0);
+        animationType = MOVE_Y;
+        destination = [toy integerValue];
+    } else {
+        animationType = MOVE_X;
+        destination = [tox integerValue];
+    }
+}
+
+
+
 - (id)initWithJsonDict: (NSDictionary *)dict
 {
     NSArray *frame = [dict objectForKey:@"frame"];
@@ -46,19 +63,8 @@
     imageview.frame   = [SwipePageWidgetView createCGRectByDict:from];
     [self addSubview:imageview];
     
-    NSDictionary *to  = [pos objectForKey:@"to"];
-    if( to ){
-        NSString *tox     = [to objectForKey:@"x"];
-        if( tox.length == 0 ){
-            NSString *toy = [to objectForKey:@"y"];
-            assert(toy.length > 0);
-            animationType = MOVE_Y;
-            destination = [toy integerValue];
-        } else {
-            animationType = MOVE_X;
-            destination = [tox integerValue];
-        }
-    }
+    
+    [self toDestination: [pos objectForKey:@"to"]];
     NSString *dur = [dict objectForKey:@"duration"];
     if(dur) duration = [dur floatValue];
     NSString *del = [dict objectForKey:@"delay"];
