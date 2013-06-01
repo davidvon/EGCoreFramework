@@ -47,18 +47,23 @@
     [self addSubview:imageview];
     
     NSDictionary *to  = [pos objectForKey:@"to"];
-    NSString *tox     = [to objectForKey:@"x"];
-    if( tox.length == 0 ){
-        NSString *toy = [to objectForKey:@"y"];
-        assert(toy.length > 0);
-        animationType = MOVE_Y;
-        destination = [toy integerValue];
-    } else {
-        animationType = MOVE_X;
-        destination = [tox integerValue];
+    if( to ){
+        NSString *tox     = [to objectForKey:@"x"];
+        if( tox.length == 0 ){
+            NSString *toy = [to objectForKey:@"y"];
+            assert(toy.length > 0);
+            animationType = MOVE_Y;
+            destination = [toy integerValue];
+        } else {
+            animationType = MOVE_X;
+            destination = [tox integerValue];
+        }
     }
-    duration = [[dict objectForKey:@"duration"] floatValue];
-    delay = [[dict objectForKey:@"delay"] floatValue];
+    NSString *dur = [dict objectForKey:@"duration"];
+    if(dur) duration = [dur floatValue];
+    NSString *del = [dict objectForKey:@"delay"];
+    if(del) delay = [del floatValue];
+    
     widgetType = [SwipePageWidgetView widgetTypeFromDict: dict];
     if( widgetType == WIDGET_ANIMATION || widgetType == WIDGET_ANIMATION_SWIPING ){
         [self animate];
@@ -85,7 +90,6 @@
 
 +(CGRect) createCGRectByDict:(NSArray*)dict
 {
-    assert(dict.count == 4);
     NSInteger x =  [[dict objectAtIndex:0] integerValue];
     NSInteger y =  [[dict objectAtIndex:1] integerValue];
     NSInteger w =  [[dict objectAtIndex:2] integerValue];
@@ -94,22 +98,25 @@
 }
 
 
+
 +(WidgetType) widgetTypeFromDict:(NSDictionary*)dict
 {
     NSString *type = [dict objectForKey:@"type"];
-    if( [type isEqualToString:@"swiping"])    return WIDGET_SWIPING;
-    if( [type isEqualToString:@"animation"] ) return WIDGET_ANIMATION;
+    if( [type isEqualToString:KEY_IMAGE])       return WIDGET_STATIC_IMAGE;
+    if( [type isEqualToString:KEY_SWIPIING])    return WIDGET_SWIPING;
+    if( [type isEqualToString:KEY_ANIMATION] )  return WIDGET_ANIMATION;
     return WIDGET_ANIMATION_SWIPING;
 }
 
 
 - (void)swipeViewDidScroll:(float)offset withIndex:(int) index
 {
-    if( widgetType == WIDGET_ANIMATION ) return;
-    CGRect rect = self.frame;
-    float val = offset - index;
-    rect.origin.x = destination- val*1000;
-    self.frame = rect;
+    if( widgetType == WIDGET_SWIPING || widgetType ==  WIDGET_ANIMATION_SWIPING ){
+        CGRect rect = self.frame;
+        float val = offset - index;
+        rect.origin.x = destination- val*1000;
+        self.frame = rect;
+    }
 //    NSLog(@"x=%f, offset=%f", rect.origin.x, offset );
 }
 

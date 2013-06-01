@@ -40,13 +40,15 @@
 -(void) resetContentWithIndex:(int)index
 {    
     [self clearExistingWidgets];
-    [self loadSwipingWidgets:index];    
+    [self loadStaticShowWidgets:index forKey:D_WIDGET_STATIC_IMAGE];
+    [self loadStaticShowWidgets:index forKey:D_WIDGET_SWIPINGS];
+    [self initAnimationBackground:json_data];    
     [self timerAnimation];
 }
 
 
 
--(void)loadSwipingWidgets:(int)index
+-(void)loadStaticShowWidgets:(int)index forKey:(NSString*)key
 {
     NSString *pageName = [[AppDataSource instance] getPageFileNameByIndex:index];
     if( pageName.length == 0 ) return;
@@ -55,14 +57,15 @@
     
     json_data = [[AppDataSource instance] getPage:filename];
     
-    NSArray *objs = [json_data objectForKey:WIDGET_SWIPINGS];
+    NSArray *objs = [json_data objectForKey:key];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
         SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
         [widgets addObject:widget];
     }
-    [self initAnimationBackground:json_data];    
 }
+
+
 
 
 - (void)swipeViewDidScroll:(SwipeView *)swipeView
@@ -100,7 +103,7 @@
 
 -(void) animationGroupShow
 {
-    NSArray *objs = [json_data objectForKey:WIDGET_ANIMATIONS];
+    NSArray *objs = [json_data objectForKey:D_WIDGET_ANIMATIONS];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
         SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];

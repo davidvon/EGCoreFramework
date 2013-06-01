@@ -7,20 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum {
-    WIDGET_SWIPING,
-    WIDGET_ANIMATION,
-    WIDGET_ANIMATION_SWIPING,
-}WidgetType;
-
-
-typedef enum {
-    MOVE_X,
-    MOVE_Y,
-}AnimationType;
-
-
+#import "SwipePageView.h"
 
 @interface SwipePageWidgetView : UIView{
     WidgetType widgetType;

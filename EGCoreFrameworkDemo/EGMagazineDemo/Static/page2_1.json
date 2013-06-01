@@ -3,6 +3,17 @@
     "name":"清新系列", 
     "background":"bg1.jpg",
     
+    "widget.static.image":[
+        {
+          "name":"static.1",
+          "type":"image", 
+          "image":"XSW_vacation_close_btn.png",
+          "position":{ "from":[0,0,64,64], "z":"1" },
+          "frame":[40,40,100,100]
+        }
+    ],
+
+    
     "widget.swipings":[
         {
           "name":"swiping.1",
