@@ -12,7 +12,7 @@
           "frame":[40,40,100,100],
           "perform":{
                "class":"TestAnimationViewController",
-               "function":"reflectionFunction",
+               "function":"reflectionFunction"
            }
         }
     ],

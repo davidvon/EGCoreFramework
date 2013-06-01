@@ -17,7 +17,7 @@
     float delay;
 }
 @property (nonatomic, strong) NSString *name;
-
+@property (nonatomic, strong) NSDictionary *reflectionInfo;
 
 
 - (id)initWithParams:(CGRect)widgetFrame dest:(int)xy animateType:(AnimationType)atype image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype;

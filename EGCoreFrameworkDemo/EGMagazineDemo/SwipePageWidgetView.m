@@ -8,9 +8,11 @@
 
 #import "SwipePageWidgetView.h"
 #import "EGCore/EGBasicAnimation.h"
+#import "EGCore/EGReflection.h"
 #import "AppDataSource.h"
 
 @implementation SwipePageWidgetView
+@synthesize reflectionInfo;
 
 - (id)initWithParams:(CGRect)widgetFrame dest:(int)xy animateType:(AnimationType)atype image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype
 {
@@ -48,6 +50,26 @@
 }
 
 
+-(BOOL) addImagePerfrom:(NSString*)image withFrame:(CGRect)frame withDict:(NSDictionary *)dict
+{
+    reflectionInfo = [dict objectForKey:@"perform"];
+    if( !reflectionInfo ) return FALSE;
+    UIButton *button = [Constant addButton:frame withImage:image inView:self];
+    [button addTarget:self action:@selector(reflection) forControlEvents:UIControlEventTouchUpInside];
+    return TRUE;
+}
+
+
+
+-(void) reflection
+{
+    NSString *class = [reflectionInfo objectForKey:@"class"];
+    NSString *func  = [reflectionInfo objectForKey:@"function"];
+    NSDictionary *param = [reflectionInfo objectForKey:@"parameters"];
+    [EGReflection performSelector:func ofClass:class withParam:param];
+}
+
+
 
 - (id)initWithJsonDict: (NSDictionary *)dict
 {
@@ -57,12 +79,15 @@
     
     self.name =  [dict objectForKey:@"name"];
     NSString *image = [dict objectForKey:@"image"];
-    UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
     NSDictionary *pos = [dict objectForKey:@"position"];
     NSArray *from     = [pos objectForKey:@"from"];
-    imageview.frame   = [SwipePageWidgetView createCGRectByDict:from];
-    [self addSubview:imageview];
-    
+    CGRect imageFrame   = [SwipePageWidgetView createCGRectByDict:from];
+    bool isExist = [self addImagePerfrom:image withFrame:imageFrame withDict:dict];
+    if( !isExist ){
+        UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
+        imageview.frame = imageFrame;
+        [self addSubview:imageview];
+    }
     
     [self toDestination: [pos objectForKey:@"to"]];
     NSString *dur = [dict objectForKey:@"duration"];

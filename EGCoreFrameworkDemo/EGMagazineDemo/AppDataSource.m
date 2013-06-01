@@ -126,7 +126,7 @@
         NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Static"] stringByAppendingPathComponent:pageName];
         NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
         json_file_content = [data objectFromJSONString];
-        [json_datas setObject:json_file_content forKey:pageName];
+        if(json_file_content) [json_datas setObject:json_file_content forKey:pageName];
     }
     return json_file_content;
 }
