@@ -8,7 +8,7 @@
 #import "SwipePageView.h"
 #import "SwipePageWidgetView.h"
 #import "EGCore/EGBasicAnimation.h"
-#import "Constant.h"
+#import "AppDataSource.h"
 
 
 @implementation SwipePageView
@@ -40,9 +40,7 @@
 -(void) resetContentWithIndex:(int)index
 {    
     [self clearExistingWidgets];
-    [self loadSwipingWidgets:index];
-    
-    [self initAnimationBackground:index];
+    [self loadSwipingWidgets:index];    
     [self timerAnimation];
 }
 
@@ -51,7 +49,7 @@
 -(void)loadSwipingWidgets:(int)index
 {
     NSString *pageName = [NSString stringWithFormat:@"page2_%d.json", index];
-    json_data = [AppJsonDataSource getPage:pageName];
+    json_data = [[AppDataSource instance] getPageInJson:pageName];
     
     NSArray *objs = [json_data objectForKey:@"widget.swipings"];
     for ( int i=0 ; i<[objs count]; i++ ) {
@@ -59,6 +57,7 @@
         SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
         [widgets addObject:widget];
     }
+    [self initAnimationBackground:json_data];    
 }
 
 
@@ -106,10 +105,10 @@
 }
 
 
--(void)initAnimationBackground:(int)index
+-(void)initAnimationBackground:(NSDictionary*)dict
 {
-    NSString *name = [NSString stringWithFormat:@"bg%d.jpg", index];
-    NSArray *myImages = [NSArray arrayWithObjects:[UIImage imageNamed:name], nil];
+    NSString *bg = [dict objectForKey:@"background"];
+    NSArray *myImages = [NSArray arrayWithObjects:[UIImage imageNamed:bg], nil];
     [kenView animateWithImages:myImages transitionDuration:60 loop:YES isLandscape:YES];
 }
 

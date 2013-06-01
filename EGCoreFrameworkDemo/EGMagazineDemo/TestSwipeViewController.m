@@ -9,6 +9,8 @@
 #import "TestSwipeViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SwipePageView.h"
+#import "AppDataSource.h"
+
 
 @implementation TestSwipeViewController
 @synthesize swipe,datasource;
@@ -58,7 +60,7 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    return 4;
+    return [[AppDataSource instance] getWidgetCountInJson:@"page2"];
 }
 
 
@@ -74,9 +76,8 @@
         }
     } else {
         [(SwipePageView*)view resetContentWithIndex:index+1 ];        
-    }
-    
-    NSLog(@"index=%d, view=%@", index, view);
+    }    
+//    NSLog(@"index=%d, view=%@", index, view);
     return view;
 }
 

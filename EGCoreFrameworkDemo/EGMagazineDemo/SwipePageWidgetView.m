@@ -8,7 +8,7 @@
 
 #import "SwipePageWidgetView.h"
 #import "EGCore/EGBasicAnimation.h"
-#import "Constant.h"
+#import "AppDataSource.h"
 
 @implementation SwipePageWidgetView
 
@@ -59,13 +59,12 @@
     }
     duration = [[dict objectForKey:@"duration"] floatValue];
     delay = [[dict objectForKey:@"delay"] floatValue];
-    widgetType = [self widgetTypeFromDict: dict];
+    widgetType = [SwipePageWidgetView widgetTypeFromDict: dict];
     if( widgetType == WIDGET_ANIMATION || widgetType == WIDGET_ANIMATION_SWIPING ){
         [self animate];
     }
     return self;
 }
-
 
 
 +(SwipePageWidgetView*) addWidgetView:(CGRect)widgetFrame toDestX:(int)x animateType:(AnimationType)atype withImage:(NSString*)image durcation:(float)dur delay:(float)time ofType:(WidgetType)type withMainViewFrame:(CGRect)mainFrame inView:(UIView *)view
@@ -95,7 +94,7 @@
 }
 
 
--(WidgetType) widgetTypeFromDict:(NSDictionary*)dict
++(WidgetType) widgetTypeFromDict:(NSDictionary*)dict
 {
     NSString *type = [dict objectForKey:@"type"];
     if( [type isEqualToString:@"swiping"])    return WIDGET_SWIPING;

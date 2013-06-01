@@ -10,7 +10,7 @@
 #import "TestAnimationViewController.h"
 #import "TestSwipeViewController.h"
 #import "TestReflection.h"
-#import "Constant.h"
+#import "AppDataSource.h"
 
 @implementation AppDelegate
 @synthesize rootViewController;
@@ -30,10 +30,10 @@
 
 -(void) testJson
 {
-    int sum = [AppJsonDataSource getWidgetCount:@"page2"];
+    int sum = [[AppDataSource instance] getWidgetCountInJson:@"page2"];
     NSLog(@"sum=%d", sum);
     
-    NSDictionary *data = [AppJsonDataSource getPage:@"page2_1"];
+    NSDictionary *data = [[AppDataSource instance] getPageInJson:@"page2_1"];
     NSLog(@"data=%@", data);
 }
 
