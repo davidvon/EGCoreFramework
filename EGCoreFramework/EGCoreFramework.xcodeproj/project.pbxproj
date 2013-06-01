@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD87B6131759D33A000E4F0C /* Harpy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60A1759D33A000E4F0C /* Harpy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD87B6141759D33A000E4F0C /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87B60B1759D33A000E4F0C /* Harpy.m */; };
+		DD87B6151759D33A000E4F0C /* HarpyConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60C1759D33A000E4F0C /* HarpyConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD87B6161759D33A000E4F0C /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60E1759D33A000E4F0C /* JSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD87B6171759D33A000E4F0C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87B60F1759D33A000E4F0C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DD87B6181759D33A000E4F0C /* EGReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B6111759D33A000E4F0C /* EGReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD87B6191759D33A000E4F0C /* EGReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87B6121759D33A000E4F0C /* EGReflection.m */; };
 		DDB7734D1752436F004A3004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDB7734B1752436F004A3004 /* InfoPlist.strings */; };
-		DDB7735317524424004A3004 /* EGReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7731917522D9A004A3004 /* EGReflection.m */; };
 		DDB7735417524426004A3004 /* EGBasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB772FA17520DE3004A3004 /* EGBasicAnimation.m */; };
-		DDB7736317524A88004A3004 /* EGReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB7731817522D9A004A3004 /* EGReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDB7736417524A8A004A3004 /* EGBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB772F917520DE3004A3004 /* EGBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637EC1756240300975F99 /* JBKenBurnsView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC637E71756240300975F99 /* JBKenBurnsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637ED1756240300975F99 /* JBKenBurnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637E81756240300975F99 /* JBKenBurnsView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -21,13 +26,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD87B60A1759D33A000E4F0C /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
+		DD87B60B1759D33A000E4F0C /* Harpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Harpy.m; sourceTree = "<group>"; };
+		DD87B60C1759D33A000E4F0C /* HarpyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarpyConstants.h; sourceTree = "<group>"; };
+		DD87B60E1759D33A000E4F0C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		DD87B60F1759D33A000E4F0C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		DD87B6111759D33A000E4F0C /* EGReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGReflection.h; sourceTree = "<group>"; };
+		DD87B6121759D33A000E4F0C /* EGReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGReflection.m; sourceTree = "<group>"; };
 		DDB772C217520BCC004A3004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDB772F917520DE3004A3004 /* EGBasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGBasicAnimation.h; path = Animation/EGBasicAnimation.h; sourceTree = "<group>"; };
 		DDB772FA17520DE3004A3004 /* EGBasicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGBasicAnimation.m; path = Animation/EGBasicAnimation.m; sourceTree = "<group>"; };
 		DDB772FC17520E1E004A3004 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DDB772FE17520E49004A3004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DDB7731817522D9A004A3004 /* EGReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGReflection.h; path = Reflection/EGReflection.h; sourceTree = "<group>"; };
-		DDB7731917522D9A004A3004 /* EGReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGReflection.m; path = Reflection/EGReflection.m; sourceTree = "<group>"; };
 		DDB773461752436F004A3004 /* EGCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB7734A1752436F004A3004 /* EGCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EGCore-Info.plist"; sourceTree = "<group>"; };
 		DDB7734C1752436F004A3004 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -38,7 +48,6 @@
 		DDC637EB1756240300975F99 /* PocketSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketSVG.m; sourceTree = "<group>"; };
 		DDC637F21756241000975F99 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		DDC637F31756241000975F99 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
-		DDC6380017562EE800975F99 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +61,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD87B6081759D33A000E4F0C /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				DD87B6091759D33A000E4F0C /* Harpy */,
+				DD87B60D1759D33A000E4F0C /* JSONKit */,
+				DD87B6101759D33A000E4F0C /* Reflection */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		DD87B6091759D33A000E4F0C /* Harpy */ = {
+			isa = PBXGroup;
+			children = (
+				DD87B60A1759D33A000E4F0C /* Harpy.h */,
+				DD87B60B1759D33A000E4F0C /* Harpy.m */,
+				DD87B60C1759D33A000E4F0C /* HarpyConstants.h */,
+			);
+			path = Harpy;
+			sourceTree = "<group>";
+		};
+		DD87B60D1759D33A000E4F0C /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				DD87B60E1759D33A000E4F0C /* JSONKit.h */,
+				DD87B60F1759D33A000E4F0C /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		DD87B6101759D33A000E4F0C /* Reflection */ = {
+			isa = PBXGroup;
+			children = (
+				DD87B6111759D33A000E4F0C /* EGReflection.h */,
+				DD87B6121759D33A000E4F0C /* EGReflection.m */,
+			);
+			path = Reflection;
+			sourceTree = "<group>";
+		};
 		DDB772B617520BCC004A3004 = {
 			isa = PBXGroup;
 			children = (
+				DD87B6081759D33A000E4F0C /* Foundation */,
 				DDC637F01756241000975F99 /* Touch */,
 				DDC637E51756240300975F99 /* Image */,
 				DDB772F817520DD2004A3004 /* Animation */,
-				DDB7731717522B9D004A3004 /* Reflection */,
 				DDB773491752436F004A3004 /* Supporting Files */,
 				DDB772C117520BCC004A3004 /* Frameworks */,
 				DDB772C017520BCC004A3004 /* Products */,
@@ -79,7 +126,6 @@
 				DDB772FE17520E49004A3004 /* UIKit.framework */,
 				DDB772FC17520E1E004A3004 /* QuartzCore.framework */,
 				DDB772C217520BCC004A3004 /* Foundation.framework */,
-				DDC6380017562EE800975F99 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,15 +137,6 @@
 				DDB772FA17520DE3004A3004 /* EGBasicAnimation.m */,
 			);
 			name = Animation;
-			sourceTree = "<group>";
-		};
-		DDB7731717522B9D004A3004 /* Reflection */ = {
-			isa = PBXGroup;
-			children = (
-				DDB7731817522D9A004A3004 /* EGReflection.h */,
-				DDB7731917522D9A004A3004 /* EGReflection.m */,
-			);
-			name = Reflection;
 			sourceTree = "<group>";
 		};
 		DDB773491752436F004A3004 /* Supporting Files */ = {
@@ -164,10 +201,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB7736317524A88004A3004 /* EGReflection.h in Headers */,
 				DDB7736417524A8A004A3004 /* EGBasicAnimation.h in Headers */,
 				DDC637EC1756240300975F99 /* JBKenBurnsView.h in Headers */,
 				DDC637EE1756240300975F99 /* PocketSVG.h in Headers */,
+				DD87B6131759D33A000E4F0C /* Harpy.h in Headers */,
+				DD87B6151759D33A000E4F0C /* HarpyConstants.h in Headers */,
+				DD87B6161759D33A000E4F0C /* JSONKit.h in Headers */,
+				DD87B6181759D33A000E4F0C /* EGReflection.h in Headers */,
 				DDC637F41756241000975F99 /* SwipeView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,11 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB7735317524424004A3004 /* EGReflection.m in Sources */,
 				DDB7735417524426004A3004 /* EGBasicAnimation.m in Sources */,
 				DDC637ED1756240300975F99 /* JBKenBurnsView.m in Sources */,
 				DDC637EF1756240300975F99 /* PocketSVG.m in Sources */,
 				DDC637F51756241000975F99 /* SwipeView.m in Sources */,
+				DD87B6141759D33A000E4F0C /* Harpy.m in Sources */,
+				DD87B6171759D33A000E4F0C /* JSONKit.m in Sources */,
+				DD87B6191759D33A000E4F0C /* EGReflection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

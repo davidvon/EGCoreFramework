@@ -10,6 +10,7 @@
 #import "TestAnimationViewController.h"
 #import "TestSwipeViewController.h"
 #import "TestReflection.h"
+#import "Constant.h"
 
 @implementation AppDelegate
 @synthesize rootViewController;
@@ -20,16 +21,27 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    [self testcase];
+//    [self testJson];
+  [self testcase];
     
     return YES;
+}
+
+
+-(void) testJson
+{
+    int sum = [AppJsonDataSource getWidgetCount:@"page2"];
+    NSLog(@"sum=%d", sum);
+    
+    NSDictionary *data = [AppJsonDataSource getPage:@"page2_1"];
+    NSLog(@"data=%@", data);
 }
 
 -(void) testcase
 {
     rootViewController = [[TestSwipeViewController alloc] init];
-//    rootViewController = [[TestAnimationViewController alloc] init];
-//    rootViewController = [[TestReflectionView alloc] init];
+//  rootViewController = [[TestAnimationViewController alloc] init];
+//  rootViewController = [[TestReflectionView alloc] init];
     self.window.rootViewController = rootViewController;
 }
 
