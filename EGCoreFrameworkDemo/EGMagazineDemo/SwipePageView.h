@@ -16,7 +16,6 @@
 
 @property (nonatomic) int pos;
 @property (nonatomic, strong) NSMutableArray *widgets;
-@property (nonatomic, strong) NSMutableArray *animationImages;
 
 - (void) resetContentWithIndex:(int)index;
 - (void) swipeViewDidScroll:(SwipeView *)swipeView;

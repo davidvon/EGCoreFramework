@@ -12,7 +12,7 @@
 
 
 @implementation SwipePageView
-@synthesize pos, widgets, animationImages;
+@synthesize pos, widgets;
 
 - (id)init
 {
@@ -21,7 +21,6 @@
         self.frame = CGRectMake(0, 0, 1024, 768);
         widgets = [[NSMutableArray alloc] init];
         kenView = [[KenBurnsView alloc] initWithFrame:CGRectMake(0,0,1024,768)];
-        animationImages = [[NSMutableArray alloc] init];
         [self addSubview:kenView];
     }
     return self;
@@ -69,13 +68,7 @@
 
 
 -(void)timerAnimation
-{
-    for( int i=0; i<animationImages.count; i++){
-        UIView *view = [animationImages objectAtIndex:i];
-        [view removeFromSuperview];
-    }
-    [animationImages removeAllObjects];
-    
+{    
     [NSTimer scheduledTimerWithTimeInterval:(0.5) target:self selector:@selector(animationShowByThread) userInfo:nil repeats:NO];
 }
 
@@ -109,16 +102,16 @@
 -(void) animationGroupShow
 {
     SwipePageWidgetView *widget = [self addWidgetView:CGRectMake(-681,200,681,70) toDestX:681 withImage:@"XSW_vacation_Golf_small_back" durcation:0.4 delay:0.f ofType:WIDGET_ANIMATION inView:self];
-    [animationImages addObject:widget];
+    [widgets addObject:widget];
     
-    widget = [self addWidgetView:CGRectMake(-501,210,373,51) toDestX:680 withImage:@"XSW_vacation_Golf_small_writing" durcation:0.4f delay:0.1f  ofType:WIDGET_ANIMATION inView:self];
-    [animationImages addObject:widget];
+    widget = [self addWidgetView:CGRectMake(-501,210,373,51) toDestX:680 withImage:@"XSW_vacation_Golf_small_writing" durcation:0.4f delay:0.05f  ofType:WIDGET_ANIMATION inView:self];
+    [widgets addObject:widget];
     
     widget = [self addWidgetView:CGRectMake(1024,280,722,109) toDestX:-722 withImage:@"XSW_vacation_Golf_big_back" durcation:0.5f delay:0.2f ofType:WIDGET_ANIMATION inView:self];
-    [animationImages addObject:widget];
+    [widgets addObject:widget];
 
     widget = [self addWidgetView:CGRectMake(1024,290,650,76) toDestX:-670 withImage:@"XSW_vacation_Golf_big_writing" durcation:0.5f delay:0.25f  ofType:WIDGET_ANIMATION inView:self];
-    [animationImages addObject:widget];
+    [widgets addObject:widget];
 }
 
 

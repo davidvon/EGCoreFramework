@@ -61,7 +61,7 @@
         destinationX = params.destinationX;
         durnation = params.durnation;
         delay = params.delay;
-        if( type == WIDGET_ANIMATION){
+        if( type == WIDGET_ANIMATION || type == WIDGET_ANIMATION_SWIPING ){
             [self animate];
         }
     }

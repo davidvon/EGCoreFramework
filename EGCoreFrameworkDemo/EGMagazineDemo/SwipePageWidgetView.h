@@ -11,6 +11,7 @@
 typedef enum {
     WIDGET_SWIPING,
     WIDGET_ANIMATION,
+    WIDGET_ANIMATION_SWIPING,
 }WidgetType;
 
 

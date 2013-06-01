@@ -70,11 +70,13 @@
         if( !view ){
             view =[[SwipePageView alloc] init];
             [datasource setObject:view forKey:[NSNumber numberWithInteger:index]];
+            [(SwipePageView*)view resetContentWithIndex:index+1 ];
         }
+    } else {
+        [(SwipePageView*)view resetContentWithIndex:index+1 ];        
     }
-    [(SwipePageView*)view resetContentWithIndex:index+1 ];
     
-    NSLog(@"view=%@",view);
+    NSLog(@"index=%d, view=%@", index, view);
     return view;
 }
 
@@ -86,11 +88,6 @@
 }
 
 
-- (void)swipeViewDidEndDragging:(SwipeView *)swipeView willDecelerate:(BOOL)decelerate
-{
-//    SwipePageView *cell = (SwipePageView *)[swipeView currentItemView];
-//    [cell swipeViewDidEndDragging:swipeView];
-}
 
 
 @end
