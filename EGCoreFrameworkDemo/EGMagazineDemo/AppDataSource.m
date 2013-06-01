@@ -83,6 +83,8 @@
 
 
 @implementation AppDataSource
+@synthesize currentCatagory;
+
 -(id) init {
     self = [super init];
     json_datas = [[NSMutableDictionary alloc] init];
@@ -91,6 +93,8 @@
     NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     NSDictionary *app_data = [data objectFromJSONString];
     [json_datas setObject:app_data forKey:@"application"];
+    
+    currentCatagory = 2;
     return self;
 }
 

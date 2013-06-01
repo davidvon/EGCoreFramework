@@ -39,6 +39,7 @@
 @interface AppDataSource : NSObject{
     NSMutableDictionary *json_datas;
 }
+@property (nonatomic) int currentCatagory;
 
 -(int)getWidgetCountInJson:(NSString*)pageName;
 -(id) getPageInJson:(NSString*)pageName;

@@ -30,7 +30,7 @@
 
 -(void) testJson
 {
-    int sum = [[AppDataSource instance] getWidgetCountInJson:@"page2"];
+    int sum = [[AppDataSource instance] getWidgetCountInJson:@"catagory2"];
     NSLog(@"sum=%d", sum);
     
     NSDictionary *data = [[AppDataSource instance] getPageInJson:@"page2_1"];

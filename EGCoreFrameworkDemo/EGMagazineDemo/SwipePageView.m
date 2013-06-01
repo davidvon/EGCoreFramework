@@ -48,7 +48,8 @@
 
 -(void)loadSwipingWidgets:(int)index
 {
-    NSString *pageName = [NSString stringWithFormat:@"page2_%d.json", index];
+    int catagory = [[AppDataSource instance] currentCatagory];
+    NSString *pageName = [NSString stringWithFormat:@"page%d_%d.json", catagory, index];
     json_data = [[AppDataSource instance] getPageInJson:pageName];
     
     NSArray *objs = [json_data objectForKey:@"widget.swipings"];

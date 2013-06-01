@@ -60,7 +60,9 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    return [[AppDataSource instance] getWidgetCountInJson:@"page2"];
+    int catagory = [[AppDataSource instance] currentCatagory];
+    NSString *catagoryName = [NSString stringWithFormat:@"catagory%d", catagory];
+    return [[AppDataSource instance] getWidgetCountInJson:catagoryName];
 }
 
 
