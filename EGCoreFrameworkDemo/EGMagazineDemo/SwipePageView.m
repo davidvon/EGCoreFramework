@@ -27,28 +27,28 @@
 }
 
 
-
--(void) resetContentWithIndex:(int)index
+-(void) clearExistingWidgets
 {
     for( int i=0; i<widgets.count; i++){
         SwipePageWidgetView *view = [widgets objectAtIndex:i];
         [view removeFromSuperview];
     }
     [widgets removeAllObjects];
+}
+
+
+-(void) resetContentWithIndex:(int)index
+{    
+    [self clearExistingWidgets];
     
     
     NSString *name = [NSString stringWithFormat:@"wzall%d", index];
-    WidgetParams *params = [[WidgetParams alloc] initWithParams:CGRectMake(4000, 100, 435, 121) destX:-4000+1024-435 image:name durnation:0 delay:0];
+    SwipePageWidgetView *widget = [self addWidgetView:CGRectMake(4000, 60, 435, 121) toDestX:-4000+1024-435 withImage:name durcation:0 delay:0 ofType:WIDGET_SWIPING withMainViewFrame:CGRectMake(0,0, 435, 121) inView:self];
+    [widgets addObject:widget];
     
-    SwipePageWidgetView *widget = [[SwipePageWidgetView alloc] initWithParams:params withFrame:CGRectMake(0,0, 435, 121) ofType:WIDGET_SWIPING];
-    [widgets addObject:widget];
-    [self addSubview:widget];
-
     name = [NSString stringWithFormat:@"wzall%d", 2];
-    params = [[WidgetParams alloc] initWithParams:CGRectMake(-4000, 300, 435, 121) destX:4000 image:name durnation:0 delay:0];
-    widget = [[SwipePageWidgetView alloc] initWithParams:params withFrame:CGRectMake(0,0, 435, 121) ofType:WIDGET_SWIPING];
+    widget = [self addWidgetView:CGRectMake(-4000, 400, 435, 121) toDestX:4000 withImage:name durcation:0 delay:0 ofType:WIDGET_SWIPING withMainViewFrame:CGRectMake(0,0, 435, 121) inView:self];
     [widgets addObject:widget];
-    [self addSubview:widget];
     
     [self initAnimationBackground:index];
     [self timerAnimation];
@@ -89,11 +89,9 @@
 }
 
 
--(SwipePageWidgetView*) addWidgetView:(CGRect)rect toDestX:(int)x withImage:(NSString*)image durcation:(float)dur delay:(float)time ofType:(WidgetType)type inView:(UIView *)view
+-(SwipePageWidgetView*) addWidgetView:(CGRect)widgetFrame toDestX:(int)x withImage:(NSString*)image durcation:(float)dur delay:(float)time ofType:(WidgetType)type withMainViewFrame:(CGRect)mainFrame inView:(UIView *)view
 {
-    WidgetParams *params = [[WidgetParams alloc] initWithParams:rect destX:x image:image durnation:dur delay:time];
-    CGRect viewRect = CGRectMake(rect.origin.x, 0, rect.size.width, rect.size.height);
-    SwipePageWidgetView *widget = [[SwipePageWidgetView alloc] initWithParams:params withFrame:viewRect ofType:type ];
+    SwipePageWidgetView *widget = [[SwipePageWidgetView alloc] initWithParams:widgetFrame destX:x image:image durnation:dur delay:time withMainViewFrame:mainFrame ofType:type];
     [view addSubview:widget];
     return widget;
 }
@@ -101,16 +99,16 @@
 
 -(void) animationGroupShow
 {
-    SwipePageWidgetView *widget = [self addWidgetView:CGRectMake(-681,200,681,70) toDestX:681 withImage:@"XSW_vacation_Golf_small_back" durcation:0.4 delay:0.f ofType:WIDGET_ANIMATION inView:self];
+    SwipePageWidgetView *widget = [self addWidgetView:CGRectMake(-681,200,681,70) toDestX:681 withImage:@"XSW_vacation_Golf_small_back" durcation:0.4 delay:0.f ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(-681,0,681,70) inView:self];
     [widgets addObject:widget];
     
-    widget = [self addWidgetView:CGRectMake(-501,210,373,51) toDestX:680 withImage:@"XSW_vacation_Golf_small_writing" durcation:0.4f delay:0.05f  ofType:WIDGET_ANIMATION inView:self];
+    widget = [self addWidgetView:CGRectMake(-501,210,373,51) toDestX:680 withImage:@"XSW_vacation_Golf_small_writing" durcation:0.4f delay:0.05f  ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(-501,0,373,51) inView:self];
     [widgets addObject:widget];
     
-    widget = [self addWidgetView:CGRectMake(1024,280,722,109) toDestX:-722 withImage:@"XSW_vacation_Golf_big_back" durcation:0.5f delay:0.2f ofType:WIDGET_ANIMATION inView:self];
+    widget = [self addWidgetView:CGRectMake(1024,280,722,109) toDestX:-722 withImage:@"XSW_vacation_Golf_big_back" durcation:0.5f delay:0.2f ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(1024,0,722,109) inView:self];
     [widgets addObject:widget];
 
-    widget = [self addWidgetView:CGRectMake(1024,290,650,76) toDestX:-670 withImage:@"XSW_vacation_Golf_big_writing" durcation:0.5f delay:0.25f  ofType:WIDGET_ANIMATION inView:self];
+    widget = [self addWidgetView:CGRectMake(1024,290,650,76) toDestX:-670 withImage:@"XSW_vacation_Golf_big_writing" durcation:0.5f delay:0.25f  ofType:WIDGET_ANIMATION withMainViewFrame:CGRectMake(1024,0,650,76) inView:self];
     [widgets addObject:widget];
 }
 

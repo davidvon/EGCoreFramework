@@ -41,7 +41,8 @@ typedef enum {
 @property (nonatomic) float durnation;
 @property (nonatomic) float delay;
 
-- (id)initWithParams:(WidgetParams*)params withFrame:(CGRect)frame ofType:(WidgetType)type;
+- (id)initWithParams:(CGRect)widgetFrame destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)type;
+
 - (void)swipeViewDidScroll:(float)offset withIndex:(int) index;
 @end
 

@@ -1,6 +1,6 @@
 //
 //  SwipePageView.h
-//  DishOrder
+//  EGCoreFrameworkDemo
 //
 //  Created by feng guanhua on 13-5-5.
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.

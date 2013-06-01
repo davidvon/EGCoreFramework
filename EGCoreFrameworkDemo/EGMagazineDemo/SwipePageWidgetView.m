@@ -46,21 +46,17 @@
 @synthesize imageViewLists, destinationX, durnation, delay;
 ;
 
-- (id)initWithParams:(WidgetParams*)params withFrame:(CGRect)frame ofType:(WidgetType)type
+- (id)initWithParams:(CGRect)widgetFrame destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)type
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithFrame:mainFrame];
     if (self) {
-        for( int i=0; i<params.imagelist.count; i++ ){
-            WidgetImage *widgetImage = (WidgetImage*)[params.imagelist objectAtIndex:i];
-            NSString *name = widgetImage.image;
-            UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:name]];
-            imageview.frame = widgetImage.frame;
-            [self addSubview:imageview];
-        }
+        UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:name]];
+        imageview.frame = widgetFrame;
+        [self addSubview:imageview];
         widgetType = type;
-        destinationX = params.destinationX;
-        durnation = params.durnation;
-        delay = params.delay;
+        destinationX = x;
+        durnation = dur;
+        delay = del;
         if( type == WIDGET_ANIMATION || type == WIDGET_ANIMATION_SWIPING ){
             [self animate];
         }
