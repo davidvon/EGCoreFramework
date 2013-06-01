@@ -9,42 +9,10 @@
 #import "SwipePageWidgetView.h"
 #import "EGCore/EGBasicAnimation.h"
 
-@implementation WidgetImage
-@synthesize image, frame;
-@end
-
-@implementation WidgetParams
-@synthesize imagelist, durnation, destinationX, delay;
--(id) initWithParams:(CGRect)rect destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)del
-{
-    self = [super init];
-    self.destinationX = x;
-    WidgetImage *image = [[WidgetImage alloc] init];
-    image.image = name;
-    image.frame = rect;
-    self.imagelist = [[NSArray alloc] initWithObjects:image,nil];
-    self.durnation = dur;
-    self.delay = del;
-    return self;
-}
-
-
--(id) initWithParams:(NSArray*)images destX:(int)x durnation:(float)dur delay:(float)del
-{
-    self = [super init];
-    self.destinationX = x;
-    self.imagelist = images;
-    self.durnation = dur;
-    self.delay = del;
-    return self;
-}
-
-@end
-
 
 @implementation SwipePageWidgetView
 @synthesize imageViewLists, destinationX, durnation, delay;
-;
+
 
 - (id)initWithParams:(CGRect)widgetFrame destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)type
 {

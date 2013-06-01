@@ -20,17 +20,6 @@ typedef enum {
 @property (nonatomic) CGRect frame;
 @end
 
-@interface WidgetParams: NSObject
-@property (nonatomic, strong) NSArray *imagelist;
-@property (nonatomic) float durnation;
-@property (nonatomic) float delay;
-@property (nonatomic) int destinationX;
-
--(id) initWithParams:(CGRect)rect destX:(int)x image:(NSString*)name durnation:(float)dur delay:(float)del;
--(id) initWithParams:(NSArray*)images destX:(int)x durnation:(float)dur delay:(float)del;
-@end
-
-
 
 
 @interface SwipePageWidgetView : UIView{
