@@ -1,4 +1,3 @@
 {
-   "categories": { "sum":"1"},
-   "catagory1": { "list":["page1_1","page1_2","page1_3","page1_4","page1_5","page1_6","page1_7"] }
+   "category": ["page1_1","page1_2","page1_3","page2_1","page2_2","page2_3","page2_4"]
 }

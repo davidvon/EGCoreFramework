@@ -66,9 +66,8 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-//    int catagory = [[AppDataSource instance] currentCatagory];
-//    NSString *catagoryName = [NSString stringWithFormat:@"catagory%d", catagory];
-    return [[AppDataSource instance] getWidgetCountInJson:@"catagory1"];
+    int count = [[AppDataSource instance] getPageCount];
+    return count;
 }
 
 
@@ -80,10 +79,10 @@
         if( !view ){
             view =[[SwipePageView alloc] init];
             [datasource setObject:view forKey:[NSNumber numberWithInteger:index]];
-            [(SwipePageView*)view resetContentWithIndex:index+1 ];
+            [(SwipePageView*)view resetContentWithIndex:index ];
         }
     } else {
-        [(SwipePageView*)view resetContentWithIndex:index+1 ];        
+        [(SwipePageView*)view resetContentWithIndex:index ];        
     }    
 //    NSLog(@"index=%d, view=%@", index, view);
     return view;

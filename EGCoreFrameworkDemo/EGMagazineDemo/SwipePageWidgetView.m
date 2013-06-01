@@ -110,7 +110,7 @@
     float val = offset - index;
     rect.origin.x = destination- val*1000;
     self.frame = rect;
-    NSLog(@"x=%f, offset=%f", rect.origin.x, offset );
+//    NSLog(@"x=%f, offset=%f", rect.origin.x, offset );
 }
 
 

@@ -30,11 +30,11 @@
 
 -(void) testJson
 {
-//    int sum = [[AppDataSource instance] getPageCountInCategory:@"catagory2"];
-//    NSLog(@"sum=%d", sum);
-//    
-//    NSDictionary *data = [[AppDataSource instance] getPage:@"page2_1"];
-//    NSLog(@"data=%@", data);
+    int sum = [[AppDataSource instance] getPageCount];
+    NSLog(@"sum=%d", sum);
+    
+    NSDictionary *data = [[AppDataSource instance] getPage:@"page2_1"];
+    NSLog(@"data=%@", data);
 }
 
 -(void) testcase

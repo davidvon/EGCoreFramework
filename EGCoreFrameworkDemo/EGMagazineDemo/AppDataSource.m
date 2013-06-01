@@ -99,34 +99,26 @@
 }
 
 
--(int) getWidgetCountInJson:(NSString*)pageName
++(AppDataSource*) instance
 {
-    NSDictionary *json_file_content =  [json_datas valueForKey:@"application"];
-    NSDictionary *obj = [json_file_content valueForKey:pageName];
-    if(obj){
-        NSArray *list = [obj valueForKey:@"list"];
-        NSLog(@"count=%d", list.count);
-        return list.count;
+    static AppDataSource *datasource = nil;
+    if( !datasource ){
+        datasource = [[AppDataSource alloc] init];
     }
-    return 0;
+    return datasource;
 }
 
 
--(int) getCategoryCountInJson
+-(int) getPageCount
 {
     NSDictionary *json_file_content =  [json_datas valueForKey:@"application"];
-    NSDictionary *obj = [json_file_content valueForKey:@"categories"];
-    if(obj){
-        int sum = [[obj valueForKey:@"sum"] integerValue];
-        NSLog(@"sum=%d", sum);
-        return sum;
-    }
-    return 0;
+    NSArray *list = [json_file_content valueForKey:@"category"];
+    NSLog(@"count=%d", list.count);
+    return list.count;
 }
 
 
-
--(id) getPageInJson:(NSString*)pageName
+-(id) getPage:(NSString*)pageName
 {
     NSDictionary *json_file_content = [json_datas valueForKey:pageName];
     if( json_file_content.count == 0 ){
@@ -140,20 +132,21 @@
 }
 
 
--(id) getWidgetFromPageInJson:(NSString*)widgetName fromPage:(NSString*)pageName
+-(id) getWidgetInPage:(NSString*)widgetName InPage:(NSString*)pageName
 {
-    NSDictionary *dict = [self getPageInJson:pageName];
+    NSDictionary *dict = [self getPage:pageName];
     return [dict objectForKey:widgetName];
 }
 
 
-+(AppDataSource*) instance
+-(NSString*) getPageFileNameByIndex:(int)index
 {
-    static AppDataSource *datasource = nil;
-    if( !datasource ){
-        datasource = [[AppDataSource alloc] init];
+    NSDictionary *json_file_content =  [json_datas valueForKey:@"application"];
+    NSArray *list = [json_file_content valueForKey:@"category"];
+    if( list.count > index ){
+        return [list objectAtIndex:index];
     }
-    return datasource;
+    return @"";
 }
 
 @end
