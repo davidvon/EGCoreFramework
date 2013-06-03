@@ -1,13 +1,13 @@
 //
-//  AppDataSource.h
-//  DishOrder
+//  Constant.h
+//  EGCoreFramework
 //
-//  Created by feng guanhua on 13-4-29.
+//  Created by feng guanhua on 13-6-3.
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 
-#ifndef DishOrder_constant_h
-#define DishOrder_constant_h
+#import <UIKit/UIKit.h>
+
 
 #define GLOBAL_BG_COLOR                 ([UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1])
 #define PRODUCT_BG_COLOR                ([UIColor colorWithRed:252/255.0f green:252/255.0f blue:252/255.0f alpha:1])
@@ -24,7 +24,9 @@
 #define DARKGRAY_COLOR                  [UIColor darkGrayColor]
 #define ORANGE_COLOR                    [UIColor orangeColor]
 
+
 @interface Constant: NSObject
+
 + (UILabel*) addLabel: (CGRect)frame bgColor:(UIColor*)bgColor inView:(UIView*)view;
 + (UILabel*) addLabel: (CGRect)rect bgColor:(UIColor*)bgColor txtColor:(UIColor*)txtColor fontSize:(NSInteger)size withText:(NSString*)text inView:(UIView*)view ;
 + (UIImageView*) addImageView: (CGRect)rect withImageName:(NSString*)imageName inView:(UIView*)view;
@@ -33,27 +35,3 @@
 + (UIButton*) addButton: (CGRect)rect withImage:(NSString*)image inView:(UIView*)view;
 
 @end
-
-
-
-@interface AppDataSource : NSObject{
-    NSMutableDictionary *json_datas;
-}
-@property (nonatomic) int currentCatagory;
-
--(int) getPageCount;
--(id)  getPage:(NSString*)pageName;
--(id)  getWidgetInPage:(NSString*)widgetName InPage:(NSString*)pageName;
--(NSString*) getPageFileNameByIndex:(int)index;
-
-+(AppDataSource*) instance;
-@end
-
-
-
-#endif
-
-
-
-
-

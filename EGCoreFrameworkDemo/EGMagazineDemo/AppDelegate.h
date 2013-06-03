@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 
-#import "EGCore/EGBasicAnimation.h"
+#import "EGCore/EGCoreAnimation.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

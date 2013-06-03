@@ -1,13 +1,13 @@
 //
 //  Constant.m
-//  EGCoreFrameworkDemo
+//  EGCoreFramework
 //
-//  Created by feng guanhua on 13-5-10.
+//  Created by feng guanhua on 13-6-3.
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 
-#import "AppDataSource.h"
-#import "EGCore/JSONKit.h"
+#import "Constant.h"
+
 
 @implementation Constant
 
@@ -57,11 +57,11 @@
     [button setBackgroundImage: [UIImage imageNamed:[imageList objectAtIndex:0] ] forState:UIControlStateNormal];
     if([imageList count]>1) [button setBackgroundImage:[UIImage imageNamed:[imageList objectAtIndex:1]] forState:UIControlStateHighlighted];
     if([imageList count]>2) [button setBackgroundImage:[UIImage imageNamed:[imageList objectAtIndex:2]] forState:UIControlStateSelected];
-
+    
     [button setTitleColor:WHITE_COLOR forState:UIControlStateNormal];
     [button setTitle:text forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:size];
-        
+    
     [view addSubview:button];
     return button;
 }
@@ -76,81 +76,5 @@
 }
 
 @end
-
-
-
-
-
-
-@implementation AppDataSource
-@synthesize currentCatagory;
-
--(id) init {
-    self = [super init];
-    json_datas = [[NSMutableDictionary alloc] init];
-    NSError *error = [[NSError alloc] init];
-    NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Static"] stringByAppendingPathComponent:@"application.json"];
-    NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
-    NSDictionary *app_data = [data objectFromJSONString];
-    [json_datas setObject:app_data forKey:@"application"];
-    
-    currentCatagory = 1;
-    return self;
-}
-
-
-+(AppDataSource*) instance
-{
-    static AppDataSource *datasource = nil;
-    if( !datasource ){
-        datasource = [[AppDataSource alloc] init];
-    }
-    return datasource;
-}
-
-
--(int) getPageCount
-{
-    NSDictionary *json_file_content =  [json_datas valueForKey:@"application"];
-    NSArray *list = [json_file_content valueForKey:@"category"];
-    NSLog(@"count=%d", list.count);
-    return list.count;
-}
-
-
--(id) getPage:(NSString*)pageName
-{
-    NSDictionary *json_file_content = [json_datas valueForKey:pageName];
-    if( json_file_content.count == 0 ){
-        NSError *error = [[NSError alloc] init];
-        NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Static"] stringByAppendingPathComponent:pageName];
-        NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
-        json_file_content = [data objectFromJSONString];
-        if(json_file_content) [json_datas setObject:json_file_content forKey:pageName];
-    }
-    return json_file_content;
-}
-
-
--(id) getWidgetInPage:(NSString*)widgetName InPage:(NSString*)pageName
-{
-    NSDictionary *dict = [self getPage:pageName];
-    return [dict objectForKey:widgetName];
-}
-
-
--(NSString*) getPageFileNameByIndex:(int)index
-{
-    NSDictionary *json_file_content =  [json_datas valueForKey:@"application"];
-    NSArray *list = [json_file_content valueForKey:@"category"];
-    if( list.count > index ){
-        return [list objectAtIndex:index];
-    }
-    return @"";
-}
-
-@end
-
-
 
 

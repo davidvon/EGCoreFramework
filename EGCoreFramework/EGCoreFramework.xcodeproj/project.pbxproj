@@ -15,14 +15,26 @@
 		DD87B6181759D33A000E4F0C /* EGReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B6111759D33A000E4F0C /* EGReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD87B6191759D33A000E4F0C /* EGReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87B6121759D33A000E4F0C /* EGReflection.m */; };
 		DDB7734D1752436F004A3004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDB7734B1752436F004A3004 /* InfoPlist.strings */; };
-		DDB7735417524426004A3004 /* EGBasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB772FA17520DE3004A3004 /* EGBasicAnimation.m */; };
-		DDB7736417524A8A004A3004 /* EGBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB772F917520DE3004A3004 /* EGBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDB7735417524426004A3004 /* EGCoreAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB772FA17520DE3004A3004 /* EGCoreAnimation.m */; };
+		DDB7736417524A8A004A3004 /* EGCoreAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB772F917520DE3004A3004 /* EGCoreAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637EC1756240300975F99 /* JBKenBurnsView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC637E71756240300975F99 /* JBKenBurnsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637ED1756240300975F99 /* JBKenBurnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637E81756240300975F99 /* JBKenBurnsView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC637EE1756240300975F99 /* PocketSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC637EA1756240300975F99 /* PocketSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637EF1756240300975F99 /* PocketSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637EB1756240300975F99 /* PocketSVG.m */; };
 		DDC637F41756241000975F99 /* SwipeView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC637F21756241000975F99 /* SwipeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637F51756241000975F99 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637F31756241000975F99 /* SwipeView.m */; };
+		DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBA175CB3FE000872CE /* SwipePageView.h */; };
+		DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBB175CB3FE000872CE /* SwipePageView.m */; };
+		DDF56EC2175CB3FE000872CE /* SwipePageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */; };
+		DDF56EC4175CB3FE000872CE /* SwipePageWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBE175CB3FE000872CE /* SwipePageWidgetView.h */; };
+		DDF56EC5175CB3FE000872CE /* SwipePageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBF175CB3FE000872CE /* SwipePageWidgetView.m */; };
+		DDF56EC9175CB45E000872CE /* SwipeDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EC7175CB45E000872CE /* SwipeDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF56ECA175CB45E000872CE /* EGMagazineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EC8175CB45E000872CE /* EGMagazineDataSource.m */; };
+		DDF56ECE175CB4F9000872CE /* Constant.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ECC175CB4F9000872CE /* Constant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF56ED0175CB5D3000872CE /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56ECD175CB4F9000872CE /* Constant.m */; };
+		DDF56ED7175CC494000872CE /* EGShadingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ED5175CC494000872CE /* EGShadingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF56ED8175CC494000872CE /* EGShadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56ED6175CC494000872CE /* EGShadingImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +46,8 @@
 		DD87B6111759D33A000E4F0C /* EGReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGReflection.h; sourceTree = "<group>"; };
 		DD87B6121759D33A000E4F0C /* EGReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGReflection.m; sourceTree = "<group>"; };
 		DDB772C217520BCC004A3004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DDB772F917520DE3004A3004 /* EGBasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGBasicAnimation.h; path = Animation/EGBasicAnimation.h; sourceTree = "<group>"; };
-		DDB772FA17520DE3004A3004 /* EGBasicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGBasicAnimation.m; path = Animation/EGBasicAnimation.m; sourceTree = "<group>"; };
+		DDB772F917520DE3004A3004 /* EGCoreAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGCoreAnimation.h; path = Animation/EGCoreAnimation.h; sourceTree = "<group>"; };
+		DDB772FA17520DE3004A3004 /* EGCoreAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGCoreAnimation.m; path = Animation/EGCoreAnimation.m; sourceTree = "<group>"; };
 		DDB772FC17520E1E004A3004 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DDB772FE17520E49004A3004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DDB773461752436F004A3004 /* EGCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +60,18 @@
 		DDC637EB1756240300975F99 /* PocketSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketSVG.m; sourceTree = "<group>"; };
 		DDC637F21756241000975F99 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		DDC637F31756241000975F99 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		DDF56EBA175CB3FE000872CE /* SwipePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageView.h; sourceTree = "<group>"; };
+		DDF56EBB175CB3FE000872CE /* SwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
+		DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageViewController.h; sourceTree = "<group>"; };
+		DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageViewController.m; sourceTree = "<group>"; };
+		DDF56EBE175CB3FE000872CE /* SwipePageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageWidgetView.h; sourceTree = "<group>"; };
+		DDF56EBF175CB3FE000872CE /* SwipePageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageWidgetView.m; sourceTree = "<group>"; };
+		DDF56EC7175CB45E000872CE /* SwipeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeDataSource.h; sourceTree = "<group>"; };
+		DDF56EC8175CB45E000872CE /* EGMagazineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGMagazineDataSource.m; sourceTree = "<group>"; };
+		DDF56ECC175CB4F9000872CE /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		DDF56ECD175CB4F9000872CE /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		DDF56ED5175CC494000872CE /* EGShadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGShadingImageView.h; path = Animation/EGShadingImageView.h; sourceTree = "<group>"; };
+		DDF56ED6175CC494000872CE /* EGShadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGShadingImageView.m; path = Animation/EGShadingImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +88,7 @@
 		DD87B6081759D33A000E4F0C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				DDF56ECB175CB4DB000872CE /* Common */,
 				DD87B6091759D33A000E4F0C /* Harpy */,
 				DD87B60D1759D33A000E4F0C /* JSONKit */,
 				DD87B6101759D33A000E4F0C /* Reflection */,
@@ -102,6 +127,7 @@
 		DDB772B617520BCC004A3004 = {
 			isa = PBXGroup;
 			children = (
+				DDF56EB9175CB3FE000872CE /* EGMagazine */,
 				DD87B6081759D33A000E4F0C /* Foundation */,
 				DDC637F01756241000975F99 /* Touch */,
 				DDC637E51756240300975F99 /* Image */,
@@ -133,8 +159,10 @@
 		DDB772F817520DD2004A3004 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				DDB772F917520DE3004A3004 /* EGBasicAnimation.h */,
-				DDB772FA17520DE3004A3004 /* EGBasicAnimation.m */,
+				DDF56ED5175CC494000872CE /* EGShadingImageView.h */,
+				DDF56ED6175CC494000872CE /* EGShadingImageView.m */,
+				DDB772F917520DE3004A3004 /* EGCoreAnimation.h */,
+				DDB772FA17520DE3004A3004 /* EGCoreAnimation.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -194,6 +222,30 @@
 			path = SwipeView;
 			sourceTree = "<group>";
 		};
+		DDF56EB9175CB3FE000872CE /* EGMagazine */ = {
+			isa = PBXGroup;
+			children = (
+				DDF56EC7175CB45E000872CE /* SwipeDataSource.h */,
+				DDF56EC8175CB45E000872CE /* EGMagazineDataSource.m */,
+				DDF56EBA175CB3FE000872CE /* SwipePageView.h */,
+				DDF56EBB175CB3FE000872CE /* SwipePageView.m */,
+				DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */,
+				DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */,
+				DDF56EBE175CB3FE000872CE /* SwipePageWidgetView.h */,
+				DDF56EBF175CB3FE000872CE /* SwipePageWidgetView.m */,
+			);
+			path = EGMagazine;
+			sourceTree = "<group>";
+		};
+		DDF56ECB175CB4DB000872CE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DDF56ECC175CB4F9000872CE /* Constant.h */,
+				DDF56ECD175CB4F9000872CE /* Constant.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -201,14 +253,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB7736417524A8A004A3004 /* EGBasicAnimation.h in Headers */,
+				DDB7736417524A8A004A3004 /* EGCoreAnimation.h in Headers */,
+				DD87B6181759D33A000E4F0C /* EGReflection.h in Headers */,
+				DDF56ED7175CC494000872CE /* EGShadingImageView.h in Headers */,
 				DDC637EC1756240300975F99 /* JBKenBurnsView.h in Headers */,
 				DDC637EE1756240300975F99 /* PocketSVG.h in Headers */,
 				DD87B6131759D33A000E4F0C /* Harpy.h in Headers */,
 				DD87B6151759D33A000E4F0C /* HarpyConstants.h in Headers */,
 				DD87B6161759D33A000E4F0C /* JSONKit.h in Headers */,
-				DD87B6181759D33A000E4F0C /* EGReflection.h in Headers */,
+				DDF56EC2175CB3FE000872CE /* SwipePageViewController.h in Headers */,
+				DDF56EC9175CB45E000872CE /* SwipeDataSource.h in Headers */,
 				DDC637F41756241000975F99 /* SwipeView.h in Headers */,
+				DDF56ECE175CB4F9000872CE /* Constant.h in Headers */,
+				DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */,
+				DDF56EC4175CB3FE000872CE /* SwipePageWidgetView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,13 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB7735417524426004A3004 /* EGBasicAnimation.m in Sources */,
+				DDF56ED0175CB5D3000872CE /* Constant.m in Sources */,
+				DDB7735417524426004A3004 /* EGCoreAnimation.m in Sources */,
 				DDC637ED1756240300975F99 /* JBKenBurnsView.m in Sources */,
 				DDC637EF1756240300975F99 /* PocketSVG.m in Sources */,
 				DDC637F51756241000975F99 /* SwipeView.m in Sources */,
 				DD87B6141759D33A000E4F0C /* Harpy.m in Sources */,
 				DD87B6171759D33A000E4F0C /* JSONKit.m in Sources */,
 				DD87B6191759D33A000E4F0C /* EGReflection.m in Sources */,
+				DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */,
+				DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */,
+				DDF56EC5175CB3FE000872CE /* SwipePageWidgetView.m in Sources */,
+				DDF56ECA175CB45E000872CE /* EGMagazineDataSource.m in Sources */,
+				DDF56ED8175CC494000872CE /* EGShadingImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

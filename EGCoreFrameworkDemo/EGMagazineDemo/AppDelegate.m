@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "TestAnimationViewController.h"
-#import "SwipePageViewController.h"
+#import "TestCoreAnimationView.h"
+#import "EGCore/SwipePageViewController.h"
 #import "TestReflection.h"
-#import "AppDataSource.h"
+#import "EGCore/SwipeDataSource.h"
+#import "TestShadingAnimationView.h"
 
 @implementation AppDelegate
 @synthesize rootViewController;
@@ -21,29 +22,48 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-//    [self testJson];
-  [self testcase];
-    
+    [self testcase];
     return YES;
 }
 
 
 -(void) testJson
 {
-    int sum = [[AppDataSource instance] getPageCount];
+    int sum = [[SwipeDataSource instance] getPageCount];
     NSLog(@"sum=%d", sum);
     
-    NSDictionary *data = [[AppDataSource instance] getPage:@"page2_1"];
+    NSDictionary *data = [[SwipeDataSource instance] getPage:@"page2_1"];
     NSLog(@"data=%@", data);
 }
 
+
+
 -(void) testcase
 {
-    rootViewController = [[SwipePageViewController alloc] init];
+//  [self testJson];
+//  rootViewController = [[SwipePageViewController alloc] init];
 //  rootViewController = [[TestAnimationViewController alloc] init];
 //  rootViewController = [[TestReflectionView alloc] init];
+    rootViewController = [[TestShadingAnimationView alloc] init];
+    
+    
     self.window.rootViewController = rootViewController;
 }
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

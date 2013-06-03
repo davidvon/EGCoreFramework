@@ -7,9 +7,9 @@
 //
 
 #import "SwipePageWidgetView.h"
-#import "EGCore/EGBasicAnimation.h"
-#import "EGCore/EGReflection.h"
-#import "AppDataSource.h"
+#import "EGCoreAnimation.h"
+#import "EGReflection.h"
+#import "Constant.h"
 
 @implementation SwipePageWidgetView
 @synthesize reflectionInfo;
@@ -99,6 +99,7 @@
     if( widgetType == WIDGET_ANIMATION || widgetType == WIDGET_ANIMATION_SWIPING ){
         [self animate];
     }
+    NSLog(@"name=%@", self.name);
     return self;
 }
 
@@ -154,10 +155,11 @@
 
 -(void) animate
 {
+    NSLog(@"animating: x=%d, offset=%d", (int)self.frame.origin.x, (int)destination );
     if( animationType == MOVE_X )
-        [EGBasicAnimation moveX:destination duration:duration delay:delay withView:self];
+        [EGCoreAnimation moveX:destination duration:duration delay:delay withView:self];
     else
-        [EGBasicAnimation moveY:destination duration:duration delay:delay withView:self];
+        [EGCoreAnimation moveY:destination duration:duration delay:delay withView:self];
 }
 
 

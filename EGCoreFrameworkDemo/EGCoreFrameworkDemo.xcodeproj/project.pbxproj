@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD2A765A175387A100A7886A /* SwipePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A7659175387A100A7886A /* SwipePageViewController.m */; };
 		DD4DD6A21759E4E4005FBE14 /* Static in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A11759E4E4005FBE14 /* Static */; };
 		DD4DD6A9175A25CC005FBE14 /* bg1_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A6175A25CC005FBE14 /* bg1_1.jpg */; };
 		DD4DD6AA175A25CC005FBE14 /* bg1_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A7175A25CC005FBE14 /* bg1_2.jpg */; };
 		DD4DD6AB175A25CC005FBE14 /* bg1_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A8175A25CC005FBE14 /* bg1_3.jpg */; };
-		DDB6AAE817578D9F0093B05B /* SwipePageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB6AAE517578CDA0093B05B /* SwipePageWidgetView.m */; };
-		DDB6AAE917578DA00093B05B /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB6AAE317578CDA0093B05B /* SwipePageView.m */; };
+		DD596F4B175ABCE90014D1A8 /* big_yun.png in Resources */ = {isa = PBXBuildFile; fileRef = DD596F48175ABCE90014D1A8 /* big_yun.png */; };
+		DD596F4C175ABCE90014D1A8 /* niao.png in Resources */ = {isa = PBXBuildFile; fileRef = DD596F49175ABCE90014D1A8 /* niao.png */; };
+		DD596F4D175ABCE90014D1A8 /* small_yun.png in Resources */ = {isa = PBXBuildFile; fileRef = DD596F4A175ABCE90014D1A8 /* small_yun.png */; };
+		DD596F50175ABD370014D1A8 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD596F4F175ABD370014D1A8 /* bg.jpg */; };
 		DDB77288175207D0004A3004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB77287175207D0004A3004 /* UIKit.framework */; };
 		DDB7728A175207D0004A3004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB77289175207D0004A3004 /* Foundation.framework */; };
 		DDB7728C175207D0004A3004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7728B175207D0004A3004 /* CoreGraphics.framework */; };
@@ -23,7 +24,7 @@
 		DDB7729C175207D0004A3004 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7729B175207D0004A3004 /* Default@2x.png */; };
 		DDB7729E175207D0004A3004 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7729D175207D0004A3004 /* Default-568h@2x.png */; };
 		DDB7730D175219D6004A3004 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7730C175219D6004A3004 /* QuartzCore.framework */; };
-		DDB77322175234A7004A3004 /* TestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB77321175234A6004A3004 /* TestAnimationViewController.m */; };
+		DDB77322175234A7004A3004 /* TestCoreAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB77321175234A6004A3004 /* TestCoreAnimationView.m */; };
 		DDC637F81756294A00975F99 /* TestReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637F71756294A00975F99 /* TestReflection.m */; };
 		DDC63828175656DC00975F99 /* EGCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC63826175656CF00975F99 /* EGCore.framework */; };
 		DDE692FD1759B37000C97CF0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692D91759B37000C97CF0 /* 1.png */; };
@@ -59,7 +60,7 @@
 		DDE6931E1759B37000C97CF0 /* XSW_vacation_water_big_writing.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692FA1759B37000C97CF0 /* XSW_vacation_water_big_writing.png */; };
 		DDE6931F1759B37000C97CF0 /* XSW_vacation_water_small_back.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692FB1759B37000C97CF0 /* XSW_vacation_water_small_back.png */; };
 		DDE693201759B37000C97CF0 /* XSW_vacation_water_small_writing.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692FC1759B37000C97CF0 /* XSW_vacation_water_small_writing.png */; };
-		DDE6933D1759C47F00C97CF0 /* AppDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE692D61759B2FB00C97CF0 /* AppDataSource.m */; };
+		DDF56EDB175CCD3E000872CE /* TestShadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EDA175CCD3E000872CE /* TestShadingAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,16 +74,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD2A7658175387A100A7886A /* SwipePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageViewController.h; sourceTree = "<group>"; };
-		DD2A7659175387A100A7886A /* SwipePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageViewController.m; sourceTree = "<group>"; };
 		DD4DD6A11759E4E4005FBE14 /* Static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Static; sourceTree = "<group>"; };
 		DD4DD6A6175A25CC005FBE14 /* bg1_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_1.jpg; sourceTree = "<group>"; };
 		DD4DD6A7175A25CC005FBE14 /* bg1_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_2.jpg; sourceTree = "<group>"; };
 		DD4DD6A8175A25CC005FBE14 /* bg1_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_3.jpg; sourceTree = "<group>"; };
-		DDB6AAE217578CDA0093B05B /* SwipePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageView.h; sourceTree = "<group>"; };
-		DDB6AAE317578CDA0093B05B /* SwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
-		DDB6AAE417578CDA0093B05B /* SwipePageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageWidgetView.h; sourceTree = "<group>"; };
-		DDB6AAE517578CDA0093B05B /* SwipePageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageWidgetView.m; sourceTree = "<group>"; };
+		DD596F48175ABCE90014D1A8 /* big_yun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_yun.png; sourceTree = "<group>"; };
+		DD596F49175ABCE90014D1A8 /* niao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao.png; sourceTree = "<group>"; };
+		DD596F4A175ABCE90014D1A8 /* small_yun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_yun.png; sourceTree = "<group>"; };
+		DD596F4F175ABD370014D1A8 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		DDB77284175207D0004A3004 /* EGCoreFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGCoreFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB77287175207D0004A3004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DDB77289175207D0004A3004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,14 +93,12 @@
 		DDB7729B175207D0004A3004 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DDB7729D175207D0004A3004 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DDB7730C175219D6004A3004 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DDB77320175234A6004A3004 /* TestAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnimationViewController.h; sourceTree = "<group>"; };
-		DDB77321175234A6004A3004 /* TestAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnimationViewController.m; sourceTree = "<group>"; };
+		DDB77320175234A6004A3004 /* TestCoreAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCoreAnimationView.h; sourceTree = "<group>"; };
+		DDB77321175234A6004A3004 /* TestCoreAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCoreAnimationView.m; sourceTree = "<group>"; };
 		DDC637F61756294A00975F99 /* TestReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestReflection.h; sourceTree = "<group>"; };
 		DDC637F71756294A00975F99 /* TestReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestReflection.m; sourceTree = "<group>"; };
 		DDC638161756418F00975F99 /* EGCoreFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EGCoreFramework.xcodeproj; path = ../EGCoreFramework/EGCoreFramework.xcodeproj; sourceTree = "<group>"; };
 		DDC63826175656CF00975F99 /* EGCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGCore.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EGCoreFrameworkDemo-cfqbjtgadowbksadfcrnzrrdidcc/Build/Products/Debug-iphonesimulator/EGCore.framework"; sourceTree = "<group>"; };
-		DDE692D51759B2FB00C97CF0 /* AppDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDataSource.h; sourceTree = "<group>"; };
-		DDE692D61759B2FB00C97CF0 /* AppDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDataSource.m; sourceTree = "<group>"; };
 		DDE692D91759B37000C97CF0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		DDE692DA1759B37000C97CF0 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
 		DDE692DB1759B37000C97CF0 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
@@ -139,6 +136,8 @@
 		DDE693361759B4A000C97CF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDE6933A1759B50800C97CF0 /* EGCoreFrameworkDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EGCoreFrameworkDemo-Info.plist"; sourceTree = "<group>"; };
 		DDE6933C1759B51B00C97CF0 /* EGCoreFrameworkDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGCoreFrameworkDemo-Prefix.pch"; sourceTree = "<group>"; };
+		DDF56ED9175CCD3E000872CE /* TestShadingAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestShadingAnimationView.h; sourceTree = "<group>"; };
+		DDF56EDA175CCD3E000872CE /* TestShadingAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestShadingAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,18 +191,12 @@
 			children = (
 				DDB77296175207D0004A3004 /* AppDelegate.h */,
 				DDB77297175207D0004A3004 /* AppDelegate.m */,
-				DDB77320175234A6004A3004 /* TestAnimationViewController.h */,
-				DDB77321175234A6004A3004 /* TestAnimationViewController.m */,
-				DD2A7658175387A100A7886A /* SwipePageViewController.h */,
-				DD2A7659175387A100A7886A /* SwipePageViewController.m */,
+				DDB77320175234A6004A3004 /* TestCoreAnimationView.h */,
+				DDB77321175234A6004A3004 /* TestCoreAnimationView.m */,
+				DDF56ED9175CCD3E000872CE /* TestShadingAnimationView.h */,
+				DDF56EDA175CCD3E000872CE /* TestShadingAnimationView.m */,
 				DDC637F61756294A00975F99 /* TestReflection.h */,
 				DDC637F71756294A00975F99 /* TestReflection.m */,
-				DDB6AAE217578CDA0093B05B /* SwipePageView.h */,
-				DDB6AAE317578CDA0093B05B /* SwipePageView.m */,
-				DDB6AAE417578CDA0093B05B /* SwipePageWidgetView.h */,
-				DDB6AAE517578CDA0093B05B /* SwipePageWidgetView.m */,
-				DDE692D51759B2FB00C97CF0 /* AppDataSource.h */,
-				DDE692D61759B2FB00C97CF0 /* AppDataSource.m */,
 				DD4DD6A11759E4E4005FBE14 /* Static */,
 				DDE692D81759B37000C97CF0 /* Images */,
 				DDB7728E175207D0004A3004 /* Supporting Files */,
@@ -239,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE692D91759B37000C97CF0 /* 1.png */,
+				DD596F4F175ABD370014D1A8 /* bg.jpg */,
 				DDE692DA1759B37000C97CF0 /* bg1.jpg */,
 				DDE692DB1759B37000C97CF0 /* bg2.jpg */,
 				DDE692DC1759B37000C97CF0 /* bg3.jpg */,
@@ -250,6 +244,9 @@
 				DDE692DF1759B37000C97CF0 /* wzall2.png */,
 				DDE692E01759B37000C97CF0 /* wzall3.png */,
 				DDE692E11759B37000C97CF0 /* wzall4.png */,
+				DD596F48175ABCE90014D1A8 /* big_yun.png */,
+				DD596F49175ABCE90014D1A8 /* niao.png */,
+				DD596F4A175ABCE90014D1A8 /* small_yun.png */,
 				DDE692E21759B37000C97CF0 /* XSW_vacation_back.png */,
 				DDE692E61759B37000C97CF0 /* XSW_vacation_close_btn.png */,
 				DDE692E71759B37000C97CF0 /* XSW_vacation_first_1.png */,
@@ -385,6 +382,10 @@
 				DD4DD6A9175A25CC005FBE14 /* bg1_1.jpg in Resources */,
 				DD4DD6AA175A25CC005FBE14 /* bg1_2.jpg in Resources */,
 				DD4DD6AB175A25CC005FBE14 /* bg1_3.jpg in Resources */,
+				DD596F4B175ABCE90014D1A8 /* big_yun.png in Resources */,
+				DD596F4C175ABCE90014D1A8 /* niao.png in Resources */,
+				DD596F4D175ABCE90014D1A8 /* small_yun.png in Resources */,
+				DD596F50175ABD370014D1A8 /* bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,12 +398,9 @@
 			files = (
 				DDB77294175207D0004A3004 /* main.m in Sources */,
 				DDB77298175207D0004A3004 /* AppDelegate.m in Sources */,
-				DDB77322175234A7004A3004 /* TestAnimationViewController.m in Sources */,
-				DD2A765A175387A100A7886A /* SwipePageViewController.m in Sources */,
-				DDB6AAE917578DA00093B05B /* SwipePageView.m in Sources */,
-				DDB6AAE817578D9F0093B05B /* SwipePageWidgetView.m in Sources */,
+				DDB77322175234A7004A3004 /* TestCoreAnimationView.m in Sources */,
 				DDC637F81756294A00975F99 /* TestReflection.m in Sources */,
-				DDE6933D1759C47F00C97CF0 /* AppDataSource.m in Sources */,
+				DDF56EDB175CCD3E000872CE /* TestShadingAnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

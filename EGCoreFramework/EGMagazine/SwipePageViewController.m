@@ -9,8 +9,7 @@
 #import "SwipePageViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SwipePageView.h"
-#import "AppDataSource.h"
-
+#import "SwipeDataSource.h"
 
 @implementation SwipePageViewController
 @synthesize swipe,datasource;
@@ -19,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self){
-        self.view.backgroundColor = [UIColor colorWithRed:40/255.0f green:40/255.0f blue:40/255.0f alpha:1];
+        self.view.backgroundColor = [UIColor whiteColor];
         datasource = [[NSMutableDictionary alloc] init];
         [self loadSwipeView];
     }
@@ -53,11 +52,11 @@
 }
 
 
-
 -(void)reloadData
 {
     [swipe reloadData];
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -66,7 +65,7 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    int count = [[AppDataSource instance] getPageCount];
+    int count = [[SwipeDataSource instance] getPageCount];
     return count;
 }
 
@@ -84,7 +83,6 @@
     } else {
         [(SwipePageView*)view resetContentWithIndex:index ];        
     }    
-//    NSLog(@"index=%d, view=%@", index, view);
     return view;
 }
 

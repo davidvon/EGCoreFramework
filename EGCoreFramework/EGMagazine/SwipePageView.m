@@ -7,8 +7,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SwipePageView.h"
 #import "SwipePageWidgetView.h"
-#import "EGCore/EGBasicAnimation.h"
-#import "AppDataSource.h"
+#import "EGCoreAnimation.h"
+#import "SwipeDataSource.h"
 
 
 @implementation SwipePageView
@@ -50,12 +50,12 @@
 
 -(void)loadStaticShowWidgets:(int)index forKey:(NSString*)key
 {
-    NSString *pageName = [[AppDataSource instance] getPageFileNameByIndex:index];
+    NSString *pageName = [[SwipeDataSource instance] getPageFileNameByIndex:index];
     if( pageName.length == 0 ) return;
     NSString *filename = [pageName stringByAppendingString:@".json"];
     NSLog(@"name=%@", filename);
     
-    json_data = [[AppDataSource instance] getPage:filename];
+    json_data = [[SwipeDataSource instance] getPage:filename];
     
     NSArray *objs = [json_data objectForKey:key];
     for ( int i=0 ; i<[objs count]; i++ ) {
@@ -80,7 +80,7 @@
 
 -(void)timerAnimation
 {    
-    [NSTimer scheduledTimerWithTimeInterval:(0.5) target:self selector:@selector(animationShowByThread) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:(0.3) target:self selector:@selector(animationShowByThread) userInfo:nil repeats:NO];
 }
 
 

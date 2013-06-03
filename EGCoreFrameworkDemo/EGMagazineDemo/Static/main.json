@@ -1,0 +1,36 @@
+{
+    "title":"青春期",
+    "category":"疯狂系列",
+    "background":"bg.jpg",
+    
+    "widget.animations":[
+         {
+            "name":"animation.1",
+            "type":"animation",
+            "image":"big_yun.png",
+            "position":{ "from":[-800,100,1024,768], "to":{"x":"2048"}, "z":"1" },
+            "duration":"80",
+            "delay":"0",
+            "frame":[0,0,1024,768]
+        },
+        {
+            "name":"animation.2",
+            "type":"animation",
+            "image":"small_yun.png",
+            "position":{ "from":[-469,310,469,284], "to":{"x":"1493"}, "z":"1" },
+            "duration":"40",
+            "delay":"0",
+            "frame":[0,0,1024,768]
+        },
+        {
+            "name":"animation.3",
+            "type":"animation",
+            "image":"small_yun.png",
+            "position":{ "from":[-400,50,469,284], "to":{"x":"1493"}, "z":"1" },
+            "duration":"40",
+            "delay":"60",
+            "frame":[0,0,1024,768]
+        }
+        
+    ]
+}
