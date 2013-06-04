@@ -6,7 +6,7 @@
     "widget.animations":[
          {
             "name":"animation.1",
-            "type":"animation",
+            "type":"animation.move.x",
             "image":"big_yun.png",
             "position":{ "from":[-800,100,1024,768], "to":{"x":"2048"}, "z":"1" },
             "duration":"80",
@@ -15,7 +15,7 @@
         },
         {
             "name":"animation.2",
-            "type":"animation",
+            "type":"animation.move.x",
             "image":"small_yun.png",
             "position":{ "from":[-469,310,469,284], "to":{"x":"1493"}, "z":"1" },
             "duration":"40",
@@ -24,7 +24,7 @@
         },
         {
             "name":"animation.3",
-            "type":"animation",
+            "type":"animation.move.x",
             "image":"small_yun.png",
             "position":{ "from":[-400,50,469,284], "to":{"x":"1493"}, "z":"1" },
             "duration":"40",

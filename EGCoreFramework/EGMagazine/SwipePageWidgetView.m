@@ -14,7 +14,7 @@
 @implementation SwipePageWidgetView
 @synthesize reflectionInfo;
 
-- (id)initWithParams:(CGRect)widgetFrame dest:(int)xy animateType:(AnimationType)atype image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype
+- (id)initWithParams:(CGRect)widgetFrame dest:(int)xy image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype
 {
     self = [super initWithFrame:mainFrame];
     if (self) {
@@ -24,9 +24,8 @@
         widgetType = wtype;
         destination = xy;
         duration = dur;
-        animationType = atype;
         delay = del;
-        if( widgetType == WIDGET_ANIMATION || widgetType == WIDGET_ANIMATION_SWIPING ){
+        if( widgetType == Widget_Animation_MoveX || widgetType == Widget_Animation_MoveY || widgetType == Widget_Animation_Swiping ){
             [self animate];
         }
     }
@@ -41,10 +40,8 @@
     if( tox.length == 0 ){
         NSString *toy = [to objectForKey:@"y"];
         assert(toy.length > 0);
-        animationType = MOVE_Y;
         destination = [toy integerValue];
     } else {
-        animationType = MOVE_X;
         destination = [tox integerValue];
     }
 }
@@ -96,7 +93,8 @@
     if(del) delay = [del floatValue];
     
     widgetType = [SwipePageWidgetView widgetTypeFromDict: dict];
-    if( widgetType == WIDGET_ANIMATION || widgetType == WIDGET_ANIMATION_SWIPING ){
+    if( widgetType == Widget_Animation_MoveX || widgetType == Widget_Animation_MoveY ||
+        widgetType == Widget_Animation_Swiping || widgetType == Widget_Animation_ImageShading  ){
         [self animate];
     }
     NSLog(@"name=%@", self.name);
@@ -104,9 +102,9 @@
 }
 
 
-+(SwipePageWidgetView*) addWidgetView:(CGRect)widgetFrame toDestX:(int)x animateType:(AnimationType)atype withImage:(NSString*)image durcation:(float)dur delay:(float)time ofType:(WidgetType)type withMainViewFrame:(CGRect)mainFrame inView:(UIView *)view
++(SwipePageWidgetView*) addWidgetView:(CGRect)widgetFrame toDestX:(int)x withImage:(NSString*)image durcation:(float)dur delay:(float)time ofType:(WidgetType)type withMainViewFrame:(CGRect)mainFrame inView:(UIView *)view
 {
-    SwipePageWidgetView *widget = [[SwipePageWidgetView alloc] initWithParams:widgetFrame dest:x animateType:atype image:image durnation:dur delay:time withMainViewFrame:mainFrame ofType:type];
+    SwipePageWidgetView *widget = [[SwipePageWidgetView alloc] initWithParams:widgetFrame dest:x image:image durnation:dur delay:time withMainViewFrame:mainFrame ofType:type];
     [view addSubview:widget];
     return widget;
 }
@@ -134,31 +132,32 @@
 +(WidgetType) widgetTypeFromDict:(NSDictionary*)dict
 {
     NSString *type = [dict objectForKey:@"type"];
-    if( [type isEqualToString:KEY_IMAGE])       return WIDGET_STATIC_IMAGE;
-    if( [type isEqualToString:KEY_SWIPIING])    return WIDGET_SWIPING;
-    if( [type isEqualToString:KEY_ANIMATION] )  return WIDGET_ANIMATION;
-    return WIDGET_ANIMATION_SWIPING;
+    if( [type isEqualToString:KEY_Image_Static])                return Widget_Image_Static;
+    if( [type isEqualToString:KEY_Swiping])                     return Widget_Swiping;
+    if( [type isEqualToString:KEY_Animation_MoveX] )            return Widget_Animation_MoveX;
+    if( [type isEqualToString:KEY_Animation_MoveY] )            return Widget_Animation_MoveY;
+    if( [type isEqualToString:KEY_Animation_ImageShading] )     return Widget_Animation_ImageShading;
+    return Widget_Animation_Swiping;
 }
 
 
 - (void)swipeViewDidScroll:(float)offset withIndex:(int) index
 {
-    if( widgetType == WIDGET_SWIPING || widgetType ==  WIDGET_ANIMATION_SWIPING ){
+    if( widgetType == Widget_Swiping || widgetType ==  Widget_Animation_Swiping ){
         CGRect rect = self.frame;
         float val = offset - index;
         rect.origin.x = destination- val*1000;
         self.frame = rect;
     }
-//    NSLog(@"x=%f, offset=%f", rect.origin.x, offset );
 }
 
 
 -(void) animate
 {
     NSLog(@"animating: x=%d, offset=%d", (int)self.frame.origin.x, (int)destination );
-    if( animationType == MOVE_X )
+    if( widgetType == Widget_Animation_MoveX )
         [EGCoreAnimation moveX:destination duration:duration delay:delay withView:self];
-    else
+    else if( widgetType == Widget_Animation_MoveY )
         [EGCoreAnimation moveY:destination duration:duration delay:delay withView:self];
 }
 

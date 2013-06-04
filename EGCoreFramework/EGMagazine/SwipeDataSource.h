@@ -1,14 +1,16 @@
 //
-//  AppDataSource.h
-//  DishOrder
+//  SwipeDataSource.h
+//  EGCoreFrameworkDemo
 //
 //  Created by feng guanhua on 13-4-29.
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 #import <UIKit/UIKit.h>
 
-#ifndef AppDataSource_h
-#define AppDataSource_h
+
+#define APPLICATION_JSONFILE   @"application.json"
+#define APPLICATION_JSONPATH   @"Static"
+
 
 @interface SwipeDataSource : NSObject{
     NSMutableDictionary *json_datas;
@@ -22,10 +24,6 @@
 
 +(SwipeDataSource*) instance;
 @end
-
-
-
-#endif
 
 
 

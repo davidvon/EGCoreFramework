@@ -1,5 +1,5 @@
 //
-//  Constant.m
+//  SwipeDataSource.m
 //  EGCoreFrameworkDemo
 //
 //  Created by feng guanhua on 13-5-10.
@@ -16,7 +16,7 @@
     self = [super init];
     json_datas = [[NSMutableDictionary alloc] init];
     NSError *error = [[NSError alloc] init];
-    NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Static"] stringByAppendingPathComponent:@"application.json"];
+    NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:APPLICATION_JSONPATH] stringByAppendingPathComponent:APPLICATION_JSONFILE];
     NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     NSDictionary *app_data = [data objectFromJSONString];
     [json_datas setObject:app_data forKey:@"application"];
@@ -50,8 +50,9 @@
     NSDictionary *json_file_content = [json_datas valueForKey:pageName];
     if( json_file_content.count == 0 ){
         NSError *error = [[NSError alloc] init];
-        NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Static"] stringByAppendingPathComponent:pageName];
+        NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:APPLICATION_JSONPATH] stringByAppendingPathComponent:pageName];
         NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+        if(!data) return nil;
         json_file_content = [data objectFromJSONString];
         if(json_file_content) [json_datas setObject:json_file_content forKey:pageName];
     }

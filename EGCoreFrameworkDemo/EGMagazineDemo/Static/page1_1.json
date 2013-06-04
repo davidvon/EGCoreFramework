@@ -18,7 +18,7 @@
     "widget.animations":[
          {
             "name":"animation.1",
-            "type":"animation",
+            "type":"animation.imageshading",
             "image":"XSW_vacation_water_big_back.png",
             "position":{ "from":[-681,200,722,109], "to":{"x":"681"}, "z":"1" },
             "duration":"0.4",
@@ -27,7 +27,7 @@
         },
         {
             "name":"animation.2",
-            "type":"animation",
+            "type":"animation.move.x",
             "image":"XSW_vacation_water_big_writing.png",
             "position":{ "from":[-501,210,653,76], "to":{"x":"680"}, "z":"1" },
             "duration":"0.4",
@@ -36,7 +36,7 @@
         },
         {
             "name":"animation.3",
-            "type":"animation",
+            "type":"animation.move.x",
             "image":"XSW_vacation_mountain_big_back.png",
             "position":{ "from":[1024,280,722,199], "to":{"x":"-722"}, "z":"1" },
             "duration":"0.5",
@@ -45,7 +45,7 @@
         },
         {
             "name":"animation.4",
-            "type":"animation",
+            "type":"animation.move.x",
             "image":"XSW_vacation_mountain_big_writing.png",
             "position":{ "from":[1024,290,653,166], "to":{"x":"-670"}, "z":"1" },
             "duration":"0.5",

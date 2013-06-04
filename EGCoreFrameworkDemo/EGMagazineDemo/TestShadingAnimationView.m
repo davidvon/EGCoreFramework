@@ -14,7 +14,7 @@
 {
     [super viewWillAppear:animated];
     
-    EGShadingImageView *imgView = [[EGShadingImageView alloc] initWithBackgroundImage:(NSString*)@"XSW_vacation_Golf_big_back" withPoint:CGPointMake( 20, 50) ];
+    EGShadingImageView *imgView = [[EGShadingImageView alloc] initWithBackgroundImage:(NSString*)@"XSW_vacation_Golf_big_back" withPoint:CGPointMake( 20, 20) ];
     [self.view addSubview:imgView];
     
     [imgView addAnimationImage:@"XSW_vacation_Golf_big_writing" withStyle:kCAGravityBottom fromPoint:CGPointMake(20, 10)];

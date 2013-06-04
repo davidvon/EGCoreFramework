@@ -10,27 +10,26 @@
 #import "EGCore/SwipeView.h"
 #import "EGCore/JBKenBurnsView.h"
 
-#define D_WIDGET_ANIMATIONS     @"widget.animations"
-#define D_WIDGET_SWIPINGS       @"widget.swipings"
-#define D_WIDGET_STATIC_IMAGE   @"widget.static.image"
+#define Category_Widget_Animations           @"widget.animations"
+#define Category_Widget_Swipings             @"widget.swipings"
+#define Category_Widget_StaticImage          @"widget.static.image"
 
-#define KEY_IMAGE               @"image"
-#define KEY_SWIPIING            @"swiping"
-#define KEY_ANIMATION           @"animation"
+#define KEY_Image_Static                @"image.static"
+#define KEY_Swiping                     @"swiping"
+#define KEY_Animation_MoveX             @"animation.move.x"
+#define KEY_Animation_MoveY             @"animation.move.y"
+#define KEY_Animation_ImageShading      @"animation.imageshading"
 
+#define BACKGROUND_TRANS_DUR      60
 
 typedef enum {
-    WIDGET_STATIC_IMAGE,
-    WIDGET_SWIPING,
-    WIDGET_ANIMATION,
-    WIDGET_ANIMATION_SWIPING,
+    Widget_Image_Static,
+    Widget_Swiping,
+    Widget_Animation_Swiping,
+    Widget_Animation_MoveX,
+    Widget_Animation_MoveY,
+    Widget_Animation_ImageShading,
 }WidgetType;
-
-
-typedef enum {
-    MOVE_X,
-    MOVE_Y,
-}AnimationType;
 
 
 

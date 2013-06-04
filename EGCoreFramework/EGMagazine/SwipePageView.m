@@ -40,8 +40,8 @@
 -(void) resetContentWithIndex:(int)index
 {    
     [self clearExistingWidgets];
-    [self loadStaticShowWidgets:index forKey:D_WIDGET_STATIC_IMAGE];
-    [self loadStaticShowWidgets:index forKey:D_WIDGET_SWIPINGS];
+    [self loadStaticShowWidgets:index forKey:Category_Widget_StaticImage];
+    [self loadStaticShowWidgets:index forKey:Category_Widget_Swipings];
     [self initAnimationBackground:json_data];    
     [self timerAnimation];
 }
@@ -103,7 +103,7 @@
 
 -(void) animationGroupShow
 {
-    NSArray *objs = [json_data objectForKey:D_WIDGET_ANIMATIONS];
+    NSArray *objs = [json_data objectForKey:Category_Widget_Animations];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
         SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
@@ -116,7 +116,7 @@
 {
     NSString *bg = [dict objectForKey:@"background"];
     NSArray *myImages = [NSArray arrayWithObjects:[UIImage imageNamed:bg], nil];
-    [kenView animateWithImages:myImages transitionDuration:60 loop:YES isLandscape:YES];
+    [kenView animateWithImages:myImages transitionDuration:BACKGROUND_TRANS_DUR loop:YES isLandscape:YES];
 }
 
 @end

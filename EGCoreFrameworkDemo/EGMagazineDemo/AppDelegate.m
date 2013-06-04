@@ -41,10 +41,10 @@
 -(void) testcase
 {
 //  [self testJson];
-//  rootViewController = [[SwipePageViewController alloc] init];
+  rootViewController = [[SwipePageViewController alloc] init];
 //  rootViewController = [[TestAnimationViewController alloc] init];
 //  rootViewController = [[TestReflectionView alloc] init];
-    rootViewController = [[TestShadingAnimationView alloc] init];
+//    rootViewController = [[TestShadingAnimationView alloc] init];
     
     
     self.window.rootViewController = rootViewController;
