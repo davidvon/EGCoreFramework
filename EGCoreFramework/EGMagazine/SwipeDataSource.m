@@ -85,7 +85,8 @@
     if( [type isEqualToString:KEY_Swiping])                     return Widget_Swiping;
     if( [type isEqualToString:KEY_Animation_MoveX] )            return Widget_Animation_MoveX;
     if( [type isEqualToString:KEY_Animation_MoveY] )            return Widget_Animation_MoveY;
-    if( [type isEqualToString:KEY_Animation_ImageShading] )     return Widget_Animation_ImageShading;
+    if( [type isEqualToString:KEY_Animation_ImageShade] )       return Widget_Animation_ImageShade;
+    if( [type isEqualToString:KEY_Animation_ImageFadeIn] )      return Widget_Animation_ImageFadeIn;
     return Widget_Animation_Swiping;
 }
 

@@ -11,7 +11,7 @@
 #import "EGCore/SwipePageViewController.h"
 #import "TestReflection.h"
 #import "EGCore/SwipeDataSource.h"
-#import "TestShadingAnimationView.h"
+#import "TestAnimationImageView.h"
 
 @implementation AppDelegate
 @synthesize rootViewController;
@@ -41,11 +41,11 @@
 -(void) testcase
 {
 //  [self testJson];
-  rootViewController = [[SwipePageViewController alloc] init];
+    rootViewController = [[SwipePageViewController alloc] init];
 //  rootViewController = [[TestAnimationViewController alloc] init];
 //  rootViewController = [[TestReflectionView alloc] init];
-//    rootViewController = [[TestShadingAnimationView alloc] init];
-    
+//    rootViewController = [[TestAnimationImageView alloc] initWithType:Widget_Animation_ImageShade ];
+//    rootViewController = [[TestAnimationImageView alloc] initWithType:Widget_Animation_ImageFadeIn ];
     
     self.window.rootViewController = rootViewController;
 }

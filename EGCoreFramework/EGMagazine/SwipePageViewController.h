@@ -14,5 +14,4 @@
 @property (nonatomic, strong) SwipeView *swipe;
 @property (nonatomic, strong) NSMutableDictionary *datasource;
 -(void) reloadData;
--(void) timerPerform:(NSTimer*)timer;
 @end

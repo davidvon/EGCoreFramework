@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD0D76A9175E30A8007D3395 /* SwipeShadeImageWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0D76A7175E30A8007D3395 /* SwipeShadeImageWidgetView.h */; };
-		DD0D76AA175E30A8007D3395 /* SwipeShadeImageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0D76A8175E30A8007D3395 /* SwipeShadeImageWidgetView.m */; };
+		DD0D76A9175E30A8007D3395 /* AnimateImageWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0D76A7175E30A8007D3395 /* AnimateImageWidgetView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD0D76AA175E30A8007D3395 /* AnimateImageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0D76A8175E30A8007D3395 /* AnimateImageWidgetView.m */; };
 		DD87B6131759D33A000E4F0C /* Harpy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60A1759D33A000E4F0C /* Harpy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD87B6141759D33A000E4F0C /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87B60B1759D33A000E4F0C /* Harpy.m */; };
 		DD87B6151759D33A000E4F0C /* HarpyConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60C1759D33A000E4F0C /* HarpyConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,13 +35,13 @@
 		DDF56ECA175CB45E000872CE /* SwipeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EC8175CB45E000872CE /* SwipeDataSource.m */; };
 		DDF56ECE175CB4F9000872CE /* Constant.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ECC175CB4F9000872CE /* Constant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56ED0175CB5D3000872CE /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56ECD175CB4F9000872CE /* Constant.m */; };
-		DDF56ED7175CC494000872CE /* EGShadingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ED5175CC494000872CE /* EGShadingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF56ED8175CC494000872CE /* EGShadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56ED6175CC494000872CE /* EGShadingImageView.m */; };
+		DDF56ED7175CC494000872CE /* EGAnimateImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ED5175CC494000872CE /* EGAnimateImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF56ED8175CC494000872CE /* EGAnimateImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56ED6175CC494000872CE /* EGAnimateImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD0D76A7175E30A8007D3395 /* SwipeShadeImageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeShadeImageWidgetView.h; sourceTree = "<group>"; };
-		DD0D76A8175E30A8007D3395 /* SwipeShadeImageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeShadeImageWidgetView.m; sourceTree = "<group>"; };
+		DD0D76A7175E30A8007D3395 /* AnimateImageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateImageWidgetView.h; sourceTree = "<group>"; };
+		DD0D76A8175E30A8007D3395 /* AnimateImageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateImageWidgetView.m; sourceTree = "<group>"; };
 		DD87B60A1759D33A000E4F0C /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
 		DD87B60B1759D33A000E4F0C /* Harpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Harpy.m; sourceTree = "<group>"; };
 		DD87B60C1759D33A000E4F0C /* HarpyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarpyConstants.h; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 		DDF56EC8175CB45E000872CE /* SwipeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeDataSource.m; sourceTree = "<group>"; };
 		DDF56ECC175CB4F9000872CE /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		DDF56ECD175CB4F9000872CE /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
-		DDF56ED5175CC494000872CE /* EGShadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGShadingImageView.h; path = Animation/EGShadingImageView.h; sourceTree = "<group>"; };
-		DDF56ED6175CC494000872CE /* EGShadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGShadingImageView.m; path = Animation/EGShadingImageView.m; sourceTree = "<group>"; };
+		DDF56ED5175CC494000872CE /* EGAnimateImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGAnimateImageView.h; path = Animation/EGAnimateImageView.h; sourceTree = "<group>"; };
+		DDF56ED6175CC494000872CE /* EGAnimateImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGAnimateImageView.m; path = Animation/EGAnimateImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +163,8 @@
 		DDB772F817520DD2004A3004 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				DDF56ED5175CC494000872CE /* EGShadingImageView.h */,
-				DDF56ED6175CC494000872CE /* EGShadingImageView.m */,
+				DDF56ED5175CC494000872CE /* EGAnimateImageView.h */,
+				DDF56ED6175CC494000872CE /* EGAnimateImageView.m */,
 				DDB772F917520DE3004A3004 /* EGCoreAnimation.h */,
 				DDB772FA17520DE3004A3004 /* EGCoreAnimation.m */,
 			);
@@ -237,8 +237,8 @@
 				DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */,
 				DDF56EBE175CB3FE000872CE /* SwipeWidgetView.h */,
 				DDF56EBF175CB3FE000872CE /* SwipeWidgetView.m */,
-				DD0D76A7175E30A8007D3395 /* SwipeShadeImageWidgetView.h */,
-				DD0D76A8175E30A8007D3395 /* SwipeShadeImageWidgetView.m */,
+				DD0D76A7175E30A8007D3395 /* AnimateImageWidgetView.h */,
+				DD0D76A8175E30A8007D3395 /* AnimateImageWidgetView.m */,
 			);
 			path = EGMagazine;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 			files = (
 				DDB7736417524A8A004A3004 /* EGCoreAnimation.h in Headers */,
 				DD87B6181759D33A000E4F0C /* EGReflection.h in Headers */,
-				DDF56ED7175CC494000872CE /* EGShadingImageView.h in Headers */,
+				DDF56ED7175CC494000872CE /* EGAnimateImageView.h in Headers */,
 				DDC637EC1756240300975F99 /* JBKenBurnsView.h in Headers */,
 				DDC637EE1756240300975F99 /* PocketSVG.h in Headers */,
 				DD87B6131759D33A000E4F0C /* Harpy.h in Headers */,
@@ -271,9 +271,9 @@
 				DDF56EC9175CB45E000872CE /* SwipeDataSource.h in Headers */,
 				DDC637F41756241000975F99 /* SwipeView.h in Headers */,
 				DDF56ECE175CB4F9000872CE /* Constant.h in Headers */,
+				DD0D76A9175E30A8007D3395 /* AnimateImageWidgetView.h in Headers */,
 				DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */,
 				DDF56EC4175CB3FE000872CE /* SwipeWidgetView.h in Headers */,
-				DD0D76A9175E30A8007D3395 /* SwipeShadeImageWidgetView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +352,8 @@
 				DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */,
 				DDF56EC5175CB3FE000872CE /* SwipeWidgetView.m in Sources */,
 				DDF56ECA175CB45E000872CE /* SwipeDataSource.m in Sources */,
-				DDF56ED8175CC494000872CE /* EGShadingImageView.m in Sources */,
-				DD0D76AA175E30A8007D3395 /* SwipeShadeImageWidgetView.m in Sources */,
+				DDF56ED8175CC494000872CE /* EGAnimateImageView.m in Sources */,
+				DD0D76AA175E30A8007D3395 /* AnimateImageWidgetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,14 +9,17 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-@interface EGShadingImageView : UIImageView
+#import "SwipeDataSource.h"
+
+@interface EGAnimateImageView : UIImageView
 {
     int currentHeight;
     NSTimer *timer;
     CALayer *animateLayer;
+    WidgetType  widgetType;
 }
 
 -(id) initWithBackgroundImage:(NSString*)name withPoint:(CGPoint)point;
--(void) addAnimationImage:(NSString*)name withStyle:(NSString*)style fromPoint:(CGPoint)point;
+-(void) addAnimationImage:(NSString*)name withType:(WidgetType)type fromPoint:(CGPoint)point;
 -(void) animate;
 @end

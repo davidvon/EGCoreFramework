@@ -9,7 +9,7 @@
 #import "SwipeWidgetView.h"
 #import "EGCoreAnimation.h"
 #import "SwipeDataSource.h"
-#import "SwipeShadeImageWidgetView.h"
+#import "AnimateImageWidgetView.h"
 
 @implementation SwipePageView
 @synthesize widgets,json_data;
@@ -53,8 +53,8 @@
 {
     SwipeWidgetView *widget = nil;
     WidgetType type =  [SwipeDataSource widgetTypeFromDict:dict];
-    if( type == Widget_Animation_ImageShading ){
-        widget = [[SwipeShadeImageWidgetView alloc] initWithJsonDict:dict];
+    if( type == Widget_Animation_ImageShade || type == Widget_Animation_ImageFadeIn ){
+        widget = [[AnimateImageWidgetView alloc] initWithJsonDict:dict withType:type];
     } else {
          widget = [[SwipeWidgetView alloc] initWithJsonDict:dict];
     }

@@ -20,9 +20,10 @@
 #define KEY_Swiping                     @"swiping"
 #define KEY_Animation_MoveX             @"animation.move.x"
 #define KEY_Animation_MoveY             @"animation.move.y"
-#define KEY_Animation_ImageShading      @"animation.shadeimage"
+#define KEY_Animation_ImageShade        @"animation.image.shade"
+#define KEY_Animation_ImageFadeIn       @"animation.image.fadein"
 
-#define BACKGROUND_TRANS_DUR      60
+#define BACKGROUND_TRANS_DUR            60
 
 typedef enum {
     Widget_Image_Static,
@@ -30,7 +31,8 @@ typedef enum {
     Widget_Animation_Swiping,
     Widget_Animation_MoveX,
     Widget_Animation_MoveY,
-    Widget_Animation_ImageShading,
+    Widget_Animation_ImageShade,
+    Widget_Animation_ImageFadeIn,
 }WidgetType;
 
 

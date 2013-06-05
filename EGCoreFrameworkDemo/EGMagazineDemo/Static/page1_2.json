@@ -18,12 +18,12 @@
     "widget.animations":[
          {
             "name":"animation.1",
-            "type":"animation.move.x",
+            "type":"animation.image.fadein",
             "image":"XSW_vacation_water_big_back.png",
-            "position":{ "from":[-681,200,722,109], "to":{"x":"681"}, "z":"1" },
-            "duration":"0.4",
-            "delay":"0",
-            "frame":[-681,0,681,70]
+            "image.position":[20,20],
+            "animation.image":"XSW_vacation_Golf_big_writing.png",
+            "animation.position":[20,10],
+            "delay":"1"
         },
         {
             "name":"animation.2",

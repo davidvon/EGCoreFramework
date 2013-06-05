@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 
-#import "EGShadingImageView.h"
+#import "EGAnimateImageView.h"
 
-@implementation EGShadingImageView
+@implementation EGAnimateImageView
 
 - (id)initWithBackgroundImage:(NSString*)name withPoint:(CGPoint)point;
 {
@@ -22,18 +22,23 @@
 }
 
 
--(void)addAnimationImage:(NSString*)name withStyle:(NSString*)style fromPoint:(CGPoint)point;
+-(void) addAnimationImage:(NSString*)name withType:(WidgetType)type fromPoint:(CGPoint)point
 {
     if(animateLayer){
         [animateLayer removeFromSuperlayer];
         animateLayer = nil;
     }
     animateLayer = [CALayer layer];
-    animateLayer.frame = CGRectMake(point.x, point.y, self.frame.size.width, currentHeight);
     UIImage *image = [UIImage imageNamed:name];
     animateLayer.contents= (id)image.CGImage;
     animateLayer.masksToBounds = YES;
-    animateLayer.contentsGravity = style;
+    widgetType = type;
+    if( widgetType == Widget_Animation_ImageShade ){
+        animateLayer.contentsGravity = kCAGravityBottom;
+        animateLayer.frame = CGRectMake(point.x, point.y, self.frame.size.width, currentHeight);
+    }else{
+        animateLayer.frame = CGRectMake(point.x, point.y, image.size.width, image.size.height);
+    }
     [self.layer addSublayer:animateLayer];
     currentHeight = self.frame.origin.y;
 }
@@ -43,7 +48,6 @@
 {
     currentHeight += 2;
     animateLayer.frame = CGRectMake(animateLayer.frame.origin.x, animateLayer.frame.origin.y, self.frame.size.width, currentHeight);
-//    NSLog(@"current=%d, y=%f, end=%f", currentHeight, self.frame.origin.y, self.frame.size.height );
     if (currentHeight >= self.frame.size.height) {
         if(timer)[timer invalidate];
         timer = nil;
@@ -51,7 +55,7 @@
     }
 }
 
--(void) animate
+-(void) swipeAnimate
 {
     if(timer){
         [timer invalidate];
@@ -59,6 +63,25 @@
     }
     timer = [NSTimer timerWithTimeInterval:0.02 target:self selector:@selector(stepHeight) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+}
+
+
+
+-(void) fadeInAnimate
+{
+    self.alpha = 0;
+    [UIView animateWithDuration:0.6f animations:^{
+        self.alpha = 1;
+    }];
+}
+
+-(void)animate
+{
+    if( widgetType == Widget_Animation_ImageShade){
+        [self swipeAnimate];
+    } else {
+        [self fadeInAnimate];
+    }
 }
 
 @end

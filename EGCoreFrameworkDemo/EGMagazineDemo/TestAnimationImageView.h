@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestShadingAnimationView : UIViewController
-
+@interface TestAnimationImageView : UIViewController{
+    int animationType;
+}
+-(id) initWithType:(int) type;
 @end

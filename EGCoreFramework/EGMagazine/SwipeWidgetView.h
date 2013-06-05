@@ -19,10 +19,10 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSDictionary *reflectionInfo;
 
-- (id)initWithParams:(CGRect)widgetFrame dest:(int)xy image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype;
-- (id)initWithJsonDict:(NSDictionary *)dict;
+- (id) initWithParams:(CGRect)widgetFrame dest:(int)xy image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype;
+- (id) initWithJsonDict:(NSDictionary *)dict;
 
-- (void)swipeViewDidScroll:(float)offset withIndex:(int) index;
+- (void) swipeViewDidScroll:(float)offset withIndex:(int) index;
 - (void) animate;
 @end
 

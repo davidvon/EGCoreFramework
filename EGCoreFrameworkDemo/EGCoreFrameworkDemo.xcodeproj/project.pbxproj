@@ -60,7 +60,7 @@
 		DDE6931E1759B37000C97CF0 /* XSW_vacation_water_big_writing.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692FA1759B37000C97CF0 /* XSW_vacation_water_big_writing.png */; };
 		DDE6931F1759B37000C97CF0 /* XSW_vacation_water_small_back.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692FB1759B37000C97CF0 /* XSW_vacation_water_small_back.png */; };
 		DDE693201759B37000C97CF0 /* XSW_vacation_water_small_writing.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692FC1759B37000C97CF0 /* XSW_vacation_water_small_writing.png */; };
-		DDF56EDB175CCD3E000872CE /* TestShadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EDA175CCD3E000872CE /* TestShadingAnimationView.m */; };
+		DDF56EDB175CCD3E000872CE /* TestAnimationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EDA175CCD3E000872CE /* TestAnimationImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,8 +136,8 @@
 		DDE693361759B4A000C97CF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDE6933A1759B50800C97CF0 /* EGCoreFrameworkDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EGCoreFrameworkDemo-Info.plist"; sourceTree = "<group>"; };
 		DDE6933C1759B51B00C97CF0 /* EGCoreFrameworkDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGCoreFrameworkDemo-Prefix.pch"; sourceTree = "<group>"; };
-		DDF56ED9175CCD3E000872CE /* TestShadingAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestShadingAnimationView.h; sourceTree = "<group>"; };
-		DDF56EDA175CCD3E000872CE /* TestShadingAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestShadingAnimationView.m; sourceTree = "<group>"; };
+		DDF56ED9175CCD3E000872CE /* TestAnimationImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnimationImageView.h; sourceTree = "<group>"; };
+		DDF56EDA175CCD3E000872CE /* TestAnimationImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnimationImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +193,8 @@
 				DDB77297175207D0004A3004 /* AppDelegate.m */,
 				DDB77320175234A6004A3004 /* TestCoreAnimationView.h */,
 				DDB77321175234A6004A3004 /* TestCoreAnimationView.m */,
-				DDF56ED9175CCD3E000872CE /* TestShadingAnimationView.h */,
-				DDF56EDA175CCD3E000872CE /* TestShadingAnimationView.m */,
+				DDF56ED9175CCD3E000872CE /* TestAnimationImageView.h */,
+				DDF56EDA175CCD3E000872CE /* TestAnimationImageView.m */,
 				DDC637F61756294A00975F99 /* TestReflection.h */,
 				DDC637F71756294A00975F99 /* TestReflection.m */,
 				DD4DD6A11759E4E4005FBE14 /* Static */,
@@ -400,7 +400,7 @@
 				DDB77298175207D0004A3004 /* AppDelegate.m in Sources */,
 				DDB77322175234A7004A3004 /* TestCoreAnimationView.m in Sources */,
 				DDC637F81756294A00975F99 /* TestReflection.m in Sources */,
-				DDF56EDB175CCD3E000872CE /* TestShadingAnimationView.m in Sources */,
+				DDF56EDB175CCD3E000872CE /* TestAnimationImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
