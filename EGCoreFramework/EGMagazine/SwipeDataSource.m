@@ -77,6 +77,19 @@
     return @"";
 }
 
+
++(WidgetType) widgetTypeFromDict:(NSDictionary*)dict
+{
+    NSString *type = [dict objectForKey:@"type"];
+    if( [type isEqualToString:KEY_Image_Static])                return Widget_Image_Static;
+    if( [type isEqualToString:KEY_Swiping])                     return Widget_Swiping;
+    if( [type isEqualToString:KEY_Animation_MoveX] )            return Widget_Animation_MoveX;
+    if( [type isEqualToString:KEY_Animation_MoveY] )            return Widget_Animation_MoveY;
+    if( [type isEqualToString:KEY_Animation_ImageShading] )     return Widget_Animation_ImageShading;
+    return Widget_Animation_Swiping;
+}
+
+
 @end
 
 

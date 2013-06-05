@@ -18,6 +18,7 @@
     [self.view addSubview:imgView];
     
     [imgView addAnimationImage:@"XSW_vacation_Golf_big_writing" withStyle:kCAGravityBottom fromPoint:CGPointMake(20, 10)];
+    [imgView animate];
 }
 
 

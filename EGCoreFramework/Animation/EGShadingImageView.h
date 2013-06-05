@@ -18,4 +18,5 @@
 
 -(id) initWithBackgroundImage:(NSString*)name withPoint:(CGPoint)point;
 -(void) addAnimationImage:(NSString*)name withStyle:(NSString*)style fromPoint:(CGPoint)point;
+-(void) animate;
 @end

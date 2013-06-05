@@ -35,7 +35,6 @@
     animateLayer.masksToBounds = YES;
     animateLayer.contentsGravity = style;
     [self.layer addSublayer:animateLayer];
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(stepHeight) userInfo:nil repeats:YES];
     currentHeight = self.frame.origin.y;
 }
 
@@ -44,12 +43,22 @@
 {
     currentHeight += 2;
     animateLayer.frame = CGRectMake(animateLayer.frame.origin.x, animateLayer.frame.origin.y, self.frame.size.width, currentHeight);
-    NSLog(@"current=%d, y=%f, end=%f", currentHeight, self.frame.origin.y, self.frame.size.height );
+//    NSLog(@"current=%d, y=%f, end=%f", currentHeight, self.frame.origin.y, self.frame.size.height );
     if (currentHeight >= self.frame.size.height) {
         if(timer)[timer invalidate];
         timer = nil;
         currentHeight=0;
     }
+}
+
+-(void) animate
+{
+    if(timer){
+        [timer invalidate];
+        timer = nil;
+    }
+    timer = [NSTimer timerWithTimeInterval:0.02 target:self selector:@selector(stepHeight) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 @end

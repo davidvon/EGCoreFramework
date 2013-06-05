@@ -12,6 +12,30 @@
 #define APPLICATION_JSONPATH   @"Static"
 
 
+#define Category_Widget_Animations      @"widget.animations"
+#define Category_Widget_Swipings        @"widget.swipings"
+#define Category_Widget_StaticImage     @"widget.static.image"
+
+#define KEY_Image_Static                @"image.static"
+#define KEY_Swiping                     @"swiping"
+#define KEY_Animation_MoveX             @"animation.move.x"
+#define KEY_Animation_MoveY             @"animation.move.y"
+#define KEY_Animation_ImageShading      @"animation.shadeimage"
+
+#define BACKGROUND_TRANS_DUR      60
+
+typedef enum {
+    Widget_Image_Static,
+    Widget_Swiping,
+    Widget_Animation_Swiping,
+    Widget_Animation_MoveX,
+    Widget_Animation_MoveY,
+    Widget_Animation_ImageShading,
+}WidgetType;
+
+
+
+
 @interface SwipeDataSource : NSObject{
     NSMutableDictionary *json_datas;
 }
@@ -22,6 +46,7 @@
 -(id)  getWidgetInPage:(NSString*)widgetName InPage:(NSString*)pageName;
 -(NSString*) getPageFileNameByIndex:(int)index;
 
++(WidgetType) widgetTypeFromDict:(NSDictionary*)dict;
 +(SwipeDataSource*) instance;
 @end
 

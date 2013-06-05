@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SwipePageView.h"
+#import "SwipeDataSource.h"
 
-@interface SwipePageWidgetView : UIView{
+@interface SwipeWidgetView : UIView{
     WidgetType widgetType;
     int   destination;
     float duration;
@@ -18,13 +19,10 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSDictionary *reflectionInfo;
 
-
 - (id)initWithParams:(CGRect)widgetFrame dest:(int)xy image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype;
 - (id)initWithJsonDict:(NSDictionary *)dict;
 
-+(SwipePageWidgetView*) addWidgetView:(CGRect)widgetFrame toDestX:(int)x withImage:(NSString*)image durcation:(float)dur delay:(float)time ofType:(WidgetType)type withMainViewFrame:(CGRect)mainFrame inView:(UIView *)view;
-+(SwipePageWidgetView*) initWithJsonDict:(NSDictionary *)dict inView:(UIView *)view;
-
 - (void)swipeViewDidScroll:(float)offset withIndex:(int) index;
+- (void) animate;
 @end
 

@@ -6,10 +6,10 @@
 //
 #import <QuartzCore/QuartzCore.h>
 #import "SwipePageView.h"
-#import "SwipePageWidgetView.h"
+#import "SwipeWidgetView.h"
 #import "EGCoreAnimation.h"
 #import "SwipeDataSource.h"
-
+#import "SwipeShadeImageWidgetView.h"
 
 @implementation SwipePageView
 @synthesize widgets,json_data;
@@ -30,7 +30,7 @@
 -(void) clearExistingWidgets
 {
     for( int i=0; i<widgets.count; i++){
-        SwipePageWidgetView *view = [widgets objectAtIndex:i];
+        SwipeWidgetView *view = [widgets objectAtIndex:i];
         [view removeFromSuperview];
     }
     [widgets removeAllObjects];
@@ -48,6 +48,21 @@
 
 
 
+
+-(SwipeWidgetView*) createViewWithJsonDict:(NSDictionary*)dict inView:(UIView*)view
+{
+    SwipeWidgetView *widget = nil;
+    WidgetType type =  [SwipeDataSource widgetTypeFromDict:dict];
+    if( type == Widget_Animation_ImageShading ){
+        widget = [[SwipeShadeImageWidgetView alloc] initWithJsonDict:dict];
+    } else {
+         widget = [[SwipeWidgetView alloc] initWithJsonDict:dict];
+    }
+    [view addSubview:widget];
+    return widget;
+}
+
+
 -(void)loadStaticShowWidgets:(int)index forKey:(NSString*)key
 {
     NSString *pageName = [[SwipeDataSource instance] getPageFileNameByIndex:index];
@@ -60,7 +75,7 @@
     NSArray *objs = [json_data objectForKey:key];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
-        SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
+        SwipeWidgetView *widget = [self createViewWithJsonDict:obj inView:self];
         [widgets addObject:widget];
     }
 }
@@ -71,7 +86,7 @@
 - (void)swipeViewDidScroll:(SwipeView *)swipeView
 {
     for ( int i=0;  i<widgets.count; i++ ) {
-        SwipePageWidgetView *view = [widgets objectAtIndex:i];
+        SwipeWidgetView *view = [widgets objectAtIndex:i];
         [view swipeViewDidScroll:[swipeView scrollOffset] withIndex:[swipeView previousItemIndex]];
     }
 }
@@ -87,7 +102,8 @@
 
 -(void) animationShowByThread
 {
-    [NSThread detachNewThreadSelector:@selector(animationGroupShow) toTarget:self withObject:nil];
+//    [NSThread detachNewThreadSelector:@selector(animationGroupShow) toTarget:self withObject:nil];
+    [self animationGroupShow];
 }
 
 
@@ -106,8 +122,10 @@
     NSArray *objs = [json_data objectForKey:Category_Widget_Animations];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
-        SwipePageWidgetView *widget = [SwipePageWidgetView initWithJsonDict:obj inView:self];
+        
+        SwipeWidgetView *widget = [self createViewWithJsonDict:obj inView:self];
         [widgets addObject:widget];
+        [widget animate];
     }
 }
 

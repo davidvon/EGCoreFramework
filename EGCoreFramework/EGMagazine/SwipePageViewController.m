@@ -94,6 +94,11 @@
 }
 
 
-
+-(void) timerPerform:(NSTimer*)timer
+{
+    id obj = [timer userInfo];
+    [obj performSelector:@selector(animate)];
+    
+}
 
 @end

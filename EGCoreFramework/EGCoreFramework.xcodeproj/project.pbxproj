@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0D76A9175E30A8007D3395 /* SwipeShadeImageWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0D76A7175E30A8007D3395 /* SwipeShadeImageWidgetView.h */; };
+		DD0D76AA175E30A8007D3395 /* SwipeShadeImageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0D76A8175E30A8007D3395 /* SwipeShadeImageWidgetView.m */; };
 		DD87B6131759D33A000E4F0C /* Harpy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60A1759D33A000E4F0C /* Harpy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD87B6141759D33A000E4F0C /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87B60B1759D33A000E4F0C /* Harpy.m */; };
 		DD87B6151759D33A000E4F0C /* HarpyConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60C1759D33A000E4F0C /* HarpyConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,8 +29,8 @@
 		DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBB175CB3FE000872CE /* SwipePageView.m */; };
 		DDF56EC2175CB3FE000872CE /* SwipePageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */; };
-		DDF56EC4175CB3FE000872CE /* SwipePageWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBE175CB3FE000872CE /* SwipePageWidgetView.h */; };
-		DDF56EC5175CB3FE000872CE /* SwipePageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBF175CB3FE000872CE /* SwipePageWidgetView.m */; };
+		DDF56EC4175CB3FE000872CE /* SwipeWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBE175CB3FE000872CE /* SwipeWidgetView.h */; };
+		DDF56EC5175CB3FE000872CE /* SwipeWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBF175CB3FE000872CE /* SwipeWidgetView.m */; };
 		DDF56EC9175CB45E000872CE /* SwipeDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EC7175CB45E000872CE /* SwipeDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56ECA175CB45E000872CE /* SwipeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EC8175CB45E000872CE /* SwipeDataSource.m */; };
 		DDF56ECE175CB4F9000872CE /* Constant.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ECC175CB4F9000872CE /* Constant.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0D76A7175E30A8007D3395 /* SwipeShadeImageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeShadeImageWidgetView.h; sourceTree = "<group>"; };
+		DD0D76A8175E30A8007D3395 /* SwipeShadeImageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeShadeImageWidgetView.m; sourceTree = "<group>"; };
 		DD87B60A1759D33A000E4F0C /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
 		DD87B60B1759D33A000E4F0C /* Harpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Harpy.m; sourceTree = "<group>"; };
 		DD87B60C1759D33A000E4F0C /* HarpyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarpyConstants.h; sourceTree = "<group>"; };
@@ -64,8 +68,8 @@
 		DDF56EBB175CB3FE000872CE /* SwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
 		DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageViewController.h; sourceTree = "<group>"; };
 		DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageViewController.m; sourceTree = "<group>"; };
-		DDF56EBE175CB3FE000872CE /* SwipePageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageWidgetView.h; sourceTree = "<group>"; };
-		DDF56EBF175CB3FE000872CE /* SwipePageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageWidgetView.m; sourceTree = "<group>"; };
+		DDF56EBE175CB3FE000872CE /* SwipeWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeWidgetView.h; sourceTree = "<group>"; };
+		DDF56EBF175CB3FE000872CE /* SwipeWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeWidgetView.m; sourceTree = "<group>"; };
 		DDF56EC7175CB45E000872CE /* SwipeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeDataSource.h; sourceTree = "<group>"; };
 		DDF56EC8175CB45E000872CE /* SwipeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeDataSource.m; sourceTree = "<group>"; };
 		DDF56ECC175CB4F9000872CE /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
@@ -231,8 +235,10 @@
 				DDF56EBB175CB3FE000872CE /* SwipePageView.m */,
 				DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */,
 				DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */,
-				DDF56EBE175CB3FE000872CE /* SwipePageWidgetView.h */,
-				DDF56EBF175CB3FE000872CE /* SwipePageWidgetView.m */,
+				DDF56EBE175CB3FE000872CE /* SwipeWidgetView.h */,
+				DDF56EBF175CB3FE000872CE /* SwipeWidgetView.m */,
+				DD0D76A7175E30A8007D3395 /* SwipeShadeImageWidgetView.h */,
+				DD0D76A8175E30A8007D3395 /* SwipeShadeImageWidgetView.m */,
 			);
 			path = EGMagazine;
 			sourceTree = "<group>";
@@ -266,7 +272,8 @@
 				DDC637F41756241000975F99 /* SwipeView.h in Headers */,
 				DDF56ECE175CB4F9000872CE /* Constant.h in Headers */,
 				DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */,
-				DDF56EC4175CB3FE000872CE /* SwipePageWidgetView.h in Headers */,
+				DDF56EC4175CB3FE000872CE /* SwipeWidgetView.h in Headers */,
+				DD0D76A9175E30A8007D3395 /* SwipeShadeImageWidgetView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +350,10 @@
 				DD87B6191759D33A000E4F0C /* EGReflection.m in Sources */,
 				DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */,
 				DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */,
-				DDF56EC5175CB3FE000872CE /* SwipePageWidgetView.m in Sources */,
+				DDF56EC5175CB3FE000872CE /* SwipeWidgetView.m in Sources */,
 				DDF56ECA175CB45E000872CE /* SwipeDataSource.m in Sources */,
 				DDF56ED8175CC494000872CE /* EGShadingImageView.m in Sources */,
+				DD0D76AA175E30A8007D3395 /* SwipeShadeImageWidgetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

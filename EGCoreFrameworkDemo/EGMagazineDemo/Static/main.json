@@ -8,8 +8,8 @@
             "name":"animation.1",
             "type":"animation.move.x",
             "image":"big_yun.png",
-            "position":{ "from":[-800,100,1024,768], "to":{"x":"2048"}, "z":"1" },
-            "duration":"80",
+            "position":{ "from":[-800,100,1024,768], "to":{"x":"1500"}, "z":"1" },
+            "duration":"60",
             "delay":"0",
             "frame":[0,0,1024,768]
         },
