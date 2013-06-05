@@ -12,6 +12,20 @@
 @implementation EGCoreAnimation
 
 
+
+//FadeIn
++(void) fadeIn:(float)duration delay:(float)time withView:(UIView *)view
+{
+    view.alpha = 0;
+    UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut;
+    [UIView animateWithDuration:duration delay:time options:options animations:^ {
+        view.alpha = 1;
+    } completion:nil];
+}
+
+
+
+
 //永久闪烁的动画
 +(CABasicAnimation *)opacityForever_Animation:(float)time
 {
@@ -243,6 +257,8 @@
     animGroup.duration = 6;
     [view.layer addAnimation:animGroup forKey:nil];
 }
+
+
 @end
 
 

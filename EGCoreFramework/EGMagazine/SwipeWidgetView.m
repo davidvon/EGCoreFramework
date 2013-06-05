@@ -129,6 +129,8 @@
             return [EGCoreAnimation moveX:destination duration:duration delay:delay withView:self];
         case Widget_Animation_MoveY:
             return [EGCoreAnimation moveY:destination duration:duration delay:delay withView:self];
+        case Widget_Animation_FadeIn:
+            return [EGCoreAnimation fadeIn:duration delay:delay withView:self];
         default:
             return;
     }        

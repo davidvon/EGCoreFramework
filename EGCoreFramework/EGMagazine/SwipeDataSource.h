@@ -22,6 +22,7 @@
 #define KEY_Animation_MoveY             @"animation.move.y"
 #define KEY_Animation_ImageShade        @"animation.image.shade"
 #define KEY_Animation_ImageFadeIn       @"animation.image.fadein"
+#define KEY_Animation_FadeIn            @"animation.fadein"
 
 #define BACKGROUND_TRANS_DUR            60
 
@@ -33,6 +34,7 @@ typedef enum {
     Widget_Animation_MoveY,
     Widget_Animation_ImageShade,
     Widget_Animation_ImageFadeIn,
+    Widget_Animation_FadeIn,
 }WidgetType;
 
 

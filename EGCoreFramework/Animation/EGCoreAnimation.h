@@ -30,5 +30,5 @@
 +(void)rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount;
 +(void)rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount direction:(int)dir; //旋转
 
-
++(void) fadeIn:(float)duration delay:(float)time withView:(UIView *)view;
 @end
