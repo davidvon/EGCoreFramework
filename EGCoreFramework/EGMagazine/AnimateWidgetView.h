@@ -1,5 +1,5 @@
 //
-//  SwipePageWidgetView.h
+//  AnimateWidgetView.h
 //  EGCoreFrameworkDemo
 //
 //  Created by feng guanhua on 13-5-28.
@@ -10,7 +10,7 @@
 #import "SwipePageView.h"
 #import "SwipeDataSource.h"
 
-@interface SwipeWidgetView : UIView{
+@interface AnimateWidgetView : UIView{
     WidgetType widgetType;
     int   destination;
     float duration;
@@ -18,10 +18,9 @@
 }
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSDictionary *reflectionInfo;
+@property (nonatomic, strong) NSMutableArray *animationGroupInfo;
 
-- (id) initWithParams:(CGRect)widgetFrame dest:(int)xy image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype;
 - (id) initWithJsonDict:(NSDictionary *)dict;
-
 - (void) swipeViewDidScroll:(float)offset withIndex:(int) index;
 - (void) animate;
 @end

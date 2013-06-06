@@ -55,7 +55,7 @@
     UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(130,130,100,100)];
     imageview.image = [UIImage imageNamed:@"1"];
     [self.view addSubview:imageview];
-    CABasicAnimation *anim = [EGCoreAnimation opacityForever_Animation:3.f];
+    CABasicAnimation *anim = [EGCoreAnimation opacityForever:3.f];
     UIView *view = [[self.view subviews] lastObject];
     [view.layer addAnimation:anim forKey:nil];
 }
@@ -98,10 +98,10 @@
     [imageview.layer addAnimation:anim forKey:nil];
     
     imageview = [self addImageView:@"XSW_vacation_Golf_big_back" withFrame:CGRectMake(1024,280,722,109)];
-    [EGCoreAnimation moveX:300 duration:0.4f delay:0.5f withView:imageview ];
+    [EGCoreAnimation moveX:300 duration:0.4f delay:0.5f inView:imageview ];
 
     imageview = [self addImageView:@"XSW_vacation_Golf_big_writing" withFrame:CGRectMake(1024,290,650,76)];
-    [EGCoreAnimation moveX:340 duration:0.4f  delay:0.5f withView:imageview ];
+    [EGCoreAnimation moveX:340 duration:0.4f  delay:0.5f inView:imageview ];
 }
 
 

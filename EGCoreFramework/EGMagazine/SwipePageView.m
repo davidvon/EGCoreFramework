@@ -6,7 +6,7 @@
 //
 #import <QuartzCore/QuartzCore.h>
 #import "SwipePageView.h"
-#import "SwipeWidgetView.h"
+#import "AnimateWidgetView.h"
 #import "EGCoreAnimation.h"
 #import "SwipeDataSource.h"
 #import "AnimateImageWidgetView.h"
@@ -30,7 +30,7 @@
 -(void) clearExistingWidgets
 {
     for( int i=0; i<widgets.count; i++){
-        SwipeWidgetView *view = [widgets objectAtIndex:i];
+        AnimateWidgetView *view = [widgets objectAtIndex:i];
         [view removeFromSuperview];
     }
     [widgets removeAllObjects];
@@ -49,14 +49,14 @@
 
 
 
--(SwipeWidgetView*) createViewWithJsonDict:(NSDictionary*)dict inView:(UIView*)view
+-(AnimateWidgetView*) createViewWithJsonDict:(NSDictionary*)dict inView:(UIView*)view
 {
-    SwipeWidgetView *widget = nil;
+    AnimateWidgetView *widget = nil;
     WidgetType type =  [SwipeDataSource widgetTypeFromDict:dict];
     if( type == Widget_Animation_ImageShade || type == Widget_Animation_ImageFadeIn ){
         widget = [[AnimateImageWidgetView alloc] initWithJsonDict:dict withType:type];
     } else {
-         widget = [[SwipeWidgetView alloc] initWithJsonDict:dict];
+         widget = [[AnimateWidgetView alloc] initWithJsonDict:dict];
     }
     [view addSubview:widget];
     return widget;
@@ -75,7 +75,7 @@
     NSArray *objs = [json_data objectForKey:key];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
-        SwipeWidgetView *widget = [self createViewWithJsonDict:obj inView:self];
+        AnimateWidgetView *widget = [self createViewWithJsonDict:obj inView:self];
         [widgets addObject:widget];
     }
 }
@@ -86,7 +86,7 @@
 - (void)swipeViewDidScroll:(SwipeView *)swipeView
 {
     for ( int i=0;  i<widgets.count; i++ ) {
-        SwipeWidgetView *view = [widgets objectAtIndex:i];
+        AnimateWidgetView *view = [widgets objectAtIndex:i];
         [view swipeViewDidScroll:[swipeView scrollOffset] withIndex:[swipeView previousItemIndex]];
     }
 }
@@ -123,7 +123,7 @@
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
         
-        SwipeWidgetView *widget = [self createViewWithJsonDict:obj inView:self];
+        AnimateWidgetView *widget = [self createViewWithJsonDict:obj inView:self];
         [widgets addObject:widget];
         [widget animate];
     }

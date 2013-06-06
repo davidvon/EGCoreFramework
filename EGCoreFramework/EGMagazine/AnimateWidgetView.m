@@ -1,33 +1,18 @@
 //
-//  SwipePageWidgetView.m
+//  AnimateWidgetView.m
 //  EGCoreFrameworkDemo
 //
 //  Created by feng guanhua on 13-5-28.
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 
-#import "SwipeWidgetView.h"
+#import "AnimateWidgetView.h"
 #import "EGCoreAnimation.h"
 #import "EGReflection.h"
 #import "Constant.h"
 
-@implementation SwipeWidgetView
-@synthesize reflectionInfo;
-
-- (id)initWithParams:(CGRect)widgetFrame dest:(int)xy image:(NSString*)name durnation:(float)dur delay:(float)del withMainViewFrame:(CGRect)mainFrame ofType:(WidgetType)wtype
-{
-    self = [super initWithFrame:mainFrame];
-    if (self) {
-        UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:name]];
-        imageview.frame = widgetFrame;
-        [self addSubview:imageview];
-        widgetType = wtype;
-        destination = xy;
-        duration = dur;
-        delay = del;
-    }
-    return self;
-}
+@implementation AnimateWidgetView
+@synthesize reflectionInfo, animationGroupInfo;
 
 
 -(BOOL) addImagePerfrom:(NSString*)image withFrame:(CGRect)frame withDict:(NSDictionary *)dict
@@ -57,7 +42,6 @@
     NSString *tox = [to objectForKey:@"x"];
     if( tox.length == 0 ){
         NSString *toy = [to objectForKey:@"y"];
-        assert(toy.length > 0);
         destination = [toy integerValue];
     } else {
         destination = [tox integerValue];
@@ -71,7 +55,7 @@
     NSString *image   = [dict objectForKey:@"image"];
     NSDictionary *pos = [dict objectForKey:@"position"];
     NSArray *from     = [pos objectForKey:@"from"];
-    CGRect imageFrame = [SwipeWidgetView createCGRectByDict:from];
+    CGRect imageFrame = [AnimateWidgetView createCGRectByDict:from];
     bool isExist = [self addImagePerfrom:image withFrame:imageFrame withDict:dict];
     if( !isExist ) {
         UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
@@ -79,13 +63,14 @@
         [self addSubview:imageview];
     }    
     [self toDestination: [pos objectForKey:@"to"]];
+    self.layer.zPosition = [[pos objectForKey:@"z"] floatValue];
 }
 
 
 
 - (id)initWithJsonDict:(NSDictionary *)dict
 {
-    CGRect ret = [SwipeWidgetView createCGRectByDict:[dict objectForKey:@"frame"]];
+    CGRect ret = [AnimateWidgetView createCGRectByDict:[dict objectForKey:@"frame"]];
     self = [super initWithFrame:ret];
     self.name =  [dict objectForKey:@"name"];
     
@@ -126,11 +111,15 @@
 {
     switch (widgetType) {
         case Widget_Animation_MoveX:
-            return [EGCoreAnimation moveX:destination duration:duration delay:delay withView:self];
+            return [EGCoreAnimation moveX:destination duration:duration delay:delay inView:self];
         case Widget_Animation_MoveY:
-            return [EGCoreAnimation moveY:destination duration:duration delay:delay withView:self];
+            return [EGCoreAnimation moveY:destination duration:duration delay:delay inView:self];
         case Widget_Animation_FadeIn:
-            return [EGCoreAnimation fadeIn:duration delay:delay withView:self];
+            return [EGCoreAnimation fadeIn:duration delay:delay inView:self];
+        case Widget_Animation_MoveLoopX:
+            return [EGCoreAnimation moveLoopX:duration from:self.frame.origin.x to:destination inView:self];
+        case Widget_Animation_MoveLoopY:
+            return [EGCoreAnimation moveLoopY:duration from:self.frame.origin.y to:destination inView:self];
         default:
             return;
     }        

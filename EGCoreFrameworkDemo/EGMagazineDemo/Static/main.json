@@ -6,11 +6,13 @@
     "widget.animations":[
          {
             "name":"animation.1",
-            "type":"animation.move.x",
+            "types":["animation.move.loop.x","animation.loop.opacity"],
             "image":"big_yun.png",
-            "position":{ "from":[-800,100,1024,768], "to":{"x":"1500"}, "z":"1" },
-            "duration":"60",
-            "delay":"0",
+            "positions":[
+                { "from":[-800,100,1024,768], "to":{"x":"1500"}, "z":"1" },
+                { "from":[-800,100,1024,768], "to":{"x":"1500"}, "z":"1" }],            
+            "durations":[60,100],
+            "delay":[5,10],
             "frame":[0,0,1024,768]
         },
         {

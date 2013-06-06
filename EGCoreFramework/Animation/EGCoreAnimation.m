@@ -14,7 +14,7 @@
 
 
 //FadeIn
-+(void) fadeIn:(float)duration delay:(float)time withView:(UIView *)view
++(void) fadeIn:(float)duration delay:(float)time inView:(UIView *)view
 {
     view.alpha = 0;
     UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut;
@@ -27,39 +27,40 @@
 
 
 //永久闪烁的动画
-+(CABasicAnimation *)opacityForever_Animation:(float)time
++(CABasicAnimation *) opacityForever:(float)time
 {
-    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"opacity"];
-    animation.fromValue=[NSNumber numberWithFloat:1.0];
-    animation.toValue=[NSNumber numberWithFloat:0.0];
-    animation.autoreverses=YES;
-    animation.duration=time;
-    animation.repeatCount=FLT_MAX;
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    animation.fromValue = [NSNumber numberWithFloat:1.0];
+    animation.toValue =[NSNumber numberWithFloat:0.0];
+    animation.autoreverses = YES;
+    animation.duration  = time;
+    animation.repeatCount = FLT_MAX;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
     return animation;
 }
 
 
+
 //有闪烁次数的动画
-+(CABasicAnimation *)opacityTimes_Animation:(float)repeatTimes durTimes:(float)time;
++(void) opacityTimes:(float)repeatTimes durTimes:(float)time inView:(UIView *)view
 {
-    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"opacity"];
-    animation.fromValue=[NSNumber numberWithFloat:1.0];
-    animation.toValue=[NSNumber numberWithFloat:0.4];
-    animation.repeatCount=repeatTimes;
-    animation.duration=time;
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
-    animation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    animation.autoreverses=YES;
-    return  animation;
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    animation.fromValue = [NSNumber numberWithFloat:1.0];
+    animation.toValue = [NSNumber numberWithFloat:0.4];
+    animation.repeatCount = repeatTimes;
+    animation.duration = time;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    animation.autoreverses = YES;
+    [view.layer addAnimation:animation forKey:@""];
 }
 
 
 
 //延时横向移动
-+(void) moveX:(int)x duration:(float)duration delay:(float)time withView:(UIView *)view
++(void) moveX:(int)x duration:(float)duration delay:(float)time inView:(UIView *)view
 {
     UIViewAnimationOptions options = UIViewAnimationCurveLinear | UIViewAnimationOptionCurveEaseInOut;
     [UIView animateWithDuration:duration delay:time options:options animations:^ {
@@ -71,7 +72,7 @@
 
 
 //横向移动
-+(CABasicAnimation *)moveX:(float)duration X:(NSNumber *)x
++(CABasicAnimation *) moveX:(float)duration X:(NSNumber *)x
 {
     CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
     animation.toValue=x;
@@ -84,7 +85,7 @@
 
 
 //延时纵向移动
-+(void) moveY:(int)y duration:(float)duration delay:(float)time withView:(UIView *)view
++(void) moveY:(int)y duration:(float)duration delay:(float)time inView:(UIView *)view
 {
     UIViewAnimationOptions options = UIViewAnimationCurveLinear | UIViewAnimationOptionCurveEaseInOut;
     [UIView animateWithDuration:duration delay:time options:options animations:^ {
@@ -95,17 +96,47 @@
 }
 
 
+//循环纵向移动
++(void) moveLoopX:(float)dur from:(int)fromX to:(int)toX inView:(UIView *)view
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation.fromValue = [NSNumber numberWithInt:fromX];
+    animation.toValue = [NSNumber numberWithInt:toX];
+    animation.autoreverses = YES;
+    animation.repeatCount = FLT_MAX;
+    animation.duration = dur;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [view.layer addAnimation:animation forKey:@""];
+}
+
 
 //纵向移动
-+(CABasicAnimation *)moveY:(float)duration Y:(NSNumber *)y 
++(CABasicAnimation *) moveY:(float)duration Y:(NSNumber *)y 
 {
-    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-    animation.toValue=y;
-    animation.duration=duration;
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+    animation.toValue = y;
+    animation.duration = duration;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
     return animation;
 }
+
+
+//循环纵向移动
++(void) moveLoopY:(float)dur from:(int)fromY to:(int)toY inView:(UIView *)view
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+    animation.fromValue = [NSNumber numberWithInt:fromY];
+    animation.toValue = [NSNumber numberWithInt:toY];
+    animation.autoreverses = YES;
+    animation.repeatCount = FLT_MAX;
+    animation.duration = dur;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [view.layer addAnimation:animation forKey:@""];
+}
+
 
 
 //根据SVG文件轨迹移动
@@ -126,14 +157,14 @@
 //缩放
 +(CABasicAnimation *)scale:(NSNumber *)Multiple orgin:(NSNumber *)orginMultiple durTimes:(float)time Rep:(float)repeatTimes
 {
-    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    animation.fromValue=orginMultiple;
-    animation.toValue=Multiple;
-    animation.duration=time;
-    animation.autoreverses=YES;
-    animation.repeatCount=repeatTimes;
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.fromValue = orginMultiple;
+    animation.toValue = Multiple;
+    animation.duration = time;
+    animation.autoreverses = YES;
+    animation.repeatCount = repeatTimes;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
     return animation;
 }
 
@@ -142,40 +173,40 @@
 //组合动画
 +(CAAnimationGroup *)groupAnimation:(NSArray *)animationAry durTimes:(float)time Rep:(float)repeatTimes
 {
-    CAAnimationGroup *animation=[CAAnimationGroup animation];
-    animation.animations=animationAry;
-    animation.duration=time;
-    animation.repeatCount=repeatTimes;
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
+    CAAnimationGroup *animation = [CAAnimationGroup animation];
+    animation.animations = animationAry;
+    animation.duration = time;
+    animation.repeatCount = repeatTimes;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
     return animation;
 }
 
 
 
 //路径动画
-+(CAKeyframeAnimation *)keyframeAniamtion:(CGMutablePathRef)path durTimes:(float)time Rep:(float)repeatTimes
++(CAKeyframeAnimation *)keyPath:(CGMutablePathRef)path durTimes:(float)time repeatTimes:(float)repeatTimes
 {
-    CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"position"];
-    animation.path=path;
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
-    animation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    animation.autoreverses=NO;
-    animation.duration=time;
-    animation.repeatCount=repeatTimes;
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    animation.path = path;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    animation.autoreverses = NO;
+    animation.duration = time;
+    animation.repeatCount = repeatTimes;
     return animation;
 }
 
 
 
 //点移动
-+(CABasicAnimation *)movepoint:(CGPoint )point 
++(CABasicAnimation *)movePoint:(CGPoint )point 
 {
-    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"transform.translation"];
+    CABasicAnimation *animation =[CABasicAnimation animationWithKeyPath:@"transform.translation"];
     animation.toValue = [NSValue valueWithCGPoint:point];
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
     return animation;
 }
 

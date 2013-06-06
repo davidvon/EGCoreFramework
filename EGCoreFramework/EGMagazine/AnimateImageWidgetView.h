@@ -6,10 +6,10 @@
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 
-#import "SwipeWidgetView.h"
+#import "AnimateWidgetView.h"
 #import "EGAnimateImageView.h"
 
-@interface AnimateImageWidgetView : SwipeWidgetView
+@interface AnimateImageWidgetView : AnimateWidgetView
 
 @property(nonatomic,strong) EGAnimateImageView *animateView;
 

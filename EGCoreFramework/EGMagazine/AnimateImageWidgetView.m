@@ -14,9 +14,10 @@
 
 - (id)initWithJsonDict:(NSDictionary *)dict withType:(WidgetType)type
 {
-    NSArray *pos = [dict objectForKey:@"image.position"];
-    int x =  [[pos objectAtIndex:0] intValue];
-    int y =  [[pos objectAtIndex:1] intValue];
+    NSDictionary *pos = [dict objectForKey:@"position"];
+    NSArray *imagepos = [pos objectForKey:@"image"];
+    int x =  [[imagepos objectAtIndex:0] intValue];
+    int y =  [[imagepos objectAtIndex:1] intValue];
     UIImage *image = [UIImage imageNamed: [dict objectForKey:@"image"]];
     CGRect ret = CGRectMake( x, y, image.size.width, image.size.height);
     self = [super initWithFrame:ret];
@@ -25,13 +26,12 @@
     [self addSubview:animateView];
     
     NSString *animateImage = [dict objectForKey:@"animation.image"];
-    pos = [dict objectForKey:@"animation.position"];
-    x =  [[pos objectAtIndex:0] intValue];
-    y =  [[pos objectAtIndex:1] intValue];
+    imagepos = [pos objectForKey:@"animation"];
+    x =  [[imagepos objectAtIndex:0] intValue];
+    y =  [[imagepos objectAtIndex:1] intValue];
     if([dict objectForKey:@"delay"]) delay = [[dict objectForKey:@"delay"] floatValue];
     
     [animateView addAnimationImage:animateImage withType:widgetType fromPoint:CGPointMake(x, y)];
-  
     return self;
 }
 

@@ -12,23 +12,39 @@
 
 @interface EGCoreAnimation : NSObject
 
-+(CABasicAnimation *)moveX:(float)duration X:(NSNumber *)x;     //横向移动
-+(CABasicAnimation *)moveY:(float)duration Y:(NSNumber *)y;     //纵向移动
-+(void) moveX:(int)x duration:(float)duration delay:(float)time withView:(UIView *)view;
-+(void) moveY:(int)y duration:(float)duration delay:(float)time withView:(UIView *)view;
+//纵横移动
++(CABasicAnimation *) moveX:(float)duration X:(NSNumber *)x;
++(CABasicAnimation *) moveY:(float)duration Y:(NSNumber *)y;
++(void) moveX:(int)x duration:(float)duration delay:(float)time inView:(UIView *)view;
++(void) moveY:(int)y duration:(float)duration delay:(float)time inView:(UIView *)view;
++(void) moveLoopX:(float)dur from:(int)fromX to:(int)toX inView:(UIView *)view;
++(void) moveLoopY:(float)dur from:(int)fromY to:(int)toY inView:(UIView *)view;
++(CABasicAnimation *) movePoint:(CGPoint )point;
+
+//路径动画
 +(CAKeyframeAnimation*) movePathBySVG:(UIView*)owner durcation:(float)dur bySVGFile:(NSString*)svg;
++(CAKeyframeAnimation*) keyPath:(CGMutablePathRef)path durTimes:(float)time repeatTimes:(float)repeatTimes;
 
-+(CABasicAnimation *)opacityForever_Animation:(float)time;  //永久闪烁的动画
-+(CABasicAnimation *)opacityTimes_Animation:(float)repeatTimes durTimes:(float)time;
+//永久闪烁
++(CABasicAnimation*) opacityForever:(float)time;
++(void) opacityTimes:(float)repeatTimes durTimes:(float)time inView:(UIView *)view;
 
-+(CABasicAnimation *)scale:(NSNumber *)Multiple orgin:(NSNumber *)orginMultiple durTimes:(float)time Rep:(float)repeatTimes; //缩放
-+(CAAnimationGroup *)groupAnimation:(NSArray *)animationAry durTimes:(float)time Rep:(float)repeatTimes;        //组合动画
-+(CAKeyframeAnimation *)keyframeAniamtion:(CGMutablePathRef)path durTimes:(float)time Rep:(float)repeatTimes;   //路径动画
-+(CABasicAnimation *)movepoint:(CGPoint )point;             //点移动
-+(CABasicAnimation *)rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount;  //旋转
+//缩放
++(CABasicAnimation*) scale:(NSNumber *)Multiple orgin:(NSNumber *)orginMultiple durTimes:(float)time Rep:(float)repeatTimes;
 
-+(void)rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount;
-+(void)rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount direction:(int)dir; //旋转
+//组合动画
++(CAAnimationGroup*) groupAnimation:(NSArray *)animationAry durTimes:(float)time Rep:(float)repeatTimes;
 
-+(void) fadeIn:(float)duration delay:(float)time withView:(UIView *)view;
+//旋转
++(CABasicAnimation*) rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount;
++(void) rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount;
++(void) rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount direction:(int)dir;
+
+//褪色
++(void) fadeIn:(float)duration delay:(float)time inView:(UIView *)view;
 @end
+
+
+
+
+

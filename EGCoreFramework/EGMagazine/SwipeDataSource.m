@@ -85,10 +85,12 @@
     if( [type isEqualToString:KEY_Swiping])                     return Widget_Swiping;
     if( [type isEqualToString:KEY_Animation_MoveX] )            return Widget_Animation_MoveX;
     if( [type isEqualToString:KEY_Animation_MoveY] )            return Widget_Animation_MoveY;
+    if( [type isEqualToString:KEY_Animation_MoveLoopX] )        return Widget_Animation_MoveLoopX;
+    if( [type isEqualToString:KEY_Animation_MoveLoopY] )        return Widget_Animation_MoveLoopY;
     if( [type isEqualToString:KEY_Animation_ImageShade] )       return Widget_Animation_ImageShade;
     if( [type isEqualToString:KEY_Animation_ImageFadeIn] )      return Widget_Animation_ImageFadeIn;
     if( [type isEqualToString:KEY_Animation_FadeIn] )           return Widget_Animation_FadeIn;
-    return Widget_Animation_Swiping;
+    return Widget_NA;
 }
 
 

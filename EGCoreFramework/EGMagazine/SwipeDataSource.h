@@ -16,22 +16,28 @@
 #define Category_Widget_Swipings        @"widget.swipings"
 #define Category_Widget_StaticImage     @"widget.static.image"
 
-#define KEY_Image_Static                @"image.static"
+#define KEY_Image_Static                @"image"
 #define KEY_Swiping                     @"swiping"
 #define KEY_Animation_MoveX             @"animation.move.x"
 #define KEY_Animation_MoveY             @"animation.move.y"
+#define KEY_Animation_MoveLoopX         @"animation.move.loop.x"
+#define KEY_Animation_MoveLoopY         @"animation.move.loop.y"
 #define KEY_Animation_ImageShade        @"animation.image.shade"
 #define KEY_Animation_ImageFadeIn       @"animation.image.fadein"
 #define KEY_Animation_FadeIn            @"animation.fadein"
 
+
 #define BACKGROUND_TRANS_DUR            60
 
 typedef enum {
+    Widget_NA,
     Widget_Image_Static,
     Widget_Swiping,
     Widget_Animation_Swiping,
     Widget_Animation_MoveX,
     Widget_Animation_MoveY,
+    Widget_Animation_MoveLoopX,
+    Widget_Animation_MoveLoopY,
     Widget_Animation_ImageShade,
     Widget_Animation_ImageFadeIn,
     Widget_Animation_FadeIn,

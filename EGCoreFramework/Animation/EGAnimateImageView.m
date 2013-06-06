@@ -7,6 +7,7 @@
 //
 
 #import "EGAnimateImageView.h"
+#import "EGCoreAnimation.h"
 
 @implementation EGAnimateImageView
 
@@ -69,11 +70,9 @@
 
 -(void) fadeInAnimate
 {
-    self.alpha = 0;
-    [UIView animateWithDuration:0.6f animations:^{
-        self.alpha = 1;
-    }];
+    [EGCoreAnimation fadeIn:0.6f delay:0 inView:self];
 }
+
 
 -(void)animate
 {
