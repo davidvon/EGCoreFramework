@@ -9,7 +9,7 @@
           "name":"static.phone",
           "type":"image", 
           "image":"title.png",
-          "position":{ "from":[0,0,1024,36], "z":"1.2" },
+          "position":{ "from":[0,0,483,36], "z":"1.2" },
           "frame":[0,0,1024,36]
         }
     ],
@@ -78,7 +78,6 @@
             "delay":"0.2",
             "frame":[0,0,132,57]
         }
-        
     ],
     
     "widget.animations.perform":{

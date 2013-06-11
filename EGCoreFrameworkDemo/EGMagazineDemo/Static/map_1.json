@@ -1,0 +1,18 @@
+{
+    "title":"地图",
+    "category":"地图系列",
+    "background":"dyjt_bg.png",
+    "background.animate.enable":"0",
+    
+    "widget.animations":[
+        {
+            "name":"main.tip.image.6",
+            "type":"animation.loop.fadeinout",
+            "image":"flick.png",
+            "position":{ "from":[500,690,94,54], "to":{"y":"8"}, "z":"1" },
+            "duration":"2",
+            "delay":"0.2",
+            "frame":[0,0,94,54]
+        }
+    ]
+}

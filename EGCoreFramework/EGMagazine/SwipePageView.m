@@ -44,7 +44,7 @@
 -(void) resetContentWithIndex:(int)index
 {    
     [self clearExistingSubViews];
-    [self loadStaticShowWidgets:index forKey:Category_Widget_StaticImage withJsonData:json_data];
+    [self loadStaticShowWidgets:index forKey:Category_Widget_StaticImage withJsonData:nil];
     [self loadStaticShowWidgets:index forKey:Category_Widget_Swipings withJsonData:json_data];
     [self initAnimationBackground:json_data];    
     [self timerAnimation];

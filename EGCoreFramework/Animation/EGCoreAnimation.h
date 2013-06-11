@@ -27,6 +27,7 @@
 
 //永久闪烁
 +(CABasicAnimation*) opacityForever:(float)time;
++(void) opacityForever:(float)time inView:(UIView *)view;
 +(void) opacityTimes:(float)repeatTimes durTimes:(float)time inView:(UIView *)view;
 
 //缩放

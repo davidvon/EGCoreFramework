@@ -54,6 +54,13 @@
 }
 
 
++(void) opacityForever:(float)time inView:(UIView *)view
+{
+    CABasicAnimation *animation = [EGCoreAnimation opacityForever:time];
+    [view.layer addAnimation:animation forKey:@"opacityForever"];
+}
+
+
 
 //有闪烁次数的动画
 +(void) opacityTimes:(float)repeatTimes durTimes:(float)time inView:(UIView *)view
@@ -67,7 +74,7 @@
     animation.fillMode = kCAFillModeForwards;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
     animation.autoreverses = YES;
-    [view.layer addAnimation:animation forKey:@""];
+    [view.layer addAnimation:animation forKey:@"opacityTimes"];
 }
 
 

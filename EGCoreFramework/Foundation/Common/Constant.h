@@ -33,5 +33,5 @@
 + (UIImageView*) addPatternImageView: (CGRect)rect withImageName:(NSString*)imageName inView:(UIView*)view;
 + (UIButton*) addButton: (CGRect)rect withImageList:(NSArray*)imageList fontSize:(NSInteger)size withText:(NSString*)text inView:(UIView*)view;
 + (UIButton*) addButton: (CGRect)rect withImage:(NSString*)image inView:(UIView*)view;
-
++ (UIButton*) addButton: (CGRect)rect withImageList:(NSArray*)imageList inView:(UIView*)view;
 @end

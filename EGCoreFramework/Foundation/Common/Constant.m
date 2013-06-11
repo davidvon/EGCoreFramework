@@ -70,10 +70,22 @@
 + (UIButton*) addButton: (CGRect)rect withImage:(NSString*)image inView:(UIView*)view;
 {
     UIButton *button = [[UIButton alloc] initWithFrame:rect];
-    [button setBackgroundImage: [UIImage imageNamed:image] forState:UIControlStateNormal];
+    if( image.length >0 ) [button setBackgroundImage: [UIImage imageNamed:image] forState:UIControlStateNormal];
     [view addSubview:button];
     return button;
 }
+
++ (UIButton*) addButton: (CGRect)rect withImageList:(NSArray*)imageList inView:(UIView*)view
+{
+    UIButton *button = [[UIButton alloc] initWithFrame:rect];
+    [button setBackgroundImage: [UIImage imageNamed:[imageList objectAtIndex:0] ] forState:UIControlStateNormal];
+    if([imageList count]>1) [button setBackgroundImage:[UIImage imageNamed:[imageList objectAtIndex:1]] forState:UIControlStateHighlighted];
+    if([imageList count]>2) [button setBackgroundImage:[UIImage imageNamed:[imageList objectAtIndex:2]] forState:UIControlStateSelected];
+
+    [view addSubview:button];
+    return button;
+}
+
 
 @end
 

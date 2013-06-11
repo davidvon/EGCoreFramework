@@ -25,7 +25,7 @@
 #define KEY_Animation_ImageShade        @"animation.image.shade"
 #define KEY_Animation_ImageFadeIn       @"animation.image.fadein"
 #define KEY_Animation_FadeIn            @"animation.fadein"
-
+#define KEY_Animation_LoopFadeInOut     @"animation.loop.fadeinout"
 
 #define BACKGROUND_TRANS_DUR            60
 
@@ -41,6 +41,7 @@ typedef enum {
     Widget_Animation_ImageShade,
     Widget_Animation_ImageFadeIn,
     Widget_Animation_FadeIn,
+    Widget_Animation_LoopFadeInOut,
 }WidgetType;
 
 
@@ -55,6 +56,7 @@ typedef enum {
 -(id)  getPage:(NSString*)pageName;
 -(id)  getWidgetInPage:(NSString*)widgetName InPage:(NSString*)pageName;
 -(NSString*) getPageFileNameByIndex:(int)index;
+-(NSArray*) getAppViews;
 
 +(WidgetType) widgetTypeFromDict:(NSDictionary*)dict;
 +(SwipeDataSource*) instance;

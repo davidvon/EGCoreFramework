@@ -3,18 +3,6 @@
     "category":"疯狂系列",
     "background":"bg1_1.jpg",
     
-    "widget.swipings":[
-        {
-          "name":"swiping.2",
-          "type":"swiping",
-          "image":"XSW_vacation_show_back.png",
-          "position":{ "from":[-4000, 400, 435, 121], "to":{"x":"4000"}, "z":"1" },
-          "duration":"0",
-          "delay":"0",
-          "frame":[0,0,435,121]
-        }
-    ],
-        
     "widget.animations":[
          {
             "name":"animation.1",

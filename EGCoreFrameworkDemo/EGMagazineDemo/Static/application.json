@@ -1,3 +1,9 @@
 {
-   "category": ["main","page1_1","page1_2","page1_3","page2_1","page2_2","page2_3","page2_4"]
+   "category": ["main","map_1","page1_1","page1_2","page1_3","page2_1","page2_2","page2_3","page2_4"],
+   "views":[
+        {
+          "class":"TestMenuView",
+          "position":{ "from":[880,640,128, 453], "z":"1"}
+        }
+    ]
 }

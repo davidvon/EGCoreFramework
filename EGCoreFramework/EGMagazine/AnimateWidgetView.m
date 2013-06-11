@@ -120,6 +120,8 @@
             return [EGCoreAnimation moveLoopX:duration from:self.frame.origin.x to:destination inView:self];
         case Widget_Animation_MoveLoopY:
             return [EGCoreAnimation moveLoopY:duration from:self.frame.origin.y to:destination inView:self];
+        case Widget_Animation_LoopFadeInOut:
+            return [EGCoreAnimation opacityForever:duration inView:self];
         default:
             return;
     }        
