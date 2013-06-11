@@ -41,6 +41,18 @@
         
     "widget.animations":[
         {
+          "name":"static.1",
+          "type":"animation.move.loop.x", 
+          "image":"XSW_vacation_close_btn.png",
+          "position":{ "from":[100,100,64,64], "to":{"x":"200"}, "z":"1" },
+          "frame":[0,0,64,64],
+          "duration":"10",
+          "perform":{
+               "class":"TestAnimationViewController",
+               "function":"reflectionFunction"
+           }
+        },    
+        {
             "name":"animation.1",
             "type":"animation.move.x",
             "image":"XSW_vacation_Golf_small_back.png",

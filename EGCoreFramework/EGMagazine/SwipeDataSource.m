@@ -48,7 +48,8 @@
 -(id) getPage:(NSString*)pageName
 {
     NSDictionary *json_file_content = [json_datas valueForKey:pageName];
-    if( json_file_content.count == 0 ){
+    if( json_file_content.count == 0 )
+    {
         NSError *error = [[NSError alloc] init];
         NSString *path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:APPLICATION_JSONPATH] stringByAppendingPathComponent:pageName];
         NSString *data = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
@@ -92,6 +93,9 @@
     if( [type isEqualToString:KEY_Animation_FadeIn] )           return Widget_Animation_FadeIn;
     return Widget_NA;
 }
+
+
+
 
 
 @end

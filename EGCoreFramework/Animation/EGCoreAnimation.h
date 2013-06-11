@@ -33,7 +33,7 @@
 +(CABasicAnimation*) scale:(NSNumber *)Multiple orgin:(NSNumber *)orginMultiple durTimes:(float)time Rep:(float)repeatTimes;
 
 //组合动画
-+(CAAnimationGroup*) groupAnimation:(NSArray *)animationAry durTimes:(float)time Rep:(float)repeatTimes;
++(CAAnimationGroup *)groupAnimation:(NSArray *)animations duration:(float)dur repeats:(float)times autoreverse:(BOOL)reverse;
 
 //旋转
 +(CABasicAnimation*) rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount;
@@ -42,6 +42,8 @@
 
 //褪色
 +(void) fadeIn:(float)duration delay:(float)time inView:(UIView *)view;
++(CABasicAnimation *) fade:(float)duration from:(float)f to:(float)t;
+
 @end
 
 

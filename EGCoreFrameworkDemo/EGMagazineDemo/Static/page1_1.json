@@ -20,7 +20,7 @@
             "name":"animation.1",
             "type":"animation.image.shade",
             "image":"XSW_vacation_water_big_back.png",
-            "image.position":[20,20],
+            "image.position":[40,40],
             "animation.image":"XSW_vacation_Golf_big_writing.png",
             "animation.position":[20,10],
             "delay":"1"

@@ -5,11 +5,13 @@
 //  Copyright (c) 2013年 feng guanhua. All rights reserved.
 //
 #import <QuartzCore/QuartzCore.h>
-#import "SwipePageView.h"
-#import "AnimateWidgetView.h"
 #import "EGCoreAnimation.h"
+#import "EGReflection.h"
+#import "SwipePageView.h"
 #import "SwipeDataSource.h"
+#import "AnimateWidgetView.h"
 #import "AnimateImageWidgetView.h"
+#import "Constant.h"
 
 @implementation SwipePageView
 @synthesize widgets,json_data;
@@ -27,21 +29,23 @@
 }
 
 
--(void) clearExistingWidgets
+-(void) clearExistingSubViews
 {
-    for( int i=0; i<widgets.count; i++){
-        AnimateWidgetView *view = [widgets objectAtIndex:i];
+    for( UIView *view in [self subviews] ){
+        if( [view isKindOfClass:[KenBurnsView class]] ) continue;
         [view removeFromSuperview];
     }
+    
     [widgets removeAllObjects];
+    json_data = nil;
 }
 
 
 -(void) resetContentWithIndex:(int)index
 {    
-    [self clearExistingWidgets];
-    [self loadStaticShowWidgets:index forKey:Category_Widget_StaticImage];
-    [self loadStaticShowWidgets:index forKey:Category_Widget_Swipings];
+    [self clearExistingSubViews];
+    [self loadStaticShowWidgets:index forKey:Category_Widget_StaticImage withJsonData:json_data];
+    [self loadStaticShowWidgets:index forKey:Category_Widget_Swipings withJsonData:json_data];
     [self initAnimationBackground:json_data];    
     [self timerAnimation];
 }
@@ -52,27 +56,29 @@
 -(AnimateWidgetView*) createViewWithJsonDict:(NSDictionary*)dict inView:(UIView*)view
 {
     AnimateWidgetView *widget = nil;
-    WidgetType type =  [SwipeDataSource widgetTypeFromDict:dict];
+    WidgetType type = [SwipeDataSource widgetTypeFromDict:dict];
     if( type == Widget_Animation_ImageShade || type == Widget_Animation_ImageFadeIn ){
         widget = [[AnimateImageWidgetView alloc] initWithJsonDict:dict withType:type];
     } else {
-         widget = [[AnimateWidgetView alloc] initWithJsonDict:dict];
+        widget = [[AnimateWidgetView alloc] initWithJsonDict:dict];
     }
     [view addSubview:widget];
     return widget;
 }
 
 
--(void)loadStaticShowWidgets:(int)index forKey:(NSString*)key
+-(void)loadStaticShowWidgets:(int)index forKey:(NSString*)key withJsonData:(NSDictionary*)data
 {
-    NSString *pageName = [[SwipeDataSource instance] getPageFileNameByIndex:index];
-    if( pageName.length == 0 ) return;
-    NSString *filename = [pageName stringByAppendingString:@".json"];
-    NSLog(@"name=%@", filename);
+    if(!data){
+        NSString *pageName = [[SwipeDataSource instance] getPageFileNameByIndex:index];
+        if( pageName.length == 0 ) return;
+        NSString *filename = [pageName stringByAppendingString:@".json"];
+        NSLog(@"name=%@", filename);
+        data = [[SwipeDataSource instance] getPage:filename];
+        json_data = data;
+    }
     
-    json_data = [[SwipeDataSource instance] getPage:filename];
-    
-    NSArray *objs = [json_data objectForKey:key];
+    NSArray *objs = [data objectForKey:key];
     for ( int i=0 ; i<[objs count]; i++ ) {
         NSDictionary *obj = [objs objectAtIndex:i];
         AnimateWidgetView *widget = [self createViewWithJsonDict:obj inView:self];
@@ -95,15 +101,21 @@
 
 -(void)timerAnimation
 {    
-    [NSTimer scheduledTimerWithTimeInterval:(0.3) target:self selector:@selector(animationShowByThread) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:(0.3) target:self selector:@selector(animation) userInfo:nil repeats:NO];
 }
 
 
-
--(void) animationShowByThread
+-(void) animation
 {
-//    [NSThread detachNewThreadSelector:@selector(animationGroupShow) toTarget:self withObject:nil];
     [self animationGroupShow];
+    
+    NSDictionary *content = [json_data valueForKey:@"widget.animations.perform"];
+    if(!content) return;
+    NSString *class = [content valueForKey:@"class"];
+    NSString *function = [content valueForKey:@"function"];
+    if( class.length >0 && function.length > 0) {
+        [EGReflection performSelector:function ofClass:class withParam:self];
+    }
 }
 
 
@@ -133,6 +145,12 @@
 -(void)initAnimationBackground:(NSDictionary*)dict
 {
     NSString *bg = [dict objectForKey:@"background"];
+    NSNumber *enable = [dict objectForKey:@"background.animate.enable"];
+    if( enable && [enable boolValue]==false ){
+        [Constant addImageView:CGRectMake(0,0,1024,768) withImageName:bg inView:self];
+        return;
+    }
+    
     NSArray *myImages = [NSArray arrayWithObjects:[UIImage imageNamed:bg], nil];
     [kenView animateWithImages:myImages transitionDuration:BACKGROUND_TRANS_DUR loop:YES isLandscape:YES];
 }

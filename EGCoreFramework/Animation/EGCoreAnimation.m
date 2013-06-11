@@ -12,7 +12,6 @@
 @implementation EGCoreAnimation
 
 
-
 //FadeIn
 +(void) fadeIn:(float)duration delay:(float)time inView:(UIView *)view
 {
@@ -23,6 +22,20 @@
     } completion:nil];
 }
 
+
+//Fade
++(CABasicAnimation *) fade:(float)duration from:(float)f to:(float)t
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    animation.fromValue = [NSNumber numberWithFloat:f];
+    animation.toValue =[NSNumber numberWithFloat:t];
+    animation.autoreverses = NO;
+    animation.duration  = duration;
+    animation.repeatCount = 1;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    return animation;
+}
 
 
 
@@ -171,12 +184,13 @@
 
 
 //组合动画
-+(CAAnimationGroup *)groupAnimation:(NSArray *)animationAry durTimes:(float)time Rep:(float)repeatTimes
++(CAAnimationGroup *)groupAnimation:(NSArray *)animations duration:(float)dur repeats:(float)times autoreverse:(BOOL)reverse;
 {
     CAAnimationGroup *animation = [CAAnimationGroup animation];
-    animation.animations = animationAry;
-    animation.duration = time;
-    animation.repeatCount = repeatTimes;
+    animation.animations = animations;
+    animation.duration = dur;
+    animation.autoreverses = reverse;
+    animation.repeatCount = times;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     return animation;

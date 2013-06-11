@@ -1,38 +1,88 @@
 {
     "title":"青春期",
     "category":"疯狂系列",
-    "background":"bg.jpg",
+    "background":"pic_bg.png",
+    "background.animate.enable":"0",
     
+    "widget.static.image":[
+        {
+          "name":"static.phone",
+          "type":"image", 
+          "image":"title.png",
+          "position":{ "from":[0,0,1024,36], "z":"1.2" },
+          "frame":[0,0,1024,36]
+        }
+    ],
+
     "widget.animations":[
          {
-            "name":"animation.1",
-            "types":["animation.move.loop.x","animation.loop.opacity"],
-            "image":"big_yun.png",
-            "positions":[
-                { "from":[-800,100,1024,768], "to":{"x":"1500"}, "z":"1" },
-                { "from":[-800,100,1024,768], "to":{"x":"1500"}, "z":"1" }],            
-            "durations":[60,100],
-            "delay":[5,10],
-            "frame":[0,0,1024,768]
+            "name":"main.tip.image.1",
+            "type":"animation.move.loop.y",
+            "image":"main_trhb.png",
+            "position":{ "from":[120,570,102,37], "to":{"y":"8"}, "z":"1" },
+            "duration":"1",
+            "delay":"0.2",
+            "frame":[0,0,102,37]
         },
         {
-            "name":"animation.2",
-            "type":"animation.move.x",
-            "image":"small_yun.png",
-            "position":{ "from":[-469,310,469,284], "to":{"x":"1493"}, "z":"1" },
-            "duration":"40",
-            "delay":"0",
-            "frame":[0,0,1024,768]
+            "name":"main.tip.image.2",
+            "type":"animation.move.loop.y",
+            "image":"man_jdgy.png",
+            "position":{ "from":[200,250,92,37], "to":{"y":"8"}, "z":"1" },
+            "duration":"1",
+            "delay":"0.2",
+            "frame":[0,0,92,37]
         },
         {
-            "name":"animation.3",
-            "type":"animation.move.x",
-            "image":"small_yun.png",
-            "position":{ "from":[-400,50,469,284], "to":{"x":"1493"}, "z":"1" },
-            "duration":"40",
-            "delay":"60",
-            "frame":[0,0,1024,768]
+            "name":"main.tip.image.3",
+            "type":"animation.move.loop.y",
+            "image":"main_zzh.png",
+            "position":{ "from":[400,230,62,40], "to":{"y":"8"}, "z":"1" },
+            "duration":"1",
+            "delay":"0.2",
+            "frame":[0,0,62,40]
+        },
+        {
+            "name":"main.tip.image.4",
+            "type":"animation.move.loop.y",
+            "image":"main_wsbt.png",
+            "position":{ "from":[300,370,135,42], "to":{"y":"8"}, "z":"1" },
+            "duration":"1",
+            "delay":"0.2",
+            "frame":[0,0,135,42]
+        },
+        {
+            "name":"main.tip.image.5",
+            "type":"animation.move.loop.y",
+            "image":"man_jdgy.png",
+            "position":{ "from":[600,440,92,37], "to":{"y":"8"}, "z":"1" },
+            "duration":"1",
+            "delay":"0.2",
+            "frame":[0,0,92,37]
+        },
+        {
+            "name":"main.tip.image.5",
+            "type":"animation.move.loop.y",
+            "image":"main_hjf.png",
+            "position":{ "from":[700,380,62,38], "to":{"y":"8"}, "z":"1" },
+            "duration":"1",
+            "delay":"0.2",
+            "frame":[0,0,62,38]
+        },
+        {
+            "name":"main.tip.image.5",
+            "type":"animation.move.loop.y",
+            "image":"main_yszt.png",
+            "position":{ "from":[400,550,132,57], "to":{"y":"8"}, "z":"1" },
+            "duration":"1",
+            "delay":"0.2",
+            "frame":[0,0,132,57]
         }
         
-    ]
+    ],
+    
+    "widget.animations.perform":{
+        "class":"TestAnimateImplement",
+        "function":"mainPageAnimate:"
+    }
 }

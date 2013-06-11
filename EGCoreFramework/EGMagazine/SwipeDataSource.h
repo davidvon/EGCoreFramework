@@ -58,6 +58,7 @@ typedef enum {
 
 +(WidgetType) widgetTypeFromDict:(NSDictionary*)dict;
 +(SwipeDataSource*) instance;
+
 @end
 
 

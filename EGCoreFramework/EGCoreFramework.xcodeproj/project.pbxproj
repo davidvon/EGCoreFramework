@@ -25,11 +25,11 @@
 		DDC637EF1756240300975F99 /* PocketSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637EB1756240300975F99 /* PocketSVG.m */; };
 		DDC637F41756241000975F99 /* SwipeView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC637F21756241000975F99 /* SwipeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637F51756241000975F99 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637F31756241000975F99 /* SwipeView.m */; };
-		DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBA175CB3FE000872CE /* SwipePageView.h */; };
+		DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBA175CB3FE000872CE /* SwipePageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBB175CB3FE000872CE /* SwipePageView.m */; };
 		DDF56EC2175CB3FE000872CE /* SwipePageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */; };
-		DDF56EC4175CB3FE000872CE /* AnimateWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBE175CB3FE000872CE /* AnimateWidgetView.h */; };
+		DDF56EC4175CB3FE000872CE /* AnimateWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBE175CB3FE000872CE /* AnimateWidgetView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC5175CB3FE000872CE /* AnimateWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBF175CB3FE000872CE /* AnimateWidgetView.m */; };
 		DDF56EC9175CB45E000872CE /* SwipeDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EC7175CB45E000872CE /* SwipeDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56ECA175CB45E000872CE /* SwipeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EC8175CB45E000872CE /* SwipeDataSource.m */; };
