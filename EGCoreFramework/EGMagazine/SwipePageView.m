@@ -8,7 +8,7 @@
 #import "EGCoreAnimation.h"
 #import "EGReflection.h"
 #import "SwipePageView.h"
-#import "SwipeDataSource.h"
+#import "SwipePageDataSource.h"
 #import "AnimateWidgetView.h"
 #import "AnimateImageWidgetView.h"
 #import "Constant.h"
@@ -56,7 +56,7 @@
 -(AnimateWidgetView*) createViewWithJsonDict:(NSDictionary*)dict inView:(UIView*)view
 {
     AnimateWidgetView *widget = nil;
-    WidgetType type = [SwipeDataSource widgetTypeFromDict:dict];
+    WidgetType type = [SwipePageDataSource widgetTypeFromDict:dict];
     if( type == Widget_Animation_ImageShade || type == Widget_Animation_ImageFadeIn ){
         widget = [[AnimateImageWidgetView alloc] initWithJsonDict:dict withType:type];
     } else {
@@ -70,11 +70,11 @@
 -(void)loadStaticShowWidgets:(int)index forKey:(NSString*)key withJsonData:(NSDictionary*)data
 {
     if(!data){
-        NSString *pageName = [[SwipeDataSource instance] getPageFileNameByIndex:index];
+        NSString *pageName = [[SwipePageDataSource instance] getPageFileNameByIndex:index];
         if( pageName.length == 0 ) return;
         NSString *filename = [pageName stringByAppendingString:@".json"];
         NSLog(@"name=%@", filename);
-        data = [[SwipeDataSource instance] getPage:filename];
+        data = [[SwipePageDataSource instance] getPage:filename];
         json_data = data;
     }
     

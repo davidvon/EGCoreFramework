@@ -232,9 +232,15 @@
 }
 
 
++(void) loopRotation:(float)dur direction:(int)direction inView:(UIView*)view
+{
+    CABasicAnimation *animate = [EGCoreAnimation rotation:dur degree:M_PI direction:1 repeatCount:INT_MAX];
+    [view.layer addAnimation:animate forKey:@"loopRotation"];
+}
+
 
 //旋转
-+(CABasicAnimation *)rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount 
++(CABasicAnimation *)rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount
 {
     CATransform3D rotationTransform  = CATransform3DMakeRotation(degree, 0, 0,direction);
     CABasicAnimation* animation;

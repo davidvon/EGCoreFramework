@@ -14,4 +14,5 @@
 }
 @property (nonatomic, strong) UIImageView *background;
 @property (nonatomic, strong) UIImageView *selectedItem;
+@property (nonatomic, strong) UIViewController *mainDelegate;
 @end

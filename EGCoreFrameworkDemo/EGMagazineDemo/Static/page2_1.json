@@ -44,9 +44,9 @@
           "name":"static.1",
           "type":"animation.move.loop.x", 
           "image":"XSW_vacation_close_btn.png",
-          "position":{ "from":[100,100,64,64], "to":{"x":"200"}, "z":"1" },
+          "position":{ "from":[100,100,64,64], "to":{"x":"20"}, "z":"1" },
           "frame":[0,0,64,64],
-          "duration":"10",
+          "duration":"3",
           "perform":{
                "class":"TestAnimationViewController",
                "function":"reflectionFunction"
@@ -69,24 +69,6 @@
             "duration":"0.4",
             "delay":"0.05",
             "frame":[-501,0,373,51]
-        },
-        {
-            "name":"animation.3",
-            "type":"animation.move.x",
-            "image":"XSW_vacation_Golf_big_back.png",
-            "position":{ "from":[1024,280,722,109], "to":{"x":"-722"}, "z":"1" },
-            "duration":"0.5",
-            "delay":"0.2",
-            "frame":[1024,0,722,109]
-        },
-        {
-            "name":"animation.4",
-            "type":"animation.move.x",
-            "image":"XSW_vacation_Golf_big_writing.png",
-            "position":{ "from":[1024,290,650,76], "to":{"x":"-670"}, "z":"1" },
-            "duration":"0.5",
-            "delay":"0.25",
-            "frame":[1024,0,650,76]
-        }                
+        }
     ]
 }

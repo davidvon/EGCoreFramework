@@ -40,6 +40,7 @@
 +(CABasicAnimation*) rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount;
 +(void) rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount;
 +(void) rotationWithImageView:(UIImageView*)view durcation:(float)dur repeatCount:(int)repeatCount direction:(int)dir;
++(void) loopRotation:(float)dur direction:(int)direction inView:(UIView*)view;
 
 //褪色
 +(void) fadeIn:(float)duration delay:(float)time inView:(UIView *)view;

@@ -87,6 +87,55 @@
 }
 
 
+
++(UIScrollView*) addScrollView:(CGRect)rect inView:(UIView*)view
+{
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = CLEAR_COLOR;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    [scrollView setScrollEnabled:YES];
+    scrollView.frame = rect;
+    [view addSubview:scrollView];
+    return scrollView;
+}
+
+
+
++(UIWebView*) createWebView:(CGRect)rect
+{
+    UIWebView *webView =[[UIWebView alloc] initWithFrame:rect];
+    webView.opaque = NO;
+    webView.backgroundColor = GLOBAL_BG_COLOR;
+    for (UIView *view in [webView subviews]){
+        if ([view isKindOfClass:[UIScrollView class]]){
+            for (UIView *shadowView in view.subviews){
+                if ([shadowView isKindOfClass:[UIImageView class]]){
+                    shadowView.hidden = YES;
+                }
+            }
+        }
+    }
+    return webView;
+}
+
+
++(UIWebView*) loadWebView:(CGRect)rect withUrlPath:(NSString*)path
+{
+    UIWebView *webView = [Constant createWebView:rect];
+    NSString *url = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:path];
+    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:url]];
+    [webView loadRequest:request];
+    return webView;
+}
+
+
++(void) reloadWebViewContent:(UIWebView*)webView withUrlPath:(NSString*)path
+{
+    NSString *url = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:path];
+    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:url]];
+    [webView loadRequest:request];
+}
+
 @end
 
 

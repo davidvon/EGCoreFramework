@@ -1,44 +1,63 @@
 {
     "title":"青春期",
     "category":"疯狂系列",
-    "background":"bg1_1.jpg",
+    "background":"a9.png",
     
     "widget.animations":[
-         {
+        {
             "name":"animation.1",
-            "type":"animation.image.shade",
-            "image":"XSW_vacation_water_big_back.png",
-            "image.position":[40,40],
-            "animation.image":"XSW_vacation_Golf_big_writing.png",
-            "animation.position":[20,10],
-            "delay":"1"
+            "type":"animation.move.x",
+            "image":"dyjt_hyj_content.png",
+            "position":{ "from":[-540,210,540,384], "to":{"x":"540"}, "z":"1" },
+            "duration":"0.5",
+            "delay":"0.3",
+            "frame":[0,0,540,384]
         },
         {
             "name":"animation.2",
             "type":"animation.move.x",
-            "image":"XSW_vacation_water_big_writing.png",
-            "position":{ "from":[-501,210,653,76], "to":{"x":"680"}, "z":"1" },
-            "duration":"0.4",
-            "delay":"0.05",
-            "frame":[-501,0,373,51]
+            "image":"XSW_vacation_Golf_small_back.png",
+            "position":{ "from":[-579,158,579,53], "to":{"x":"570"}, "z":"1" },
+            "duration":"0.55",
+            "delay":"0.3",
+            "frame":[0,0,579,53]
         },
         {
             "name":"animation.3",
             "type":"animation.move.x",
-            "image":"XSW_vacation_mountain_big_back.png",
-            "position":{ "from":[1024,280,722,199], "to":{"x":"-722"}, "z":"1" },
-            "duration":"0.5",
-            "delay":"0.2",
-            "frame":[1024,0,722,109]
+            "image":"dyjt_hyj_black.png",
+            "position":{ "from":[-130,167,130,32], "to":{"x":"150"}, "z":"1" },
+            "duration":"0.6",
+            "delay":"0.3",
+            "frame":[0,0,130,32]
         },
         {
             "name":"animation.4",
             "type":"animation.move.x",
-            "image":"XSW_vacation_mountain_big_writing.png",
-            "position":{ "from":[1024,290,653,166], "to":{"x":"-670"}, "z":"1" },
-            "duration":"0.5",
-            "delay":"0.25",
-            "frame":[1024,0,650,76]
-        }    
+            "image":"dyjt_lsjjq.png",
+            "position":{ "from":[-172,167,172,32], "to":{"x":"330"}, "z":"1" },
+            "duration":"0.65",
+            "delay":"0.3",
+            "frame":[0,0,172,32]
+        },
+        {
+            "name":"animation.5",
+            "type":"animation.move.x",
+            "image":"dyjt_lshg.png",
+            "position":{ "from":[-89,167,89,32], "to":{"x":"430"}, "z":"1" },
+            "duration":"0.7",
+            "delay":"0.3",
+            "frame":[0,0,89,32]
+        },
+        {
+            "name":"animation.5",
+            "type":"animation.move.x",
+            "image":"dyjt_mlrc.png",
+            "position":{ "from":[-89,167,89,32], "to":{"x":"530"}, "z":"1" },
+            "duration":"0.75",
+            "delay":"0.3",
+            "frame":[0,0,89,32]
+        }
+        
     ]
 }

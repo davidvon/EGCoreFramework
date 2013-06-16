@@ -32,24 +32,6 @@
             "duration":"0.4",
             "delay":"0.05",
             "frame":[-501,0,373,51]
-        },
-        {
-            "name":"animation.3",
-            "type":"animation.move.x",
-            "image":"XSW_vacation_mountain_big_back.png",
-            "position":{ "from":[1024,280,722,199], "to":{"x":"-722"}, "z":"1" },
-            "duration":"0.5",
-            "delay":"0.2",
-            "frame":[1024,0,722,109]
-        },
-        {
-            "name":"animation.4",
-            "type":"animation.move.x",
-            "image":"XSW_vacation_mountain_big_writing.png",
-            "position":{ "from":[1024,290,653,166], "to":{"x":"-670"}, "z":"1" },
-            "duration":"0.5",
-            "delay":"0.25",
-            "frame":[1024,0,650,76]
-        }    
+        }
     ]
 }

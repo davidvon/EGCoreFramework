@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "SwipeDataSource.h"
+#import "SwipePageDataSource.h"
 
 @interface EGAnimateImageView : UIImageView
 {

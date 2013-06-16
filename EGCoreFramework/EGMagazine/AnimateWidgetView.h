@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SwipePageView.h"
-#import "SwipeDataSource.h"
+#import "SwipePageDataSource.h"
 
 @interface AnimateWidgetView : UIView{
     WidgetType widgetType;

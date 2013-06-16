@@ -74,7 +74,7 @@
     self = [super initWithFrame:ret];
     self.name =  [dict objectForKey:@"name"];
     
-    widgetType = [SwipeDataSource widgetTypeFromDict: dict];
+    widgetType = [SwipePageDataSource widgetTypeFromDict: dict];
     [self loadPosParamInJson:dict];
     if([dict objectForKey:@"duration"]) duration = [[dict objectForKey:@"duration"] floatValue];
     if([dict objectForKey:@"delay"])    delay    = [[dict objectForKey:@"delay"] floatValue];
@@ -122,6 +122,8 @@
             return [EGCoreAnimation moveLoopY:duration from:self.frame.origin.y to:destination inView:self];
         case Widget_Animation_LoopFadeInOut:
             return [EGCoreAnimation opacityForever:duration inView:self];
+        case Widget_Animation_LoopRetation:
+            return [EGCoreAnimation loopRotation:duration direction:1 inView:self];
         default:
             return;
     }        

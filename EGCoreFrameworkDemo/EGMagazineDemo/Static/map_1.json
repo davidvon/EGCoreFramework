@@ -4,15 +4,61 @@
     "background":"dyjt_bg.png",
     "background.animate.enable":"0",
     
+    "widget.static.image":[
+        {
+          "name":"static.1",
+          "type":"image", 
+          "image":"map_title_1.png",
+          "position":{ "from":[50,0,141,60], "z":"1" },
+          "frame":[0,0,141,60]
+        }
+    ],
+    "widget.swipings":[
+        {
+          "name":"swiping.2",
+          "type":"swiping",
+          "image":"dyjt_bg_text.png",
+          "position":{ "from":[102400,0,1024,768], "to":{"x":"-102400"}, "z":"1" },
+          "duration":"1",
+          "delay":"0.5",
+          "frame":[0,0,1024,768]
+        }
+    ],
+        
     "widget.animations":[
         {
-            "name":"main.tip.image.6",
+            "name":"main.tip.1",
             "type":"animation.loop.fadeinout",
             "image":"flick.png",
             "position":{ "from":[500,690,94,54], "to":{"y":"8"}, "z":"1" },
             "duration":"2",
             "delay":"0.2",
             "frame":[0,0,94,54]
+        },
+        {
+            "name":"map.loop.retation.1",
+            "type":"animation.loop.retation",
+            "image":"circle2.png",
+            "position":{ "from":[0,0,150,150],"z":"1" },
+            "duration":"8",
+            "frame":[160,160,150,150]
+        },
+        {
+            "name":"map.loop.retation.1",
+            "type":"animation.loop.retation",
+            "image":"circle2.png",
+            "position":{ "from":[0,0,150,150],"z":"1" },
+            "duration":"8",
+            "frame":[10,530,150,150]
+        },
+        {
+            "name":"map.loop.retation.1",
+            "type":"animation.loop.fadeinout",
+            "image":"dygt_bg_cj_1.png",
+            "position":{ "from":[0,0,1024,768],"z":"1" },
+            "duration":"1",
+            "frame":[0,0,1024,768]
         }
+        
     ]
 }

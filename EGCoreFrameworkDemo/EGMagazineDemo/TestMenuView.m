@@ -33,6 +33,7 @@
             button.tag = 100+i;
             [button addTarget:self action:@selector(touchItem:) forControlEvents:UIControlEventTouchUpInside];
         }
+        [self touchItem:[self viewWithTag:100]];
     }
     return self;
 }

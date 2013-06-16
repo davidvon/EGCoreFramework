@@ -9,7 +9,7 @@
 #import "SwipePageViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SwipePageView.h"
-#import "SwipeDataSource.h"
+#import "SwipePageDataSource.h"
 #import "EGReflection.h"
 
 @implementation SwipePageViewController
@@ -67,7 +67,7 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    int count = [[SwipeDataSource instance] getPageCount];
+    int count = [[SwipePageDataSource instance] getPageCount];
     return count;
 }
 
@@ -98,22 +98,20 @@
 
 -(void) addFetureViews
 {
-    NSArray *views = [[SwipeDataSource instance] getAppViews];
+    NSArray *views = [[SwipePageDataSource instance] getAppViews];
     for( int i=0; i<views.count; i++ ){
         NSDictionary *dic = [views objectAtIndex:i];
         NSString *className = [dic objectForKey:@"class"];
         NSDictionary *pos = [dic objectForKey:@"position"];
         NSArray *framearray = [pos objectForKey:@"from"];
-        float z = [[pos objectForKey:@"z"] floatValue];
         int x = [[framearray objectAtIndex:0] integerValue];
         int y = [[framearray objectAtIndex:1]integerValue];
         int w = [[framearray objectAtIndex:2]integerValue];
         int h = [[framearray objectAtIndex:3]integerValue];
         CGRect rect = CGRectMake(x,y,w,h);
         Class classType = NSClassFromString(className);
-        UIView *instance = (UIView *)[[classType alloc] initWithFrame:rect];
+        UIView *instance = [[classType alloc] initWithFrame:rect];
         [self.view addSubview:instance];
-        instance.layer.zPosition = z;        
     }
 }
 

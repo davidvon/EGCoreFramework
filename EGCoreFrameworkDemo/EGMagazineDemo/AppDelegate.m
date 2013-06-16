@@ -10,7 +10,8 @@
 #import "TestCoreAnimationView.h"
 #import "EGCore/SwipePageViewController.h"
 #import "TestReflection.h"
-#import "EGCore/SwipeDataSource.h"
+#import "EGCore/SwipePageDataSource.h"
+#import "SwipeWebViewController.h"
 #import "TestAnimationImageView.h"
 
 @implementation AppDelegate
@@ -29,10 +30,10 @@
 
 -(void) testJson
 {
-    int sum = [[SwipeDataSource instance] getPageCount];
+    int sum = [[SwipePageDataSource instance] getPageCount];
     NSLog(@"sum=%d", sum);
     
-    NSDictionary *data = [[SwipeDataSource instance] getPage:@"page2_1"];
+    NSDictionary *data = [[SwipePageDataSource instance] getPage:@"page2_1"];
     NSLog(@"data=%@", data);
 }
 
@@ -41,12 +42,13 @@
 -(void) testcase
 {
 //  [self testJson];
-    rootViewController = [[SwipePageViewController alloc] init];
+//  rootViewController = [[SwipePageViewController alloc] init];
 //  rootViewController = [[TestAnimationViewController alloc] init];
 //  rootViewController = [[TestReflectionView alloc] init];
-//    rootViewController = [[TestAnimationImageView alloc] initWithType:Widget_Animation_ImageShade ];
-//    rootViewController = [[TestAnimationImageView alloc] initWithType:Widget_Animation_ImageFadeIn ];
+//  rootViewController = [[TestAnimationImageView alloc] initWithType:Widget_Animation_ImageShade ];
+//  rootViewController = [[TestAnimationImageView alloc] initWithType:Widget_Animation_ImageFadeIn ];
     
+    rootViewController = [[SwipeWebViewController alloc] initWithModule:@"yzlg"];
     self.window.rootViewController = rootViewController;
 }
 

@@ -542,6 +542,7 @@
         [_delegate swipeViewDidScroll:self];
     }
     
+    NSLog(@"1.previous=%d, current=%d", _previousItemIndex, _currentItemIndex);
     if (!_defersItemViewLoading || fabsf([self minScrollDistanceFromOffset:_lastUpdateOffset toOffset:_scrollOffset]) >= 1.0f)
     {
         //update item index
@@ -552,6 +553,7 @@
         [self loadUnloadViews];
         
         //send index update event
+        NSLog(@"2.previous=%d, current=%d", _previousItemIndex, _currentItemIndex);
         if (_previousItemIndex != _currentItemIndex)
         {
             _previousItemIndex = _currentItemIndex;
@@ -1046,6 +1048,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    NSLog(@"1111111");
     if (!_suppressScrollEvent)
     {
         //stop scrolling animation
@@ -1056,6 +1059,7 @@
         _previousContentOffset = _scrollView.contentOffset;
         _scrollOffset += delta / (_vertical? _itemSize.height: _itemSize.width);
         
+        NSLog(@"0previous=%d, current=%d, _scrollOffset=%f", _previousItemIndex, _currentItemIndex, _scrollOffset);
         //update view and call delegate
         [self didScroll];
     }
