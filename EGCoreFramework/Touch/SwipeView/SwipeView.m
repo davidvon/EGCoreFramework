@@ -553,7 +553,6 @@
         [self loadUnloadViews];
         
         //send index update event
-        NSLog(@"2.previous=%d, current=%d", _previousItemIndex, _currentItemIndex);
         if (_previousItemIndex != _currentItemIndex)
         {
             _previousItemIndex = _currentItemIndex;
@@ -1048,7 +1047,6 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"1111111");
     if (!_suppressScrollEvent)
     {
         //stop scrolling animation

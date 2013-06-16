@@ -8,7 +8,7 @@
 
 #import "TestAnimationImageView.h"
 #import "EGCore/EGAnimateImageView.h"
-#import "EGCore/SwipeDataSource.h"
+#import "EGCore/SwipePageDataSource.h"
 
 @implementation TestAnimationImageView
 

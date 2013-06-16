@@ -25,14 +25,27 @@
 		DDC637EF1756240300975F99 /* PocketSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637EB1756240300975F99 /* PocketSVG.m */; };
 		DDC637F41756241000975F99 /* SwipeView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC637F21756241000975F99 /* SwipeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC637F51756241000975F99 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637F31756241000975F99 /* SwipeView.m */; };
+		DDC6F220176D59A600AA5E31 /* PathFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F21E176D59A600AA5E31 /* PathFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC6F221176D59A600AA5E31 /* PathFile.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F21F176D59A600AA5E31 /* PathFile.m */; };
+		DDC6F26A176D689600AA5E31 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F25F176D689600AA5E31 /* ZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC6F26B176D689600AA5E31 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F260176D689600AA5E31 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC6F27C176D79F600AA5E31 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F273176D79F600AA5E31 /* crypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC6F27D176D79F600AA5E31 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F274176D79F600AA5E31 /* ioapi.c */; };
+		DDC6F27E176D79F600AA5E31 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F275176D79F600AA5E31 /* ioapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC6F27F176D79F600AA5E31 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F276176D79F600AA5E31 /* mztools.c */; };
+		DDC6F280176D79F600AA5E31 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F277176D79F600AA5E31 /* mztools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC6F281176D79F600AA5E31 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F278176D79F600AA5E31 /* unzip.c */; };
+		DDC6F282176D79F600AA5E31 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F279176D79F600AA5E31 /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC6F283176D79F600AA5E31 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F27A176D79F600AA5E31 /* zip.c */; };
+		DDC6F284176D79F600AA5E31 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F27B176D79F600AA5E31 /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBA175CB3FE000872CE /* SwipePageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBB175CB3FE000872CE /* SwipePageView.m */; };
 		DDF56EC2175CB3FE000872CE /* SwipePageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */; };
 		DDF56EC4175CB3FE000872CE /* AnimateWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBE175CB3FE000872CE /* AnimateWidgetView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC5175CB3FE000872CE /* AnimateWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBF175CB3FE000872CE /* AnimateWidgetView.m */; };
-		DDF56EC9175CB45E000872CE /* SwipeDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EC7175CB45E000872CE /* SwipeDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDF56ECA175CB45E000872CE /* SwipeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EC8175CB45E000872CE /* SwipeDataSource.m */; };
+		DDF56EC9175CB45E000872CE /* SwipePageDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EC7175CB45E000872CE /* SwipePageDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF56ECA175CB45E000872CE /* SwipePageDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EC8175CB45E000872CE /* SwipePageDataSource.m */; };
 		DDF56ECE175CB4F9000872CE /* Constant.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ECC175CB4F9000872CE /* Constant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56ED0175CB5D3000872CE /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56ECD175CB4F9000872CE /* Constant.m */; };
 		DDF56ED7175CC494000872CE /* EGAnimateImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56ED5175CC494000872CE /* EGAnimateImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,14 +77,27 @@
 		DDC637EB1756240300975F99 /* PocketSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketSVG.m; sourceTree = "<group>"; };
 		DDC637F21756241000975F99 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		DDC637F31756241000975F99 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		DDC6F21E176D59A600AA5E31 /* PathFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathFile.h; sourceTree = "<group>"; };
+		DDC6F21F176D59A600AA5E31 /* PathFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathFile.m; sourceTree = "<group>"; };
+		DDC6F25F176D689600AA5E31 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		DDC6F260176D689600AA5E31 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
+		DDC6F273176D79F600AA5E31 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		DDC6F274176D79F600AA5E31 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		DDC6F275176D79F600AA5E31 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		DDC6F276176D79F600AA5E31 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		DDC6F277176D79F600AA5E31 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		DDC6F278176D79F600AA5E31 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		DDC6F279176D79F600AA5E31 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		DDC6F27A176D79F600AA5E31 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		DDC6F27B176D79F600AA5E31 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		DDF56EBA175CB3FE000872CE /* SwipePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageView.h; sourceTree = "<group>"; };
 		DDF56EBB175CB3FE000872CE /* SwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
 		DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageViewController.h; sourceTree = "<group>"; };
 		DDF56EBD175CB3FE000872CE /* SwipePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageViewController.m; sourceTree = "<group>"; };
 		DDF56EBE175CB3FE000872CE /* AnimateWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateWidgetView.h; sourceTree = "<group>"; };
 		DDF56EBF175CB3FE000872CE /* AnimateWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateWidgetView.m; sourceTree = "<group>"; };
-		DDF56EC7175CB45E000872CE /* SwipeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeDataSource.h; sourceTree = "<group>"; };
-		DDF56EC8175CB45E000872CE /* SwipeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeDataSource.m; sourceTree = "<group>"; };
+		DDF56EC7175CB45E000872CE /* SwipePageDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageDataSource.h; sourceTree = "<group>"; };
+		DDF56EC8175CB45E000872CE /* SwipePageDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageDataSource.m; sourceTree = "<group>"; };
 		DDF56ECC175CB4F9000872CE /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		DDF56ECD175CB4F9000872CE /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		DDF56ED5175CC494000872CE /* EGAnimateImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGAnimateImageView.h; path = Animation/EGAnimateImageView.h; sourceTree = "<group>"; };
@@ -92,6 +118,7 @@
 		DD87B6081759D33A000E4F0C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				DDC6F23D176D67E900AA5E31 /* Zip */,
 				DDF56ECB175CB4DB000872CE /* Common */,
 				DD87B6091759D33A000E4F0C /* Harpy */,
 				DD87B60D1759D33A000E4F0C /* JSONKit */,
@@ -226,11 +253,37 @@
 			path = SwipeView;
 			sourceTree = "<group>";
 		};
+		DDC6F23D176D67E900AA5E31 /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+				DDC6F272176D79F600AA5E31 /* minizip */,
+				DDC6F25F176D689600AA5E31 /* ZipArchive.h */,
+				DDC6F260176D689600AA5E31 /* ZipArchive.mm */,
+			);
+			path = Zip;
+			sourceTree = "<group>";
+		};
+		DDC6F272176D79F600AA5E31 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				DDC6F273176D79F600AA5E31 /* crypt.h */,
+				DDC6F274176D79F600AA5E31 /* ioapi.c */,
+				DDC6F275176D79F600AA5E31 /* ioapi.h */,
+				DDC6F276176D79F600AA5E31 /* mztools.c */,
+				DDC6F277176D79F600AA5E31 /* mztools.h */,
+				DDC6F278176D79F600AA5E31 /* unzip.c */,
+				DDC6F279176D79F600AA5E31 /* unzip.h */,
+				DDC6F27A176D79F600AA5E31 /* zip.c */,
+				DDC6F27B176D79F600AA5E31 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		DDF56EB9175CB3FE000872CE /* EGMagazine */ = {
 			isa = PBXGroup;
 			children = (
-				DDF56EC7175CB45E000872CE /* SwipeDataSource.h */,
-				DDF56EC8175CB45E000872CE /* SwipeDataSource.m */,
+				DDF56EC7175CB45E000872CE /* SwipePageDataSource.h */,
+				DDF56EC8175CB45E000872CE /* SwipePageDataSource.m */,
 				DDF56EBA175CB3FE000872CE /* SwipePageView.h */,
 				DDF56EBB175CB3FE000872CE /* SwipePageView.m */,
 				DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */,
@@ -246,6 +299,8 @@
 		DDF56ECB175CB4DB000872CE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DDC6F21E176D59A600AA5E31 /* PathFile.h */,
+				DDC6F21F176D59A600AA5E31 /* PathFile.m */,
 				DDF56ECC175CB4F9000872CE /* Constant.h */,
 				DDF56ECD175CB4F9000872CE /* Constant.m */,
 			);
@@ -268,11 +323,18 @@
 				DD87B6151759D33A000E4F0C /* HarpyConstants.h in Headers */,
 				DD87B6161759D33A000E4F0C /* JSONKit.h in Headers */,
 				DDF56EC2175CB3FE000872CE /* SwipePageViewController.h in Headers */,
-				DDF56EC9175CB45E000872CE /* SwipeDataSource.h in Headers */,
+				DDF56EC9175CB45E000872CE /* SwipePageDataSource.h in Headers */,
 				DDC637F41756241000975F99 /* SwipeView.h in Headers */,
 				DDF56ECE175CB4F9000872CE /* Constant.h in Headers */,
 				DD0D76A9175E30A8007D3395 /* AnimateImageWidgetView.h in Headers */,
 				DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */,
+				DDC6F220176D59A600AA5E31 /* PathFile.h in Headers */,
+				DDC6F26A176D689600AA5E31 /* ZipArchive.h in Headers */,
+				DDC6F27C176D79F600AA5E31 /* crypt.h in Headers */,
+				DDC6F27E176D79F600AA5E31 /* ioapi.h in Headers */,
+				DDC6F280176D79F600AA5E31 /* mztools.h in Headers */,
+				DDC6F282176D79F600AA5E31 /* unzip.h in Headers */,
+				DDC6F284176D79F600AA5E31 /* zip.h in Headers */,
 				DDF56EC4175CB3FE000872CE /* AnimateWidgetView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,9 +413,15 @@
 				DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */,
 				DDF56EC3175CB3FE000872CE /* SwipePageViewController.m in Sources */,
 				DDF56EC5175CB3FE000872CE /* AnimateWidgetView.m in Sources */,
-				DDF56ECA175CB45E000872CE /* SwipeDataSource.m in Sources */,
+				DDF56ECA175CB45E000872CE /* SwipePageDataSource.m in Sources */,
 				DDF56ED8175CC494000872CE /* EGAnimateImageView.m in Sources */,
 				DD0D76AA175E30A8007D3395 /* AnimateImageWidgetView.m in Sources */,
+				DDC6F221176D59A600AA5E31 /* PathFile.m in Sources */,
+				DDC6F26B176D689600AA5E31 /* ZipArchive.mm in Sources */,
+				DDC6F27D176D79F600AA5E31 /* ioapi.c in Sources */,
+				DDC6F27F176D79F600AA5E31 /* mztools.c in Sources */,
+				DDC6F281176D79F600AA5E31 /* unzip.c in Sources */,
+				DDC6F283176D79F600AA5E31 /* zip.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
