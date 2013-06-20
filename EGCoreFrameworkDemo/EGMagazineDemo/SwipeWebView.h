@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString *currentModulePath;
 @property (nonatomic, weak) id webVcDelegate;
 
-- (id)initWithModule:(NSString*)module;
+- (id)initWithModule:(NSString*)module delegate:(id)delegate;
 - (void) resetContentWithIndex:(int)index;
 - (void) swipeViewDidScroll:(SwipeView *)swipeView;
 
@@ -24,7 +24,7 @@
 
 
 @protocol SwipeWebViewDelagate <NSObject>
--(void) gotoPage:(int)index;
-
+-(void) gotoPage:(NSString*)pageName;
+-(NSString*) pageNameByIndex:(NSInteger)index;
 @end
 

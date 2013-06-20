@@ -13,6 +13,7 @@
 #import "EGCore/SwipePageDataSource.h"
 #import "SwipeWebViewController.h"
 #import "TestAnimationImageView.h"
+#import "UpdateViewController.h"
 
 @implementation AppDelegate
 @synthesize rootViewController;
@@ -22,6 +23,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+//    UpdateViewController *masterViewController = [[UpdateViewController alloc] init];
+//    self.window.rootViewController = masterViewController;
 
     [self testcase];
     return YES;

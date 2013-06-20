@@ -38,6 +38,8 @@
 		DDC6F282176D79F600AA5E31 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F279176D79F600AA5E31 /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDC6F283176D79F600AA5E31 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F27A176D79F600AA5E31 /* zip.c */; };
 		DDC6F284176D79F600AA5E31 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC6F27B176D79F600AA5E31 /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDE833A117709A4B003A0B1D /* EGViewCoreAnimate.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE8339F17709A4B003A0B1D /* EGViewCoreAnimate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDE833A217709A4B003A0B1D /* EGViewCoreAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE833A017709A4B003A0B1D /* EGViewCoreAnimate.m */; };
 		DDF56EC0175CB3FE000872CE /* SwipePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBA175CB3FE000872CE /* SwipePageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDF56EC1175CB3FE000872CE /* SwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF56EBB175CB3FE000872CE /* SwipePageView.m */; };
 		DDF56EC2175CB3FE000872CE /* SwipePageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -90,6 +92,8 @@
 		DDC6F279176D79F600AA5E31 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
 		DDC6F27A176D79F600AA5E31 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
 		DDC6F27B176D79F600AA5E31 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		DDE8339F17709A4B003A0B1D /* EGViewCoreAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGViewCoreAnimate.h; path = Animation/EGViewCoreAnimate.h; sourceTree = "<group>"; };
+		DDE833A017709A4B003A0B1D /* EGViewCoreAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGViewCoreAnimate.m; path = Animation/EGViewCoreAnimate.m; sourceTree = "<group>"; };
 		DDF56EBA175CB3FE000872CE /* SwipePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageView.h; sourceTree = "<group>"; };
 		DDF56EBB175CB3FE000872CE /* SwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipePageView.m; sourceTree = "<group>"; };
 		DDF56EBC175CB3FE000872CE /* SwipePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipePageViewController.h; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				DDF56ED6175CC494000872CE /* EGAnimateImageView.m */,
 				DDB772F917520DE3004A3004 /* EGCoreAnimation.h */,
 				DDB772FA17520DE3004A3004 /* EGCoreAnimation.m */,
+				DDE8339F17709A4B003A0B1D /* EGViewCoreAnimate.h */,
+				DDE833A017709A4B003A0B1D /* EGViewCoreAnimate.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				DDC6F280176D79F600AA5E31 /* mztools.h in Headers */,
 				DDC6F282176D79F600AA5E31 /* unzip.h in Headers */,
 				DDC6F284176D79F600AA5E31 /* zip.h in Headers */,
+				DDE833A117709A4B003A0B1D /* EGViewCoreAnimate.h in Headers */,
 				DDF56EC4175CB3FE000872CE /* AnimateWidgetView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +429,7 @@
 				DDC6F27F176D79F600AA5E31 /* mztools.c in Sources */,
 				DDC6F281176D79F600AA5E31 /* unzip.c in Sources */,
 				DDC6F283176D79F600AA5E31 /* zip.c in Sources */,
+				DDE833A217709A4B003A0B1D /* EGViewCoreAnimate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

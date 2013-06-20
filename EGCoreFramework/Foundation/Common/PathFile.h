@@ -15,6 +15,10 @@
 + (NSArray *)allContentsInPath:(NSString *)directoryPath;
 + (NSArray *)allFilesInPathAndItsSubpaths:(NSString *)directoryPath;
 + (NSMutableArray *)fileListInFolder:(NSString *)folderPath filterBySuffix:(NSString*)suffix;
++ (bool) isFileExistsAtPath:(NSString *)folderPath fileName:(NSString*)name;
++ (void)filesDelete:(NSString *)folderPath;
++ (BOOL)fileDelete:(NSString *)filePath;
++ (NSArray *)allFilesInPathAndItsSubpaths:(NSString *)directoryPath filterBySuffix:(NSString*)suffix ;
 @end
 
 
