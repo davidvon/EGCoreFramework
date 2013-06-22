@@ -18,7 +18,7 @@
     self = [super init];
     if (self) {
         self.frame = CGRectMake(0, 0, 1024, 768);
-        currentModulePath = [[[PathFile documentPath] stringByAppendingPathComponent:@"modules/default/"] stringByAppendingPathComponent:module];
+        currentModulePath = module;
         _webView = [Constant createWebView:self.frame];
         _webView.delegate = self;
         webVcDelegate = delegate;

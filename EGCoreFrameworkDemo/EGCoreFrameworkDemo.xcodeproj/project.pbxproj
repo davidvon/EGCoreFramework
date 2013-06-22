@@ -63,6 +63,8 @@
 		DD03CF6D17677AF300CC1C25 /* dygt_bg_gl_1png in Resources */ = {isa = PBXBuildFile; fileRef = DD03CF6817677AF200CC1C25 /* dygt_bg_gl_1png */; };
 		DD03CF6E17677AF300CC1C25 /* dygt_bg_gl_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DD03CF6917677AF200CC1C25 /* dygt_bg_gl_2.png */; };
 		DD03CF6F17677AF300CC1C25 /* dyjt_bg_text.png in Resources */ = {isa = PBXBuildFile; fileRef = DD03CF6A17677AF200CC1C25 /* dyjt_bg_text.png */; };
+		DD0567471775707A00E4B768 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD0567441775707A00E4B768 /* SVProgressHUD.bundle */; };
+		DD0567481775707A00E4B768 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0567461775707A00E4B768 /* SVProgressHUD.m */; };
 		DD4DD6A21759E4E4005FBE14 /* static in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A11759E4E4005FBE14 /* static */; };
 		DD4DD6A9175A25CC005FBE14 /* bg1_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A6175A25CC005FBE14 /* bg1_1.jpg */; };
 		DD4DD6AA175A25CC005FBE14 /* bg1_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD4DD6A7175A25CC005FBE14 /* bg1_2.jpg */; };
@@ -90,6 +92,8 @@
 		DDC637F81756294A00975F99 /* TestReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC637F71756294A00975F99 /* TestReflection.m */; };
 		DDC6F224176D624E00AA5E31 /* SwipeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC6F223176D5E2B00AA5E31 /* SwipeWebViewController.m */; };
 		DDC6F26F176D696F00AA5E31 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC6F26E176D696F00AA5E31 /* libz.dylib */; };
+		DDC8473D1774A0FE00193693 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC8473B1774A0FE00193693 /* checked.png */; };
+		DDC8473E1774A0FE00193693 /* deleted.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC8473C1774A0FE00193693 /* deleted.png */; };
 		DDD611D6176D85C0007C44CA /* SwipeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD611D5176D85C0007C44CA /* SwipeWebView.m */; };
 		DDE692FD1759B37000C97CF0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE692D91759B37000C97CF0 /* 1.png */; };
 		DDE692FE1759B37000C97CF0 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDE692DA1759B37000C97CF0 /* bg1.jpg */; };
@@ -202,6 +206,9 @@
 		DD03CF6817677AF200CC1C25 /* dygt_bg_gl_1png */ = {isa = PBXFileReference; lastKnownFileType = file; path = dygt_bg_gl_1png; sourceTree = "<group>"; };
 		DD03CF6917677AF200CC1C25 /* dygt_bg_gl_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dygt_bg_gl_2.png; sourceTree = "<group>"; };
 		DD03CF6A17677AF200CC1C25 /* dyjt_bg_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dyjt_bg_text.png; sourceTree = "<group>"; };
+		DD0567441775707A00E4B768 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		DD0567451775707A00E4B768 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		DD0567461775707A00E4B768 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		DD4DD6A11759E4E4005FBE14 /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = static; sourceTree = "<group>"; };
 		DD4DD6A6175A25CC005FBE14 /* bg1_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_1.jpg; sourceTree = "<group>"; };
 		DD4DD6A7175A25CC005FBE14 /* bg1_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1_2.jpg; sourceTree = "<group>"; };
@@ -235,6 +242,8 @@
 		DDC6F222176D5E2B00AA5E31 /* SwipeWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeWebViewController.h; sourceTree = "<group>"; };
 		DDC6F223176D5E2B00AA5E31 /* SwipeWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeWebViewController.m; sourceTree = "<group>"; };
 		DDC6F26E176D696F00AA5E31 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DDC8473B1774A0FE00193693 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = EGMagazineDemo/images/checked.png; sourceTree = SOURCE_ROOT; };
+		DDC8473C1774A0FE00193693 /* deleted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deleted.png; path = EGMagazineDemo/images/deleted.png; sourceTree = SOURCE_ROOT; };
 		DDD611D4176D85C0007C44CA /* SwipeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeWebView.h; sourceTree = "<group>"; };
 		DDD611D5176D85C0007C44CA /* SwipeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeWebView.m; sourceTree = "<group>"; };
 		DDE692D91759B37000C97CF0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -304,6 +313,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0567431775707A00E4B768 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				DD0567441775707A00E4B768 /* SVProgressHUD.bundle */,
+				DD0567451775707A00E4B768 /* SVProgressHUD.h */,
+				DD0567461775707A00E4B768 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		DDB7727B175207D0004A3004 = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +357,7 @@
 		DDB7728D175207D0004A3004 /* EGCoreFrameworkDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DD0567431775707A00E4B768 /* SVProgressHUD */,
 				DDB77296175207D0004A3004 /* AppDelegate.h */,
 				DDB77297175207D0004A3004 /* AppDelegate.m */,
 				DDB77320175234A6004A3004 /* TestCoreAnimationView.h */,
@@ -395,6 +415,8 @@
 			isa = PBXGroup;
 			children = (
 				DD8ECEEC1771FAAE0097CE74 /* bg_main.png */,
+				DDC8473B1774A0FE00193693 /* checked.png */,
+				DDC8473C1774A0FE00193693 /* deleted.png */,
 				DD8ECEED1771FAAE0097CE74 /* bg_main@2x.png */,
 				DDBA861A1768068400BC8928 /* map_title_1.png */,
 				DDBA861C1768135600BC8928 /* dyjt_bg.png */,
@@ -674,6 +696,9 @@
 				DD8ECEE91771E0500097CE74 /* image_background_blue.png in Resources */,
 				DD8ECEEE1771FAAE0097CE74 /* bg_main.png in Resources */,
 				DD8ECEEF1771FAAE0097CE74 /* bg_main@2x.png in Resources */,
+				DDC8473D1774A0FE00193693 /* checked.png in Resources */,
+				DDC8473E1774A0FE00193693 /* deleted.png in Resources */,
+				DD0567471775707A00E4B768 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +721,7 @@
 				DDE83394176F4789003A0B1D /* SGdownloader.m in Sources */,
 				DDE83397176F4950003A0B1D /* UpdateViewController.m in Sources */,
 				DDE8339A176F4987003A0B1D /* progressCell.m in Sources */,
+				DD0567481775707A00E4B768 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

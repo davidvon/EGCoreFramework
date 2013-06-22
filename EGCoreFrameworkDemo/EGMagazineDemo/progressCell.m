@@ -6,14 +6,14 @@
 //  Copyright (c) 2012 Edenpod. All rights reserved.
 //
 
-#import "progressCell.h"
+#import "ProgressCell.h"
 
-@interface progressCell()
+@interface ProgressCell()
 @property (nonatomic, strong) SGdownloader* download;
 @property (nonatomic, strong) UIProgressView* progressV;
 @property (nonatomic, strong) UIButton* updateButton;
 @end
-@implementation progressCell
+@implementation ProgressCell
 @synthesize downloadedData = _downloadedData;
 @synthesize download = _download;
 @synthesize progressV = _progressV;
@@ -41,6 +41,11 @@
     return self;
 }
 
+
+-(void)setURL:(NSString*)_url
+{
+    _downloadURL = [NSURL URLWithString:_url];
+}
 
 -(void)updateFile
 {

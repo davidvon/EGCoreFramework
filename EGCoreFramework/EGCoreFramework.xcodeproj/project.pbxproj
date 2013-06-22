@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD05673A17756C1F00E4B768 /* DejalActivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD05673817756C1F00E4B768 /* DejalActivityView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD05673B17756C1F00E4B768 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05673917756C1F00E4B768 /* DejalActivityView.m */; };
 		DD0D76A9175E30A8007D3395 /* AnimateImageWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0D76A7175E30A8007D3395 /* AnimateImageWidgetView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD0D76AA175E30A8007D3395 /* AnimateImageWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0D76A8175E30A8007D3395 /* AnimateImageWidgetView.m */; };
 		DD87B6131759D33A000E4F0C /* Harpy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD87B60A1759D33A000E4F0C /* Harpy.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD05673817756C1F00E4B768 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		DD05673917756C1F00E4B768 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		DD0D76A7175E30A8007D3395 /* AnimateImageWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateImageWidgetView.h; sourceTree = "<group>"; };
 		DD0D76A8175E30A8007D3395 /* AnimateImageWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateImageWidgetView.m; sourceTree = "<group>"; };
 		DD87B60A1759D33A000E4F0C /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
@@ -119,6 +123,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD05673617756C1F00E4B768 /* Hud */ = {
+			isa = PBXGroup;
+			children = (
+				DD05673717756C1F00E4B768 /* DejalHUD */,
+			);
+			path = Hud;
+			sourceTree = "<group>";
+		};
+		DD05673717756C1F00E4B768 /* DejalHUD */ = {
+			isa = PBXGroup;
+			children = (
+				DD05673817756C1F00E4B768 /* DejalActivityView.h */,
+				DD05673917756C1F00E4B768 /* DejalActivityView.m */,
+			);
+			path = DejalHUD;
+			sourceTree = "<group>";
+		};
 		DD87B6081759D33A000E4F0C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +183,7 @@
 		DDB772B617520BCC004A3004 = {
 			isa = PBXGroup;
 			children = (
+				DD05673617756C1F00E4B768 /* Hud */,
 				DDF56EB9175CB3FE000872CE /* EGMagazine */,
 				DD87B6081759D33A000E4F0C /* Foundation */,
 				DDC637F01756241000975F99 /* Touch */,
@@ -338,6 +360,7 @@
 				DDC6F26A176D689600AA5E31 /* ZipArchive.h in Headers */,
 				DDC6F27C176D79F600AA5E31 /* crypt.h in Headers */,
 				DDC6F27E176D79F600AA5E31 /* ioapi.h in Headers */,
+				DD05673A17756C1F00E4B768 /* DejalActivityView.h in Headers */,
 				DDC6F280176D79F600AA5E31 /* mztools.h in Headers */,
 				DDC6F282176D79F600AA5E31 /* unzip.h in Headers */,
 				DDC6F284176D79F600AA5E31 /* zip.h in Headers */,
@@ -430,6 +453,7 @@
 				DDC6F281176D79F600AA5E31 /* unzip.c in Sources */,
 				DDC6F283176D79F600AA5E31 /* zip.c in Sources */,
 				DDE833A217709A4B003A0B1D /* EGViewCoreAnimate.m in Sources */,
+				DD05673B17756C1F00E4B768 /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

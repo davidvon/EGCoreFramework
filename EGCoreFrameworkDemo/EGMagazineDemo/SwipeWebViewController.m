@@ -15,7 +15,7 @@
 #import "EGCore/JSONKit.h"
 #import "EGCore/Constant.h"
 #import "EGCore/EGViewCoreAnimate.h"
-
+#import "SVProgressHUD.h"
 
 @implementation SwipeWebViewController
 @synthesize swipe, datasource, currentModule;
@@ -28,15 +28,35 @@
         self.view.backgroundColor = [UIColor whiteColor];
         datasource = [[NSMutableDictionary alloc] init];
         currentModule = module;
-        modulePath = [[[PathFile documentPath] stringByAppendingPathComponent:@"modules/default"]
-                      stringByAppendingPathComponent:currentModule];
         self.view.frame = CGRectMake(0, 0, 1024, 768);
         [self loadSwipeView];
-        [self checkPackageStatus];
+        [self loadPackages];
+        
         UIButton *down =[Constant addButton:CGRectMake(680, 50, 68, 68) withImage:@"download_normal.png" inView:self.view];
         [down addTarget:self action:@selector(download) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNotify) name:kUpdateNotifyKey object:nil];
+}
+-(void) viewDidUnload {
+    [super viewDidUnload];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kUpdateNotifyKey  object:nil];
+}
+
+
+-(void) dealloc
+{
+    [datasource removeAllObjects];
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
 }
 
 
@@ -45,27 +65,18 @@
     if(!updatePopVc){
         UpdateViewController *updateVC = [[UpdateViewController alloc] init];
         UINavigationController *updateNavVC = [[UINavigationController alloc] initWithRootViewController:updateVC];
-        updateNavVC.view.frame = CGRectMake(262,100, 500,500);
-        updateVC.view.frame = updateNavVC.view.bounds;
         updateVC.swipeWebVc = self;
         updatePopVc = [[UIPopoverController alloc] initWithContentViewController:updateNavVC];
-        updatePopVc.popoverContentSize = CGSizeMake(500, 500);
+        updatePopVc.popoverContentSize = CGSizeMake(500, 368);
     }
-    [updatePopVc presentPopoverFromRect:CGRectMake(262, 100, 500, 500) inView:self.view permittedArrowDirections:0 animated:YES];
+    [updatePopVc presentPopoverFromRect:CGRectMake(512, 300, 0, 0) inView:self.view permittedArrowDirections:0 animated:YES];
 }
 
 
--(void) popDownloadView
-{
-    [updatePopVc dismissPopoverAnimated:true];
-}
 
-
--(void) checkPackageStatus
+-(void) loadPackages
 {
     [self initStaticWebPages];
-    _isIndexJsonFileExist = [PathFile isFileExistsAtPath:modulePath fileName:kAppJsonFile];
-    if( !_isIndexJsonFileExist ) return;
     
     NSString *filePath = [modulePath stringByAppendingPathComponent:kAppJsonFile];
     NSString *content = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
@@ -77,13 +88,22 @@
 
 -(void) initStaticWebPages
 {
-    NSString *destDir = [[PathFile documentPath] stringByAppendingPathComponent:@"modules"];
+    NSString *destDir = [[PathFile documentPath] stringByAppendingPathComponent:@"modules/update"];
     bool isExist = [[NSFileManager defaultManager] fileExistsAtPath:destDir];
 	if ( isExist ){
-        NSArray *array = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:destDir error:nil];
+        modulePath = [destDir stringByAppendingPathComponent:currentModule];
+        NSArray *array =[PathFile fileListInFolder:modulePath filterBySuffix:@"html"];
+        if( array.count > 0 ){
+            return;
+        }
+    }
+    
+    destDir = [[PathFile documentPath] stringByAppendingPathComponent:@"modules/default"];
+    modulePath = [destDir stringByAppendingPathComponent:currentModule];
+    isExist = [[NSFileManager defaultManager] fileExistsAtPath:destDir];
+	if ( isExist ){
+        NSArray *array =[PathFile fileListInFolder:modulePath filterBySuffix:@"html"];
         if( array.count > 0 ) return;
-    } else {
-        [[NSFileManager defaultManager] createDirectoryAtPath:destDir withIntermediateDirectories:true attributes:nil error:nil];
     }
     NSString *file = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"static/modules/default.zip"];
     [SwipeWebViewController unzipFiles:file toDest:destDir];
@@ -105,39 +125,23 @@
     [self.view addSubview:self.swipe];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
 
--(void) viewWillAppear:(BOOL)animated
+-(void)updateNotify
 {
-    self.navigationController.navigationBarHidden = true;
-}
+    [SVProgressHUD showSuccessWithStatus:@"更新中..." duration:1];
+    [self loadPackages];
+    [self.swipe reloadData];
 
-
--(void) dealloc
-{
-    [datasource removeAllObjects];
+    SwipeWebView *view = [datasource objectForKey:[NSNumber numberWithInteger:0]];
+    [view resetContentWithIndex:0];
+    [self.swipe scrollToPage:0 duration:0.6];
 }
 
 
--(void)reloadData
-{
-    [swipe reloadData];
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
-
+#pragma mark --- Swipe WebView ---
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    NSString *destDir = [[[PathFile documentPath] stringByAppendingPathComponent:@"modules/default/"] stringByAppendingPathComponent:currentModule];
-    NSArray *array =[PathFile fileListInFolder:destDir filterBySuffix:@"html"];
+    NSArray *array =[PathFile fileListInFolder:modulePath filterBySuffix:@"html"];
     return [array count];
 }
 
@@ -148,11 +152,14 @@
     {
         view = [datasource objectForKey:[NSNumber numberWithInteger:index]];
         if( !view ){
-            view =[[SwipeWebView alloc] initWithModule:currentModule delegate:self];
+            view =[[SwipeWebView alloc] initWithModule:modulePath delegate:self];
             [datasource setObject:view forKey:[NSNumber numberWithInteger:index]];
             [(SwipeWebView*)view resetContentWithIndex:index];
+            return view;
         }
+        ((SwipeWebView*)view).currentModulePath = modulePath;
     } else {
+        ((SwipeWebView*)view).currentModulePath = modulePath;
         [(SwipeWebView*)view resetContentWithIndex:index];
     }
 
