@@ -133,6 +133,7 @@
     [self.swipe reloadData];
 
     SwipeWebView *view = [datasource objectForKey:[NSNumber numberWithInteger:0]];
+    view.currentModulePath = modulePath; //update path for existed view
     [view resetContentWithIndex:0];
     [self.swipe scrollToPage:0 duration:0.6];
 }
